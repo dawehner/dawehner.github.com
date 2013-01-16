@@ -3,7 +3,7 @@ layout: post
 title: "Initial post"
 date: 2013-01-15 21:46
 comments: true
-categories: 
+categories: Front
 ---
 {% codeblock Just a python test lang:js %}
 import numpy as np
