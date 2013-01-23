@@ -24,7 +24,7 @@ http://timms.uni-tuebingen.de/Player/AccessASF.aspx?ref=mms%3a%2f%2fu-003-stimms
 As you see pretty much nothing is important beside the string after ?ref=,
 so let's unescape it:
 
-{% codeblock lang: python %}
+{% codeblock lang:python %}
 import urllib
 
 urllib.unquote("mms%3a%2f%2fu-003-stimms03.uni-tuebingen.de%2fUT_2006%2f10%2f18%2fUT_20061018_001_exphys7_0001.wmv500.wmv")
@@ -33,15 +33,16 @@ urllib.unquote("mms%3a%2f%2fu-003-stimms03.uni-tuebingen.de%2fUT_2006%2f10%2f18%
 > mms://u-003-stimms03.uni-tuebingen.de/UT_2006/10/18/UT_20061018_002_exphys7_0001.wmv500.wmv
 > mms://u-003-stimms03.uni-tuebingen.de/UT_2006/10/19/UT_20061019_001_exphys7_0001.wmv500.wmv
 
-{% endcodeblock}
+{% endcodeblock %}
 
 The schema so of the urls are pretty clear: servername/some semester/month/day/bla_$piece$_name.wmv500.wmv.
 
-In order to find all this different links, let's go to the overview page:
-http://timms.uni-tuebingen.de/List/List01.aspx?rpattern=UT_200[67]_____00[12]_exphys7_000_
+## Find all the download urls
+
+In order to find all this different links, let's go to the [overview page](http://timms.uni-tuebingen.de/List/List01.aspx?rpattern=UT_200[67]_____00[12]_exphys7_000_)
 and start to parse it with pyquery.
 
-{% codeblock lang: python %}
+{% codeblock lang:python %}
 from pyquery import PyQuery as pq
 
 # Download the timms overview page.
@@ -54,7 +55,7 @@ As you will see there are images with the following schema on the page:
 Now the only thing left is to get all the links and run an mplayer dump command on it,
 and 
 
-{% codeblock lang: python% }
+{% codeblock lang:python %}
 
 urls = []
 # The goal is to find all urls needed to download, but they are part of the images.
@@ -65,6 +66,14 @@ for image in py.find("table#content").find("img"):
         url = "mms://u-003-stimms03.uni-tuebingen.de/{}.wmv500.wmv".format(url_part)
         urls.append(url)
 
+{% endcodeblock %}
+
+## Catch them all
+
+The final step is to dump them all into video files, this example uses mplayer
+for that.
+
+{% codeblock lang:python %}
 import os
 import subprocess
 
@@ -78,5 +87,5 @@ for url in urls:
 {% endcodeblock %}
 
 
-The final notebook can be found under https://gist.github.com/4571983
+The final notebook can be found under [a gist](https://gist.github.com/4571983)
 
