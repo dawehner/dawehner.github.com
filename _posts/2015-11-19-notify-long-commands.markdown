@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Get notified on slow commands"
-date:   2015-11-19 14:00:00
+date:   2015-11-19 00:00:00
 categories: fish shell
 ---
 We are all lazy and we are all get distracted.
@@ -13,12 +13,14 @@ so you can get right back on track after this time.
 
 Note: This is for [Fish shell](http://fishshell.com/), which is a modern shell and really nice to use.
 
+![Fish shell](http://fishshell.com/assets/img/Terminal_Logo_CRT_Small.png)
+
 After each command a new line is printed and the shell prints out the prompt.
 On that time, we could provide a notification.
 
 So we create a new file, let's call it rpromt.fish
-```
-unction fish_right_prompt
+{% highlight bash %}
+function fish_right_prompt
     if test $CMD_DURATION
         # Store duration of last command
         set duration (echo "$CMD_DURATION 1000" | awk '{printf "%.3fs", $1 / $2}')
@@ -43,10 +45,10 @@ unction fish_right_prompt
         end
     end
 end
-```
+{% endhighlight %}
 
-and reference that inside the main fish config file: ~/.config/fish/config.fish:
+and reference that inside the main fish config file: <code>~/.config/fish/config.fish</code>:
 
-```
+{% highlight bash %}
 . ~/config/fish/functions/rpromt.fish
-```
+{% endhighlight %}
