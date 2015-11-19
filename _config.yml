@@ -1,0 +1,10 @@
+# Site settings
+title: dawehner`s spits
+description: ''
+baseurl: ""
+url: "http://dawehner.github.io"
+twitter_username: da_wehner
+github_username:  dawehner
+
+# Build settings
+markdown: kramdown
