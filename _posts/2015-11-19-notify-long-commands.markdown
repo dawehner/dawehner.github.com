@@ -15,7 +15,7 @@ Note: This is for [Fish shell](http://fishshell.com/), which is a modern shell a
 After each command a new line is printed and the shell prints out the prompt.
 On that time, we could provide a notification.
 
-Let’s create a new file and call it rprompt.fish
+Let’s create a new file and call it functions/rprompt.fish
 {% highlight bash %}
 function fish_right_prompt
     if test $CMD_DURATION
