@@ -47,5 +47,5 @@ end
 Reference rprompt.fish inside the main fish config file: <code>~/.config/fish/config.fish</code>:
 
 {% highlight bash %}
-. ~/config/fish/functions/rpromt.fish
+. ~/.config/fish/functions/rpromt.fish
 {% endhighlight %}
