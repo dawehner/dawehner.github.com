@@ -13,7 +13,7 @@ Note: This is for [Fish shell](http://fishshell.com/), which is a modern shell a
 ![Fish shell](http://fishshell.com/assets/img/Terminal_Logo_CRT_Small.png)
 
 After each command a new line is printed and the shell prints out the prompt.
-On that time, we could provide a notification.
+At that time, we could provide a notification.
 
 Let’s create a new file and call it functions/rprompt.fish
 {% highlight bash %}
