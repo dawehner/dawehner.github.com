@@ -4,21 +4,18 @@ title:  "Get notified on slow commands"
 date:   2015-11-19 00:00:00
 categories: fish shell
 ---
-We are all lazy and we are all get distracted.
-One thing which happens really often is: You run some slow command in your
-shell, switch to the browser and baaaaam, you are distracted.
+We are all lazy and we get distracted. One thing happens often… You run some slow command in your shell, switch to the browser, and bam… you are distracted.
 
-What about sending an OS notification, everytime your command need longer than let's say 10 seconds ...
-so you can get right back on track after this time.
+What about sending an OS notification? Every time any command needs longer to run than let’s say 10 seconds then there is some notification to show so you can get right back to work each time.
 
 Note: This is for [Fish shell](http://fishshell.com/), which is a modern shell and really nice to use.
 
 ![Fish shell](http://fishshell.com/assets/img/Terminal_Logo_CRT_Small.png)
 
 After each command a new line is printed and the shell prints out the prompt.
-On that time, we could provide a notification.
+At that time, we could provide a notification.
 
-So we create a new file, let's call it rpromt.fish
+Let’s create a new file and call it functions/rprompt.fish
 {% highlight bash %}
 function fish_right_prompt
     if test $CMD_DURATION
@@ -47,8 +44,8 @@ function fish_right_prompt
 end
 {% endhighlight %}
 
-and reference that inside the main fish config file: <code>~/.config/fish/config.fish</code>:
+Reference rprompt.fish inside the main fish config file: <code>~/.config/fish/config.fish</code>:
 
 {% highlight bash %}
-. ~/config/fish/functions/rpromt.fish
+. ~/.config/fish/functions/rprompt.fish
 {% endhighlight %}
