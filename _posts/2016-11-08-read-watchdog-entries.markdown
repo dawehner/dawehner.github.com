@@ -2,7 +2,7 @@
 layout: post
 title:  "Make sense of your watchdog entries"
 date:   2016-01-08 00:00:00
-categories: python, drush
+categories: python drush
 ---
 Websites have errors, which are ideally logged.
 Logging though is one thing, you also need to make some sense out of them.
@@ -70,5 +70,5 @@ And if you really want you could even visuallize it, if you want:
 count_by_message.plot(kind="bar")
 {% endhighlight %}
 
-![Bar graph](/images/watchdog-plot.png)
+![Bar graph]({{ site.url }}/images/watchdog-plot.png)
 
