@@ -38,7 +38,7 @@ First load the data into pandas:
 {% highlight python %}
 import pandas as pd
 
-result = pd.read\_json("errors.json", orient="index")
+result = pd.read_json("errors.json", orient="index")
 {% endhighlight %}
 
 Result is a thing called dataframe, which is basically an enhanced array/hashmap.
