@@ -70,5 +70,7 @@ And if you really want you could even visuallize it, if you want:
 count_by_message.plot(kind="bar")
 {% endhighlight %}
 
-![Bar graph]({{ site.url }}/assets/images/watchdog-plot.png)
+![Bar graph][bar-graph]
+
+[bar-graph]: {{ "/assets/images/watchdog-plot.png" | prepend: site.baseurl }} "Visualization"
 
