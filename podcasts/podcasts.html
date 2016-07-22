@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <div id="podcast-listing"></div>
+  <script type="text/javascript">
+    var idElement = document.getElementById("podcast-listing");
+    var request = new Request('./antennapod-feeds.opml');
+    fetch(request).then(function(response) {
+      return response.text();
+      }).then(function (response) {
+        var parser = new DOMParser();
+        var xmlDoc = parser.parseFromString(response, "text/xml");
+
+        var outlineElements = xmlDoc.getElementsByTagName('outline');
+        var length = outlineElements.length;
+        var i;
+        var outlineElement;
+        var title;
+        var url;
+
+        var html = '<ul>';
+
+        for (i = 0; i < length; i++) {
+          outlineElement = outlineElements[i];
+          title = outlineElement.attributes.getNamedItem('text').value;
+          url = outlineElement.attributes.getNamedItem('xmlUrl').value;
+          html += '<li>' + '<a href="' + url + '">' + title + '</a>' + '</li>';
+        } 
+
+        html += '</ul>';
+        idElement.innerHTML = html;
+        });
+;
+  </script>
+  </body>
+</html>
