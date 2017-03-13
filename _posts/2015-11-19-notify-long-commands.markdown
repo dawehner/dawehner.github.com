@@ -12,6 +12,10 @@ Note: This is for [Fish shell](http://fishshell.com/), which is a modern shell a
 
 ![Fish shell](http://fishshell.com/assets/img/Terminal_Logo_CRT_Small.png)
 
+__Update:__: There is a well written plugin with a logo now: https://github.com/fisherman/done
+
+Ignore the rest of this post :)
+
 After each command a new line is printed and the shell prints out the prompt.
 At that time, we could provide a notification.
 
