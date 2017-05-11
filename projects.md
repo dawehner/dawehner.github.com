@@ -12,6 +12,6 @@ This page links and describes some of my personal projects.
   <li>Tool to automatically notify finished longruning process: <a href="https://github.com/dawehner/done">Done</a></li>
   <li>Slack PHP Bot: <a href="https://github.com/dawehner/slack-phpeval">slack-phpeval</a></li>
   <li>Jupyer/Ipython kernel for PHP: <a href="https://github.com/dawehner/jupyter-php">jupyter-php</a></li>
-  <li>A lot of Drupal specific code, see <a href="https://drupal.org/u/dawehner">drupal.org</a> and <a href="https://github.com/dawehner">Github</a>
+  <li>A lot of Drupal specific code, see <a href="https://drupal.org/u/dawehner">drupal.org</a> and <a href="https://github.com/dawehner">Github</a></li>
 </ul>
 
