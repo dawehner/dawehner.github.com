@@ -2,6 +2,7 @@
 layout: post
 title:  "Automatically clear the render cache when templates change"
 date:   2017-05-11 00:00:00
+comments: true
 categories: git
 ---
 Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.

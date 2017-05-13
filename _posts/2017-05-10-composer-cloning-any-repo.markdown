@@ -2,6 +2,7 @@
 layout: post
 title:  "Clone a non composer repo with composer"
 date:   2017-05-10 00:00:00
+comments: true
 categories: composer git
 ---
 There are some usecases where you want to integrate arbitrary libraries into your system.
