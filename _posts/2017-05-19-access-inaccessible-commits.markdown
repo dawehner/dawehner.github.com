@@ -3,7 +3,7 @@ layout: post
 title:  "Access inaccessible git commits"
 date:   2017-05-19 00:00:00
 comments: true
-categories: composer git
+categories: git
 ---
 Note: This is mostly a personal note, but maybe helpful for others
 
