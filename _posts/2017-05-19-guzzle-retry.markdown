@@ -48,10 +48,17 @@ Guzzle, the most common HTTP library in PHP makes this possible out of the box:
 require_once __DIR__ . '/vendor/autoload.php';
 
 $handler_stack = \GuzzleHttp\HandlerStack::create();
-$handler_stack->push(\GuzzleHttp\Middleware::retry(function($retry) {
+$handler_stack->push(\GuzzleHttp\Middleware::retry(function($retry, $request, $value, $reason) {
+  // If we have a value already, we should be able to proceed quickly.
+  if ($value !== NULL) {
+    return FALSE;
+  }
+  
   // Reject after 10 retries.
   return $retry < 10;
 }));
+
+NOTE: In previous versions of this snippet we didn't checked for the value.
 
 $client = new \GuzzleHttp\Client(['handler' => $handler_stack]);
 
