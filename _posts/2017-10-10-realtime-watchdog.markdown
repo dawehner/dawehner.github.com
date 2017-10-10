@@ -16,11 +16,17 @@ On top of that I wanted to actually make use of the capabilities of a modern UI:
 
 Let's stream log entries to the browser:
 
-<iframe width="420" height="315" src="https://youtu.be/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://youtube.com/embed/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
+
 
 ## Implementation
 
-For the actual implementation multiple steps where required:
+A few weeks ago a friend told me: "Do you want to know how to open the chrome debugger in slack? Just press 5 times on the icon of your team." A few minutes later we figured out how communication happens in slack:
+
+* Sending messages is using HTTP requests to some server
+* Retrieving messages is using websockets from another port
+
+Given that having a similar architecture for log streaming seems not to be the worst idea.
 
 ### The server
 
@@ -29,7 +35,7 @@ to a server. There are great services out there like [pusher.com](https://pusher
 wanted to experiment with my own.
 
 
-The tools I'm using are based [reactphp](http://reactphp.org), not to mix up with the JS library.
+The tools I'm using are based upon [reactphp](http://reactphp.org). Don't mix it up with the JS library.
 
 The server consists of three parts:
 
