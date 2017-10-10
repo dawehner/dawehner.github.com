@@ -21,6 +21,9 @@ Let's stream log entries to the browser:
 
 ## Implementation
 
+
+![Slack debugger][slack_debugger]
+
 A few weeks ago a friend told me: "Do you want to know how to open the chrome debugger in slack? Just press 5 times on the icon of your team." A few minutes later we figured out how communication happens in slack:
 
 * Sending messages is using HTTP requests to some server
@@ -144,3 +147,6 @@ The elm code can be found on [gitlab](https://gitlab.com/dawehner/admin_ui_elm/b
 ## Summary
 
 I know this code is by far not production code, but it shows how much is possible with some client side logic. Do you have other ideas what could be real time?
+
+
+[slack_debugger]: {{ "/assets/images/debugger.jpg" | prepend: site.baseurl }} "Slack debugger"
