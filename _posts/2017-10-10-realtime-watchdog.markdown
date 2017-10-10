@@ -42,6 +42,7 @@ The server consists of three parts:
 * A HTTP server listening to incoming POST requests which push new log entries
   and stores the POST body.
 {% highlight php %}
+<?php
 $server = new \React\Http\Server(function (Psr\Http\Message\ServerRequestInterface $request) use (&$my_server) {
   return new Promise(function ($resolve, $reject) use ($request, &$my_server) {
     $content = '';
@@ -58,6 +59,7 @@ $server->listen($socket);
 * A websocket server which has a connection to every client
 
 {% highlight php %}
+<?php
 // Actual logic of the websocket server. This is 
 // what all the clients connect to.
 class MyServer implements MessageComponentInterface {
@@ -98,6 +100,7 @@ $app->route('/echo', new Ratchet\Server\EchoServer, array('*'));
   which has all connections open.
 
 {% highlight php %}
+<?php
 $server = new \React\Http\Server(function (Psr\Http\Message\ServerRequestInterface $request) use (&$my_server) {
    // ...
 
@@ -129,7 +132,7 @@ Browsers have good support for websockets:
 Connecting a websocket in JS is relatively easy:
 
 {% highlight javascript %}
-(new WebSocket('ws://localhost:8081/test')).addEventListener('message', function (event) {
+(new WebSocket('ws://localhost:8081/test')).addEventListener('message', (event) => {
     console.log('Message from server ', event.data);
 });
 {% endhighlight %}
@@ -138,6 +141,6 @@ For the actual client code we are using [Elm](http://elm-lang.org/), a delightfu
 I won't go into detail how this works in elm, because the [official guide](https://guide.elm-lang.org/architecture/effects/web_sockets.html) is simply well written.
 The elm code can be found on [gitlab](https://gitlab.com/dawehner/admin_ui_elm/blob/8.x-1.x/elm-dblog/src/App.elm).
 
-### Summary
+## Summary
 
 I know this code is by far not production code, but it shows how much is possible with some client side logic. Do you have other ideas what could be real time?
