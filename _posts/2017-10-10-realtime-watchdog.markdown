@@ -16,7 +16,7 @@ On top of that I wanted to actually make use of the capabilities of a modern UI:
 
 Let's stream log entries to the browser:
 
-<iframe width="420" height="315" src="https://youtube.com/embed/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
+<iframe width="630" height="473" src="https://youtube.com/embed/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
 
 
 ## Implementation
