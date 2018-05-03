@@ -11,8 +11,9 @@ Things we achieved for example is a new Drupal.org homepage with a clear focus o
 
 One small work [we](https://www.drupal.org/project/drupal/issues/2911319) have been doing can be seen in the following video:
 
-<iframe src="https://player.vimeo.com/video/264667336" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/264667336">Installing and running Drupal 8 with a single command</a> from <a href="https://vimeo.com/user80621387">David Radcliffe</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+<iframe src="https://player.vimeo.com/video/267910793" width="640" height="386" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/267910793">Drupal quickstart</a> from <a href="https://vimeo.com/user7658757">daniel wehner</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 To summarize this video: It should be possible to start Drupal as quickly as possible:
 
@@ -28,8 +29,14 @@ For me there is a lot of new possibilities opened up:
 * Installation profiles could have an easier time
 * We maybe adapt this command to make the first time contribution sprints orders of magnitude easier
 
-To try it out, download the latest dev from Drupal 8.6.x: https://ftp.drupal.org/files/projects/drupal-8.6.x-dev.zip,
-and read core/install.txt. It now contains a short quick start guide.
+To try it out you need to execute the following steps:
+
+<code>
+- curl -sS https://ftp.drupal.org/files/projects/drupal-x.y.z.zip --output drupal-x.y.z.zip
+- unzip drupal-x.y.z.zip
+- cd /path/to/drupal-x.y.z
+- php core/scripts/drupal quick-start
+</code>
 
 Please leave us feedback on Drupal.org  / twitter / Slack.
 
