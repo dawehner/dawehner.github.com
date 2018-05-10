@@ -31,12 +31,12 @@ For me there is a lot of new possibilities opened up:
 
 To try it out you need to execute the following steps:
 
-<code>
+{% highlight bash %}
 - curl -sS https://ftp.drupal.org/files/projects/drupal-x.y.z.zip --output drupal-x.y.z.zip
 - unzip drupal-x.y.z.zip
 - cd /path/to/drupal-x.y.z
 - php core/scripts/drupal quick-start
-</code>
+{% endhighlight %}
 
 Please leave us feedback on Drupal.org  / twitter / Slack.
 
