@@ -42,7 +42,7 @@ Using it for two a couple of months now it seems to have a lot of positive effec
 * The world seems much more colourful. After looking at my screen for a while the world seems so interesting. Everything seems
    to have more details than it used to have.
 * Finally: You start to care more about accessbility, which well, to be honest is something we really should care more about in
-  the techology sector.
+  the technology sector.
 
 I would recommend trying out to set your phone  / computer into black and white / darkmode for a little while at least.
 Maybe it makes a difference for you too.
