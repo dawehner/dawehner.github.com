@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "All my displays are black and white now"
-date:   2018-11-22 00:00:00
+date:   2019-01-16 00:00:00
 comments: true
 published: false
 categories: display focus
@@ -35,7 +35,7 @@ In KDE enable the following desktop effect.
 
 ## Experience report
  
-Using it for two days now it seems to have a lot of positive effects:
+Using it for two a couple of months now it seems to have a lot of positive effects:
 
 * Focusing seems much easier, given that applications distract you less. No longer there is a nice red icon on unread notifications. 
 * Reading twitter etc. seems just way boring, especially if you don't actually pay attention.
