@@ -1,0 +1,10 @@
+{
+  "name": "podcasts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "opml-to-json": "^0.0.3",
+    "uglify-js": "^3.4.9"
+  }
+}
