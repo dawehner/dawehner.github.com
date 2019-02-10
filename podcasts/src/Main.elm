@@ -81,14 +81,18 @@ view model =
                     , right = 0
                     }
                 ]
-                (E.newTabLink
-                    [ Font.color P.color.extraLink
-                    , E.centerY
-                    , E.padding 10
+                (E.row [ E.padding 10, E.centerY, Font.color P.color.extraLink, E.spacing 10 ]
+                    [ E.newTabLink
+                        []
+                        { url = "https://github.com/dawehner/dawehner.github.com/tree/master/podcasts"
+                        , label = E.text "➾ Powered by elm"
+                        }
+                    , E.newTabLink
+                        []
+                        { url = "//dawehner.github.io"
+                        , label = E.text "➾ back to blog"
+                        }
                     ]
-                    { url = "https://github.com/dawehner/dawehner.github.com/tree/master/podcasts"
-                    , label = E.text "➾ Powered by elm"
-                    }
                 )
             )
         ]
