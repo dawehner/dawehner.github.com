@@ -1,22 +1,21 @@
 ---
 layout: post
-title:  "All my displays are black and white now"
-date:   2019-01-16 00:00:00
+title:  "Seeing the screen black and white"
+date:   2019-02-10 00:00:00
 comments: true
 published: false
 categories: display focus
 ---
 
-Recently I've been thinking a lot about what matters for me. As many people I struggle with spending too much time
+Recently I've been thinking a lot about what matters to me. As many people I struggle with spending too much time
 on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit
 let's you feel good temporarily, but as long you don't consume it purposefully, it didn't really give me anything longterm.
 
-End of October I stumbled upon digital well being on Android: It allows you to set a certain time of the night, at which
+End of October I stumbled upon [digital wellbeing](https://support.google.com/pixelphone/answer/9137850?hl=en&utm_source=wellbeing.google&utm_medium=referral&utm_campaign=wellbeing) on Android: It allows you to set a certain time of the night, at which
 notifications gets disabled and your screen becomes black and white. This seems to be quite a nice solution in the late
-evening, I stopped reading my phone in the late evening, still there are like 16 hours I have my computer/phone reachable
-during the time.
+evening. I stopped reading my phone in the late evening. While this is a solution for the night, there are still like 16 hours I have my computer/phone reachable.
 
-This weekend though I had an idea: Let's use black and white _all_ the time. Almost all systems have an offer for that
+One weekend though I had an idea: Let's use black and white _all_ the time. Almost all systems have an offer for that
 actually:
 
 ### Mac OS X
@@ -29,7 +28,9 @@ actually:
 * Enable developer settings:
 * Goto about this phone and tab 7 times on the phone status
 
-### KDE
+### Linux
+
+Linux probably 
 
 In KDE enable the following desktop effect.
 
