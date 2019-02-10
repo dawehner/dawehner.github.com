@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "All my displays are black and white now"
-date:   2018-11-22 00:00:00
+title:  "Seeing the screen in black and white"
+date:   2019-02-10 00:00:00
 comments: true
-published: false
+published: true
 categories: display focus
 ---
 
-Recently I've been thinking a lot about what matters for me. As many people I struggle with spending too much time
+Recently I've been thinking a lot about what matters to me. As many people I struggle with spending too much time
 on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit
 let's you feel good temporarily, but as long you don't consume it purposefully, it didn't really give me anything longterm.
 
-End of October I stumbled upon digital well being on Android: It allows you to set a certain time of the night, at which
+End of October I stumbled upon [digital wellbeing](https://support.google.com/pixelphone/answer/9137850?hl=en&utm_source=wellbeing.google&utm_medium=referral&utm_campaign=wellbeing) on Android: It allows you to set a certain time of the night, at which
 notifications gets disabled and your screen becomes black and white. This seems to be quite a nice solution in the late
-evening, I reduced my reading time before bed, still there are like 16 hours I have my computer/phone reachable.
+evening. I stopped reading my phone in the late evening. While this is a solution for the night, there are still like 16 hours I have my computer/phone reachable.
 
 One weekend though I had an idea: Let's use black and white __all__ the time. Almost all systems have a feature for this already:
 
@@ -21,8 +21,7 @@ One weekend though I had an idea: Let's use black and white __all__ the time. Al
 
 ### Mac OS X
 
-![OSX accessibility display settings](/assets/images/picture_black_white_osx.jpg)
-
+* Open the settings applications
 * Search for accessibility in settings
 * Find the display category
 * Choose "use greyscale"
@@ -36,20 +35,20 @@ One weekend though I had an idea: Let's use black and white __all__ the time. Al
 
 ### IOS
 
-There seems to be [ways](https://www.macobserver.com/tips/how-to/grayscale-apple-devices/) to enable
-this.
+There seems to be [ways](https://www.macobserver.com/tips/how-to/grayscale-apple-devices/) to enable greyscale rendering.
 
 ### Linux
 
-I haven't tried yet, but I'm quite sure there is a way to do so.
+On Linux you can change the configuration following [this post](https://askubuntu.com/questions/443335/how-can-ubuntu-be-made-grayscale).
 
 ## Experience report
- 
+
 Using it for more than a month now it seems to have a lot of positive effects:
 
 * Focusing seems much easier: There is overall less visual noise. For example red unread notification icons aren't prominent anymore at all.
 * Reading twitter etc. seems to simply be boring. I observed that I no longer just scroll through endless lists.
 * The world outside seems much more colourful: It seems to be that their are more details.
+* For computers I'm just using it in my freetime now. Greyscale seems to be too boring.
 * Finally: You start to care more about accessbility, which well, to be honest is something we really should think about anyway in the techology sector.
 
-I would really recommend you to try it out. Maybe it makes a difference for you as well.
+Give it a try. Maybe it makes a difference to you as well.
