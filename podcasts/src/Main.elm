@@ -89,7 +89,7 @@ view model =
                         }
                     , E.newTabLink
                         []
-                        { url = "//dawehner.github.io"
+                        { url = "//"
                         , label = E.text "➾ back to blog"
                         }
                     ]
