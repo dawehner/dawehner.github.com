@@ -1,9 +1,14 @@
 module Main exposing (main)
 
 import Browser
+import Element as E
+import Element.Background as Background
+import Element.Border as Border
+import Element.Font as Font
 import Html
 import Html.Attributes
 import Json.Decode as JD
+import Palette as P
 
 
 type alias Model =
@@ -37,23 +42,79 @@ update msg model =
     ( model, Cmd.none )
 
 
+viewPodcasts : List Podcast -> E.Element msg
+viewPodcasts podcasts =
+    E.column
+        [ E.spacing 10
+        , E.padding 10
+        ]
+    <|
+        List.map
+            (\podcast ->
+                E.link
+                    [ Font.color P.color.link
+                    ]
+                    { url = podcast.url
+                    , label = E.text podcast.title
+                    }
+            )
+            podcasts
+
+
 view : Model -> Html.Html ()
 view model =
-    case model of
-        Err err -> JD.errorToString err |> Html.text
+    E.layout
+        [ E.width E.fill
+        , E.height E.fill
+        , E.inFront
+            (E.el
+                [ E.width E.fill
+                , E.alignBottom
+                , E.height (E.px 50)
+                , Background.color (E.rgb 1.0 1.0 1.0)
+                , Border.color (E.rgb 0.5 0.5 0.5)
+                , Border.solid
+                , Border.widthEach
+                    { top = 1
+                    , bottom = 0
+                    , left = 0
+                    , right = 0
+                    }
+                ]
+                (E.newTabLink
+                    [ Font.color P.color.extraLink
+                    , E.centerY
+                    , E.padding 10
+                    ]
+                    { url = "https://github.com/dawehner/dawehner.github.com/tree/master/podcasts"
+                    , label = E.text "➾ Powered by elm"
+                    }
+                )
+            )
+        ]
+        (E.el
+            [ E.paddingEach
+                { bottom = 50
+                , top = 20
+                , left = 20
+                , right = 20
+                }
+            ]
+            (case model of
+                Err err ->
+                    JD.errorToString err |> E.text
 
-        Ok podcasts ->
-            Html.ul [] <|
-                List.map
-                    (\podcast ->
-                        Html.li []
-                            [(
-                              Html.a [Html.Attributes.href podcast.url] [
-                                Html.text podcast.title
-                              ]
-                              )]
-                    )
-                    podcasts
+                Ok podcasts ->
+                    E.column []
+                        [ E.paragraph
+                            []
+                            [ E.text "A list of my favourite podcasts"
+                            ]
+                        , viewPodcasts
+                            podcasts
+                        ]
+            )
+        )
 
 
 main =

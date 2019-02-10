@@ -1,7 +1,7 @@
 const opmlToJSON = require('opml-to-json');
 const fs = require('fs');
 
-const opml = fs.readFileSync('./antennapod-feeds.opml');
+const opml = fs.readFileSync('./public/antennapod-feeds.opml');
 
 opmlToJSON(opml, (err, json) => {
   if (err) {
@@ -9,7 +9,7 @@ opmlToJSON(opml, (err, json) => {
     process.exit(1);
   }
 
-  fs.writeFileSync('./antennapod-feeds.json', JSON.stringify(json, null, 2));
+  fs.writeFileSync('./public/antennapod-feeds.json', JSON.stringify(json, null, 2));
 });
 
 
