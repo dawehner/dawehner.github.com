@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>guzzle on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/categories/guzzle/</link>
+    <description>Recent content in guzzle on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawehner.github.io/categories/guzzle/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Retry HTTP requests</title>
+      <link>https://dawehner.github.io/posts/2017-05-19-guzzle-retry/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/posts/2017-05-19-guzzle-retry/</guid>
+      <description>Problem As a matter of life we all learn stuff fails. This might be frame with our favourite picture, the street in front of our house, or more likely requests to APIs.
+A call to a 3rd/2nd party API can fail due to various reasons:
+ The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&amp;rsquo;t like you for a second.</description>
+    </item>
+    
+  </channel>
+</rss>

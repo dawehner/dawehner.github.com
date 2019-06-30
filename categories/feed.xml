@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/categories/</link>
+    <description>Recent content in Categories on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawehner.github.io/categories/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>display</title>
+      <link>https://dawehner.github.io/categories/display/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/display/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>focus</title>
+      <link>https://dawehner.github.io/categories/focus/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/focus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drupal</title>
+      <link>https://dawehner.github.io/categories/drupal/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/drupal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elm</title>
+      <link>https://dawehner.github.io/categories/elm/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/elm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://dawehner.github.io/categories/php/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>realtime</title>
+      <link>https://dawehner.github.io/categories/realtime/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/realtime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>websockets</title>
+      <link>https://dawehner.github.io/categories/websockets/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/websockets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code review</title>
+      <link>https://dawehner.github.io/categories/code-review/</link>
+      <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/code-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://dawehner.github.io/categories/github/</link>
+      <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://dawehner.github.io/categories/git/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guzzle</title>
+      <link>https://dawehner.github.io/categories/guzzle/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/guzzle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>composer</title>
+      <link>https://dawehner.github.io/categories/composer/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/composer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://dawehner.github.io/categories/shell/</link>
+      <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>https://dawehner.github.io/categories/unix/</link>
+      <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/unix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drush</title>
+      <link>https://dawehner.github.io/categories/drush/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/drush/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://dawehner.github.io/categories/python/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://dawehner.github.io/categories/automation/</link>
+      <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hammerspoon</title>
+      <link>https://dawehner.github.io/categories/hammerspoon/</link>
+      <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/hammerspoon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fish</title>
+      <link>https://dawehner.github.io/categories/fish/</link>
+      <pubDate>Thu, 19 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/fish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REST</title>
+      <link>https://dawehner.github.io/categories/rest/</link>
+      <pubDate>Sun, 18 Oct 2015 09:08:31 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/categories/rest/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

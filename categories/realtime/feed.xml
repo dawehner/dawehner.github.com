@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>realtime on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/categories/realtime/</link>
+    <description>Recent content in realtime on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawehner.github.io/categories/realtime/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Realtime watchdog powered by PHP, Drupal and Elm</title>
+      <link>https://dawehner.github.io/posts/2017-10-10-realtime-watchdog/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/posts/2017-10-10-realtime-watchdog/</guid>
+      <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
+One of them is the dblog UI.
+The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:
+Let&amp;rsquo;s stream log entries to the browser:</description>
+    </item>
+    
+  </channel>
+</rss>

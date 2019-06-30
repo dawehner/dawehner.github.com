@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>composer on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/categories/composer/</link>
+    <description>Recent content in composer on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawehner.github.io/categories/composer/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clone a non composer repo with composer</title>
+      <link>https://dawehner.github.io/posts/2017-05-10-composer-cloning-any-repo/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/posts/2017-05-10-composer-cloning-any-repo/</guid>
+      <description>There are some usecases where you want to integrate arbitrary libraries into your system. One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files. In Drupal we wanted to synchronize these information.
+Therefore we are using this small little bit in composer.json:
+{ &amp;#34;repositories&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;package&amp;#34;, &amp;#34;package&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;namespace/name&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;dev-master&amp;#34;, &amp;#34;source&amp;#34;: { &amp;#34;url&amp;#34;: &amp;#34;https://github.com/example/example-repo.git&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;git&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;master&amp;#34; } } } ] }  Once this is done you can use:</description>
+    </item>
+    
+  </channel>
+</rss>

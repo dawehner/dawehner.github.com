@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.4" />
+
+
+<title>Clone a non composer repo with composer - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Clone a non composer repo with composer - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.iocss/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.iocss/fonts.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io" class="nav-logo">
+    <img src="https://dawehner.github.ioimages/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">Clone a non composer repo with composer</h1>
+    
+
+    <div class="article-content">
+      <p>There are some usecases where you want to integrate arbitrary libraries into your system.
+One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files.
+In Drupal we wanted to synchronize these information.</p>
+
+<p>Therefore we are using this small little bit in composer.json:</p>
+
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+    <span style="color:#ed9d13">&#34;repositories&#34;</span>: [
+        {
+           <span style="color:#ed9d13">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;package&#34;</span>,
+           <span style="color:#ed9d13">&#34;package&#34;</span>: {
+                <span style="color:#ed9d13">&#34;name&#34;</span>: <span style="color:#ed9d13">&#34;namespace/name&#34;</span>,
+                <span style="color:#ed9d13">&#34;version&#34;</span>: <span style="color:#ed9d13">&#34;dev-master&#34;</span>,
+                <span style="color:#ed9d13">&#34;source&#34;</span>: {
+                    <span style="color:#ed9d13">&#34;url&#34;</span>: <span style="color:#ed9d13">&#34;https://github.com/example/example-repo.git&#34;</span>,
+                    <span style="color:#ed9d13">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;git&#34;</span>,
+                    <span style="color:#ed9d13">&#34;reference&#34;</span>: <span style="color:#ed9d13">&#34;master&#34;</span>
+                }
+            }
+        }
+    ]
+}
+</code></pre></div>
+
+<p>Once this is done you can use:</p>
+
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">composer require namespace/name</code></pre></div>
+
+<p>And well this is all you need to know. Pratically you basically specify the composer.json information inside another composer.json file.</p>
+
+    </div>
+ 
+    <ul class="article-taxonomy">
+                  
+      <hr>
+      <li>
+        <i class="fa fa-category"></i><a href="/categories/composer">composer</a><a href="/categories/git">git</a>
+      </li>
+      
+    
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/feed.xml" type="application/rss+xml" target="_blank"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/mobybit/hugo-natrium-theme"><i class="fa fa-github"></i> Code</a>
+          </li>
+          <li>
+            <a href="https://dawehner.github.iosite-notice">Site notice</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+

@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/feed.xml</link>
-    <description>Recent content on Daniel Wehner&#39;s blog</description>
+    <title>Posts on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/posts/</link>
+    <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://dawehner.github.io/feed.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dawehner.github.io/posts/feed.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,16 +31,6 @@ End of October I stumbled upon digital wellbeing on Android: It allows you to se
 One small work we have been doing can be seen in the following video:
  Drupal quickstart from daniel wehner on Vimeo.
 To summarize this video: It should be possible to start Drupal as quickly as possible:</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://dawehner.github.io/about/</link>
-      <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dawehner.github.io/about/</guid>
-      <description>TODO
-A lists of podcasts I enjoy listening to can be found here</description>
     </item>
     
     <item>
@@ -205,16 +196,6 @@ Note: This is for Fish shell, which is a modern shell and really nice to use.</d
       <description>Due to its simplicity compared to other formats like XML, JSON these days is completly ruling the marking of remote APIs, like REST.
 Let&amp;rsquo;s have a look at one small problem which occurs quite often: curl &amp;#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;amp;format=application/json&amp;#34; {&amp;#34;metaData&amp;#34;:{&amp;#34;apiVersion&amp;#34;:&amp;#34;0.2&amp;#34;,&amp;#34;warning&amp;#34;:&amp;#34;ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-Änderungen informiert zu werden&amp;#34;,&amp;#34;copyright&amp;#34;:&amp;#34;Copyright (C) 2014 Daniel Naber (www.danielnaber.de)&amp;#34;,&amp;#34;license&amp;#34;:&amp;#34;GNU LESSER GENERAL PUBLIC LICENSE Version 2.1&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;http://www.openthesaurus.de&amp;#34;,&amp;#34;date&amp;#34;:&amp;#34;Sun Oct 18 09:20:29 CEST 2015&amp;#34;},&amp;#34;synsets&amp;#34;:[{&amp;#34;id&amp;#34;:292,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Erprobung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]},{&amp;#34;id&amp;#34;:4398,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Kontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Leistungsnachweis&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;}]},{&amp;#34;id&amp;#34;:5752,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Klassenarbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Klausur&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Lernerfolgskontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schularbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schulaufgabe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Arbeit&amp;#34;,&amp;#34;level&amp;#34;:&amp;#34;umgangssprachlich&amp;#34;}]},{&amp;#34;id&amp;#34;:9138,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Experiment&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probelauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Studie&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testballon&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockenlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockentest&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]}]}⏎
 Pretty print So you are either a guru or extremly motivated to remember the open braces for your own, otherwise you need help to read the JSON properly.</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>https://dawehner.github.io/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dawehner.github.io/projects/</guid>
-      <description>This page links and describes some of my personal projects.
- A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.org and Github  </description>
     </item>
     
   </channel>

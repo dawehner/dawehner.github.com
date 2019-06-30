@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.4" />
+
+
+<title>Create a PDF from a couple of images - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Create a PDF from a couple of images - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.iocss/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.iocss/fonts.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io" class="nav-logo">
+    <img src="https://dawehner.github.ioimages/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">Create a PDF from a couple of images</h1>
+    
+
+    <div class="article-content">
+      <p>Sometimes you just want to create a PDF from a couple of scanned document papers.
+One solution could be of course to embed these pages into LibreOffice / Word and then use a PDF printer to get it.
+Some people though like tools on the shell.</p>
+
+<p>Therefore we can use imagemagick, which is probably already installed on your system.
+It provides a command line util called <code>convert</code>.
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert first-image.png second-image.png image.png result.pdf</code></pre></div></p>
+
+<p>Maybe a bit too easy.</p>
+
+    </div>
+ 
+    <ul class="article-taxonomy">
+                  
+      <hr>
+      <li>
+        <i class="fa fa-category"></i><a href="/categories/shell">shell</a>
+      </li>
+      
+    
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/feed.xml" type="application/rss+xml" target="_blank"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/mobybit/hugo-natrium-theme"><i class="fa fa-github"></i> Code</a>
+          </li>
+          <li>
+            <a href="https://dawehner.github.iosite-notice">Site notice</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+
