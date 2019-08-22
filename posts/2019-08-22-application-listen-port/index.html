@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.4" />
+
+
+<title>Find out that an application is listen on a given port - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Find out that an application is listen on a given port - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">Find out that an application is listen on a given port</h1>
+    
+
+    <div class="article-content">
+      <p>Choose one of those:</p>
+
+<pre><code>lsof -i | grep LISTEN | grep 3030
+netstat -ltnp | grep -w ':3030'
+fuser 3030
+</code></pre>
+
+    </div>
+ 
+    <ul class="article-taxonomy">
+      
+    
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="https://dawehner.github.io/feed.xml" type="application/rss+xml" target="_blank"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner/dawehner.github.com.source"><i class="fa fa-github"></i> Code</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+

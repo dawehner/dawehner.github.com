@@ -5,10 +5,20 @@
     <description>Recent content on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://dawehner.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Find out that an application is listen on a given port</title>
+      <link>https://dawehner.github.io/posts/2019-08-22-application-listen-port/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/posts/2019-08-22-application-listen-port/</guid>
+      <description>Choose one of those:
+lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 3030  </description>
+    </item>
     
     <item>
       <title>Show largest mysql tables</title>
