@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.4" />
+
+
+<title>Show largest mysql tables - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Show largest mysql tables - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">Show largest mysql tables</h1>
+    
+
+    <div class="article-content">
+      <p>Here is a small sql commando to show the largest mysql tables on your system.</p>
+
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#6ab825;font-weight:bold">SELECT</span> CONCAT(table_schema, <span style="color:#ed9d13">&#39;.&#39;</span>, <span style="color:#6ab825;font-weight:bold">table_name</span>),
+       CONCAT(ROUND(table_rows / <span style="color:#3677a9">1000000</span>, <span style="color:#3677a9">2</span>), <span style="color:#ed9d13">&#39;M&#39;</span>)                                    <span style="color:#6ab825;font-weight:bold">rows</span>,
+       CONCAT(ROUND(data_length / ( <span style="color:#3677a9">1024</span> * <span style="color:#3677a9">1024</span> * <span style="color:#3677a9">1024</span> ), <span style="color:#3677a9">2</span>), <span style="color:#ed9d13">&#39;G&#39;</span>)                    <span style="color:#6ab825;font-weight:bold">DATA</span>,
+       CONCAT(ROUND(index_length / ( <span style="color:#3677a9">1024</span> * <span style="color:#3677a9">1024</span> * <span style="color:#3677a9">1024</span> ), <span style="color:#3677a9">2</span>), <span style="color:#ed9d13">&#39;G&#39;</span>)                   idx,
+       CONCAT(ROUND(( data_length + index_length ) / ( <span style="color:#3677a9">1024</span> * <span style="color:#3677a9">1024</span> * <span style="color:#3677a9">1024</span> ), <span style="color:#3677a9">2</span>), <span style="color:#ed9d13">&#39;G&#39;</span>) total_size,
+       ROUND(index_length / data_length, <span style="color:#3677a9">2</span>)                                           idxfrac
+<span style="color:#6ab825;font-weight:bold">FROM</span>   information_schema.TABLES
+<span style="color:#6ab825;font-weight:bold">ORDER</span>  <span style="color:#6ab825;font-weight:bold">BY</span> data_length + index_length <span style="color:#6ab825;font-weight:bold">DESC</span>
+<span style="color:#6ab825;font-weight:bold">LIMIT</span>  <span style="color:#3677a9">10</span>;</code></pre></div>
+
+<p>Thank you <a href="http://www.mysqlperformanceblog.com/2008/02/04/finding-out-largest-tables-on-mysql-server/">http://www.mysqlperformanceblog.com/2008/02/04/finding-out-largest-tables-on-mysql-server/</a> for the code.</p>
+
+    </div>
+ 
+    <ul class="article-taxonomy">
+                  
+      <hr>
+      <li>
+        <i class="fa fa-category"></i><a href="/categories/mysql">mysql</a>
+      </li>
+      
+    
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="https://dawehner.github.io/feed.xml" type="application/rss+xml" target="_blank"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner/dawehner.github.com.source"><i class="fa fa-github"></i> Code</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+
