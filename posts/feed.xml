@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 17:48:05 +0000</lastBuildDate>
     
 	<atom:link href="https://dawehner.github.io/posts/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Permanent record</title>
+      <link>https://dawehner.github.io/posts/2019-permanent_record/</link>
+      <pubDate>Tue, 19 Nov 2019 17:48:05 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/posts/2019-permanent_record/</guid>
+      <description>wikipedia</description>
+    </item>
     
     <item>
       <title>Find out that an application is listen on a given port</title>
@@ -51,6 +60,15 @@ End of October I stumbled upon digital wellbeing on Android: It allows you to se
 One small work we have been doing can be seen in the following video:
  Drupal quickstart from daniel wehner on Vimeo.
 To summarize this video: It should be possible to start Drupal as quickly as possible:</description>
+    </item>
+    
+    <item>
+      <title>Live 3.0</title>
+      <link>https://dawehner.github.io/posts/2018-live_30/</link>
+      <pubDate>Thu, 19 Apr 2018 17:48:05 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/posts/2018-live_30/</guid>
+      <description>wikipedia link</description>
     </item>
     
     <item>
