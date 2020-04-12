@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
 
 <title>Realtime watchdog powered by PHP, Drupal and Elm - Daniel Wehner&#39;s blog</title>
@@ -63,7 +63,7 @@
 <p>One of them is the dblog UI.</p>
 <p>The classical dblog UI allows you to see the latest log entries, filter and sort by them.
 On top of that I wanted to actually make use of the capabilities of a modern UI:</p>
-<p>Let's stream log entries to the browser:</p>
+<p>Let&rsquo;s stream log entries to the browser:</p>
 <iframe width="630" height="473" src="https://youtube.com/embed/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
 <h2 id="implementation">Implementation</h2>
 <figure>
@@ -82,7 +82,7 @@ On top of that I wanted to actually make use of the capabilities of a modern UI:
 <p>In order to provide real time capabilities each client needs to keep up a websocket connection
 to a server. There are great services out there like <a href="https://pusher.com/">pusher.com</a>, but I
 wanted to experiment with my own.</p>
-<p>The tools I'm using are based upon <a href="http://reactphp.org">reactphp</a>. Don't mix it up with the JS library.</p>
+<p>The tools I&rsquo;m using are based upon <a href="http://reactphp.org">reactphp</a>. Don&rsquo;t mix it up with the JS library.</p>
 <p>The server consists of three parts:</p>
 <ul>
 <li>
@@ -176,7 +176,7 @@ Connecting a websocket in JS is relatively easy:</p>
 });
 </code></pre></div>
 <p>For the actual client code we are using <a href="http://elm-lang.org/">Elm</a>, a delightful language to robust implement web apps.
-I won't go into detail how this works in elm, because the <a href="https://guide.elm-lang.org/architecture/effects/web_sockets.html">official guide</a> is simply well written.
+I won&rsquo;t go into detail how this works in elm, because the <a href="https://guide.elm-lang.org/architecture/effects/web_sockets.html">official guide</a> is simply well written.
 The elm code can be found on <a href="https://gitlab.com/dawehner/admin_ui_elm/blob/8.x-1.x/elm-dblog/src/App.elm">gitlab</a>.</p>
 <h2 id="summary">Summary</h2>
 <p>I know this code is by far not production code, but it shows how much is possible with some client side logic. Do you have other ideas what could be real time?</p>

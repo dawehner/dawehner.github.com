@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2020 17:48:05 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Convert openssh key to RSA PEM</title>
+      <link>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</guid>
+      <description># Generate the ssh key ssh-keygen -t rsa -b 4096 -f /tmp/key # Convert it to a PEM file ssh-keygen -p -m PEM -f /tmp/key </description>
+    </item>
     
     <item>
       <title>Mooncop (Tom Gauld)</title>
@@ -67,7 +76,7 @@ SELECT CONCAT(table_schema, &amp;#39;.&amp;#39;, table_name), CONCAT(ROUND(table
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/seeing-the-screen-in-black-and-white/</guid>
-      <description>Recently I&#39;ve been thinking a lot about what matters to me. As many people I struggle with spending too much time on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit let&#39;s you feel good temporarily, but as long you don&#39;t consume it purposefully, it didn&#39;t really give me anything longterm.
+      <description>Recently I&amp;rsquo;ve been thinking a lot about what matters to me. As many people I struggle with spending too much time on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit let&amp;rsquo;s you feel good temporarily, but as long you don&amp;rsquo;t consume it purposefully, it didn&amp;rsquo;t really give me anything longterm.
 End of October I stumbled upon digital wellbeing on Android: It allows you to set a certain time of the night, at which notifications gets disabled and your screen becomes black and white.</description>
     </item>
     
@@ -101,7 +110,7 @@ To summarize this video: It should be possible to start Drupal as quickly as pos
       <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
 One of them is the dblog UI.
 The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:
-Let&#39;s stream log entries to the browser:</description>
+Let&amp;rsquo;s stream log entries to the browser:</description>
     </item>
     
     <item>
@@ -110,7 +119,7 @@ Let&#39;s stream log entries to the browser:</description>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/emoji-code-review/</guid>
-      <description>Problem From my personal experience the hardest part of projects isn&#39;t the technical side nor the project managment side or anything like this, its communication. Communication problems leads to demotivation, hours of lost work etc.
+      <description>Problem From my personal experience the hardest part of projects isn&amp;rsquo;t the technical side nor the project managment side or anything like this, its communication. Communication problems leads to demotivation, hours of lost work etc.
 A small subset of this space is communicating clearly in code reviews. Many people use tools like github to basically comment on bits of code, but there is no semantic meaning attached to each comment. Given that people need to extract exactly what each comment might mean.</description>
     </item>
     
@@ -134,7 +143,7 @@ which gets all the logs and I was able to cherry-pick from there on.</descriptio
       <guid>https://dawehner.github.io/retry-http-requests/</guid>
       <description>Problem As a matter of life we all learn stuff fails. This might be frame with our favourite picture, the street in front of our house, or more likely requests to APIs.
 A call to a 3rd/2nd party API can fail due to various reasons:
- The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&#39;t like you for a second.</description>
+ The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&amp;rsquo;t like you for a second.</description>
     </item>
     
     <item>
@@ -176,7 +185,7 @@ Traditionally people learn it by copying examples:
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/apcu-and-some-ramblings/</guid>
-      <description>Introduction to APCU One integral part of Drupal 8 is its quite aggressive caching. One subpart is the usage of APC(u) for caching things in the critical path of the system. Let&#39;s first see what APC(u) is and then see some potential problems with it.
+      <description>Introduction to APCU One integral part of Drupal 8 is its quite aggressive caching. One subpart is the usage of APC(u) for caching things in the critical path of the system. Let&amp;rsquo;s first see what APC(u) is and then see some potential problems with it.
 Since PHP 5.6 we have an opcode cache built into PHP, so the previous package APC is not longer needed. There was a small component of APCU, which is basically a key value store shared between all instances of PHP on a single node.</description>
     </item>
     
@@ -186,7 +195,7 @@ Since PHP 5.6 we have an opcode cache built into PHP, so the previous package AP
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
-      <description>Let&#39;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
+      <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
  Copy the files and give a shit about the history Extract the history from an existing repo.  But how would you extract a history from an existing repo?
 Extract history from existing repo.</description>
@@ -254,7 +263,7 @@ Note: This is for Fish shell, which is a modern shell and really nice to use.</d
       
       <guid>https://dawehner.github.io/pretty-print-your-json/</guid>
       <description>Due to its simplicity compared to other formats like XML, JSON these days is completly ruling the marking of remote APIs, like REST.
-Let&#39;s have a look at one small problem which occurs quite often: curl &amp;#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;amp;format=application/json&amp;#34; {&amp;#34;metaData&amp;#34;:{&amp;#34;apiVersion&amp;#34;:&amp;#34;0.2&amp;#34;,&amp;#34;warning&amp;#34;:&amp;#34;ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-Änderungen informiert zu werden&amp;#34;,&amp;#34;copyright&amp;#34;:&amp;#34;Copyright (C) 2014 Daniel Naber (www.danielnaber.de)&amp;#34;,&amp;#34;license&amp;#34;:&amp;#34;GNU LESSER GENERAL PUBLIC LICENSE Version 2.1&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;http://www.openthesaurus.de&amp;#34;,&amp;#34;date&amp;#34;:&amp;#34;Sun Oct 18 09:20:29 CEST 2015&amp;#34;},&amp;#34;synsets&amp;#34;:[{&amp;#34;id&amp;#34;:292,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Erprobung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]},{&amp;#34;id&amp;#34;:4398,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Kontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Leistungsnachweis&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;}]},{&amp;#34;id&amp;#34;:5752,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Klassenarbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Klausur&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Lernerfolgskontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schularbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schulaufgabe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Arbeit&amp;#34;,&amp;#34;level&amp;#34;:&amp;#34;umgangssprachlich&amp;#34;}]},{&amp;#34;id&amp;#34;:9138,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Experiment&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probelauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Studie&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testballon&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockenlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockentest&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]}]}⏎
+Let&amp;rsquo;s have a look at one small problem which occurs quite often: curl &amp;#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;amp;format=application/json&amp;#34; {&amp;#34;metaData&amp;#34;:{&amp;#34;apiVersion&amp;#34;:&amp;#34;0.2&amp;#34;,&amp;#34;warning&amp;#34;:&amp;#34;ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-Änderungen informiert zu werden&amp;#34;,&amp;#34;copyright&amp;#34;:&amp;#34;Copyright (C) 2014 Daniel Naber (www.danielnaber.de)&amp;#34;,&amp;#34;license&amp;#34;:&amp;#34;GNU LESSER GENERAL PUBLIC LICENSE Version 2.1&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;http://www.openthesaurus.de&amp;#34;,&amp;#34;date&amp;#34;:&amp;#34;Sun Oct 18 09:20:29 CEST 2015&amp;#34;},&amp;#34;synsets&amp;#34;:[{&amp;#34;id&amp;#34;:292,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Erprobung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]},{&amp;#34;id&amp;#34;:4398,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Kontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Leistungsnachweis&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;}]},{&amp;#34;id&amp;#34;:5752,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Klassenarbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Klausur&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Lernerfolgskontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schularbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schulaufgabe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Arbeit&amp;#34;,&amp;#34;level&amp;#34;:&amp;#34;umgangssprachlich&amp;#34;}]},{&amp;#34;id&amp;#34;:9138,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Experiment&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probelauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Studie&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testballon&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockenlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockentest&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]}]}⏎
 Pretty print So you are either a guru or extremly motivated to remember the open braces for your own, otherwise you need help to read the JSON properly.</description>
     </item>
     

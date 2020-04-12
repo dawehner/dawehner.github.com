@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
 
 <title>Profiling PHP in ddev using tideways locally - Daniel Wehner&#39;s blog</title>
@@ -71,10 +71,10 @@ all locally.</p>
 <p>We will use the <a href="https://github.com/tideways/php-xhprof-extension">php-xhprof-extension</a> project, which is a fork for the old facebook project called xhprof. Tideways continues to maintain this extension and updates it to modern PHP versions.</p>
 <p>In order to install it, you have to manipulate the ddev docker file:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker">.ddev/web-build/Dockerfile<span style="color:#a61717;background-color:#e3d2d2">
-</span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#a61717;background-color:#e3d2d2">
+</span><span style="color:#a61717;background-color:#e3d2d2">
 </span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#6ab825;font-weight:bold">ARG</span> <span style="color:#40ffff">BASE_IMAGE</span>=drud/ddev-webserver:v1.12.1<span style="color:#a61717;background-color:#e3d2d2">
 </span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#6ab825;font-weight:bold">FROM</span><span style="color:#ed9d13"> $BASE_IMAGE</span><span style="color:#a61717;background-color:#e3d2d2">
-</span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#a61717;background-color:#e3d2d2">
+</span><span style="color:#a61717;background-color:#e3d2d2">
 </span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#6ab825;font-weight:bold">RUN</span> <span style="color:#40ffff">TEMP_DEB</span>=<span style="color:#ed9d13">&#34;</span><span style="color:#6ab825;font-weight:bold">$(</span>mktemp<span style="color:#6ab825;font-weight:bold">)</span><span style="color:#ed9d13">&#34;</span> &amp;&amp; wget -O <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$TEMP_DEB</span><span style="color:#ed9d13">&#34;</span> <span style="color:#ed9d13">&#39;https://github.com/tideways/php-xhprof-extension/releases/download/v5.0.2/tideways-xhprof_5.0.2_amd64.deb&#39;</span> &amp;&amp; sudo dpkg -i <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$TEMP_DEB</span><span style="color:#ed9d13">&#34;</span> &amp;&amp; rm -f <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$TEMP_DEB</span><span style="color:#ed9d13">&#34;</span></code></pre></div>
 <p>On top of that you need to enable the php extension:
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">.ddev/php/my-php.ini
@@ -108,7 +108,7 @@ I created a small script for ease of access:</p>
 
 <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Usage: xhprof-ui-run.sh PROJECTDIR&#34;</span>
 <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;Running xhrpof UI on 3731&#34;</span>
-docker run --rm -p 3731:80 --name jeromebreton-xhprof-simple-viewer -v <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">/traces</span><span style="color:#ed9d13">&#34;</span>:/traces jeromebreton/xhprof-simple-viewer
+docker run --rm -p 3731:80 --name jeromebreton-xhprof-simple-viewer -v <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$1</span><span style="color:#ed9d13">/traces&#34;</span>:/traces jeromebreton/xhprof-simple-viewer
 
 <span style="color:#24909d">cd</span> -</code></pre></div>
 <p>With this script I can quickly launch a user interface:</p>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/categories/ssh/</link>
+    <description>Recent content in ssh on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawehner.github.io/categories/ssh/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Convert openssh key to RSA PEM</title>
+      <link>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</guid>
+      <description># Generate the ssh key ssh-keygen -t rsa -b 4096 -f /tmp/key # Convert it to a PEM file ssh-keygen -p -m PEM -f /tmp/key </description>
+    </item>
+    
+  </channel>
+</rss>

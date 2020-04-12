@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
 
 <title>APCU and some ramblings - Daniel Wehner&#39;s blog</title>
@@ -60,14 +60,14 @@
     <div class="article-content e-content">
       <h2 id="introduction-to-apcu">Introduction to APCU</h2>
 <p>One integral part of Drupal 8 is its quite aggressive caching. One subpart is the usage of APC(u) for caching things in the critical path of the
-system. Let's first see what APC(u) is and then see some potential problems with it.</p>
+system. Let&rsquo;s first see what APC(u) is and then see some potential problems with it.</p>
 <p>Since PHP 5.6 we have an opcode cache built into PHP, so the previous package APC is not longer needed. There was a small component of APCU, which
 is basically a key value store shared between all instances of PHP on a single node. This shared memory model allowed really fast retrieval of
 information for common data of PHP applications. The problem is called <a href="https://github.com/krakjoe/apcu">APCU</a>.</p>
 <h2 id="problems-on-concurrent-requests">Problems on concurrent requests</h2>
-<p>Let's assume you work on a PHP application, with just one HTTP request and response. In this world data is simply written to APCU when needed.
+<p>Let&rsquo;s assume you work on a PHP application, with just one HTTP request and response. In this world data is simply written to APCU when needed.
 When you have multiple requests at the same time, things starts to become harder:
-Let's have a look at an example of a counter which is increased by one, in two processes at the same time.</p>
+Let&rsquo;s have a look at an example of a counter which is increased by one, in two processes at the same time.</p>
 <ul>
 <li>Process A: Reads counter: 0</li>
 <li>Process B: Reads counter: 0</li>
@@ -82,7 +82,7 @@ and <a href="https://github.com/krakjoe/apcu/blob/b8c585a3af69d4151b9b53c1dbc81d
 obvious whether there is some lock protection, as <a href="https://github.com/php/php-src/blob/master/Zend/zend_operators.h#L521">fast_long_add_function</a> boils
 down to some crazy assembler. Anyone knows more about it?</p>
 <h2 id="problems-on-big-sites">Problems on big sites</h2>
-<p>Let's assume you work on an actual real live PHP application, which has multiple HTTP requests at the same time. For example you could have image
+<p>Let&rsquo;s assume you work on an actual real live PHP application, which has multiple HTTP requests at the same time. For example you could have image
 on the site, which are generated/resized on the fly (Image styles called in Drupal). In this case you have multiple HTTP requests at the same time,
 all trying to write data to APCU at the same time. Two people have seen a deadlock now on a site with multiple images and media in the edit UI. All PHP processes started to block.</p>
 <p>In order to understand why this could be a problem we need to first understand how APCU stores its data internally.
@@ -91,9 +91,9 @@ find its slot and then iterate over all slot entries to find the entry. As you c
 <p>When you now write the same key twice, for example after clearing the cache, you would like to avoid saving the same key twice. Therefore APCU sets a lock before writing the actual data. This though
 can lead to other problems, like <a href="https://github.com/krakjoe/apcu/issues/86">a deadlock</a>, when the underlying PHP process dies. The lock will stick around for a while.</p>
 <p>In case you have a filled up cache, with a lot of fragmentation, this could also lead to a slow read and write process.
-At some point memcache and even a database could be just faster, as they use a <a href="https://en.wikipedia.org/wiki/Hash_table">hash table</a>, which has on average a O(1) speed, as long they don't have hash collisions.
+At some point memcache and even a database could be just faster, as they use a <a href="https://en.wikipedia.org/wiki/Hash_table">hash table</a>, which has on average a O(1) speed, as long they don&rsquo;t have hash collisions.
 Why does APCU not use a hash map? No idea, maybe you know? On top of that, APCU also seems not be able to store data at some point, as some people report on an <a href="https://github.com/krakjoe/apcu/issues/127">issue</a>.</p>
-<p>So questions I couldn't answer?</p>
+<p>So questions I couldn&rsquo;t answer?</p>
 <ul>
 <li>
 <p>Where is this deadlock coming from?</p>

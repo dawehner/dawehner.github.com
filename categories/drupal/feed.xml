@@ -32,7 +32,7 @@ To summarize this video: It should be possible to start Drupal as quickly as pos
       <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
 One of them is the dblog UI.
 The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:
-Let&#39;s stream log entries to the browser:</description>
+Let&amp;rsquo;s stream log entries to the browser:</description>
     </item>
     
   </channel>

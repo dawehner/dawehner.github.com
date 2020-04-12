@@ -6,7 +6,7 @@
     <description>Recent content in git on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dawehner.github.io/categories/git/feed.xml" rel="self" type="application/rss+xml" />
     
@@ -51,7 +51,7 @@ Therefore we are using this small little bit in composer.json:
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
-      <description>Let&#39;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
+      <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
  Copy the files and give a shit about the history Extract the history from an existing repo.  But how would you extract a history from an existing repo?
 Extract history from existing repo.</description>
