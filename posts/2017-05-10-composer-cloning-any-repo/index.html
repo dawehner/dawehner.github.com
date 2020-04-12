@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>Clone a non composer repo with composer - Daniel Wehner&#39;s blog</title>
@@ -58,9 +58,7 @@
       <p>There are some usecases where you want to integrate arbitrary libraries into your system.
 One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files.
 In Drupal we wanted to synchronize these information.</p>
-
 <p>Therefore we are using this small little bit in composer.json:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
     <span style="color:#ed9d13">&#34;repositories&#34;</span>: [
         {
@@ -78,11 +76,8 @@ In Drupal we wanted to synchronize these information.</p>
     ]
 }
 </code></pre></div>
-
 <p>Once this is done you can use:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">composer require namespace/name</code></pre></div>
-
 <p>And well this is all you need to know. Pratically you basically specify the composer.json information inside another composer.json file.</p>
 
     </div>

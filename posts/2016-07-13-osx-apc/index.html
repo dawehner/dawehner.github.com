@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>APCU and some ramblings - Daniel Wehner&#39;s blog</title>
@@ -55,23 +55,16 @@
     
 
     <div class="article-content">
-      
-
-<h2 id="introduction-to-apcu">Introduction to APCU</h2>
-
+      <h2 id="introduction-to-apcu">Introduction to APCU</h2>
 <p>One integral part of Drupal 8 is its quite aggressive caching. One subpart is the usage of APC(u) for caching things in the critical path of the
-system. Let&rsquo;s first see what APC(u) is and then see some potential problems with it.</p>
-
+system. Let's first see what APC(u) is and then see some potential problems with it.</p>
 <p>Since PHP 5.6 we have an opcode cache built into PHP, so the previous package APC is not longer needed. There was a small component of APCU, which
 is basically a key value store shared between all instances of PHP on a single node. This shared memory model allowed really fast retrieval of
 information for common data of PHP applications. The problem is called <a href="https://github.com/krakjoe/apcu">APCU</a>.</p>
-
 <h2 id="problems-on-concurrent-requests">Problems on concurrent requests</h2>
-
-<p>Let&rsquo;s assume you work on a PHP application, with just one HTTP request and response. In this world data is simply written to APCU when needed.
+<p>Let's assume you work on a PHP application, with just one HTTP request and response. In this world data is simply written to APCU when needed.
 When you have multiple requests at the same time, things starts to become harder:
-Let&rsquo;s have a look at an example of a counter which is increased by one, in two processes at the same time.</p>
-
+Let's have a look at an example of a counter which is increased by one, in two processes at the same time.</p>
 <ul>
 <li>Process A: Reads counter: 0</li>
 <li>Process B: Reads counter: 0</li>
@@ -80,57 +73,53 @@ Let&rsquo;s have a look at an example of a counter which is increased by one, in
 <li>Process A: Writes counter: 1</li>
 <li>Process B: Writes counter: 1</li>
 </ul>
-
 <p>As you see, multiple processes acting together can be a problem.</p>
-
 <p>APCU has a counter increment/decrement build in: <a href="https://github.com/krakjoe/apcu/blob/b8c585a3af69d4151b9b53c1dbc81d9b637de6a1/php_apc.c#L547">apcu_inc</a>
 and <a href="https://github.com/krakjoe/apcu/blob/b8c585a3af69d4151b9b53c1dbc81d9b637de6a1/php_apc.c#L581">apcu_dec</a>. Just by reading this code though its not
 obvious whether there is some lock protection, as <a href="https://github.com/php/php-src/blob/master/Zend/zend_operators.h#L521">fast_long_add_function</a> boils
 down to some crazy assembler. Anyone knows more about it?</p>
-
 <h2 id="problems-on-big-sites">Problems on big sites</h2>
-
-<p>Let&rsquo;s assume you work on an actual real live PHP application, which has multiple HTTP requests at the same time. For example you could have image
+<p>Let's assume you work on an actual real live PHP application, which has multiple HTTP requests at the same time. For example you could have image
 on the site, which are generated/resized on the fly (Image styles called in Drupal). In this case you have multiple HTTP requests at the same time,
 all trying to write data to APCU at the same time. Two people have seen a deadlock now on a site with multiple images and media in the edit UI. All PHP processes started to block.</p>
-
 <p>In order to understand why this could be a problem we need to first understand how APCU stores its data internally.
 It separetes the memory in things called slots, per default 2000 of them. Each of those slots are filled up equally over time <a href="https://github.com/krakjoe/apcu/blob/b8c585a3af69d4151b9b53c1dbc81d9b637de6a1/apc_cache.c#L342">source</a>, by basically hashing the key of the insert, which should result in a equally distributed number. In order to find a cache entry, you again calculate the hash of the key,
 find its slot and then iterate over all slot entries to find the entry. As you could imagine the more entries you have, the slower it gets, as it takes time to iterate the single slot <a href="https://github.com/krakjoe/apcu/blob/b8c585a3af69d4151b9b53c1dbc81d9b637de6a1/apc_cache.c#L449">source</a>.</p>
-
 <p>When you now write the same key twice, for example after clearing the cache, you would like to avoid saving the same key twice. Therefore APCU sets a lock before writing the actual data. This though
 can lead to other problems, like <a href="https://github.com/krakjoe/apcu/issues/86">a deadlock</a>, when the underlying PHP process dies. The lock will stick around for a while.</p>
-
 <p>In case you have a filled up cache, with a lot of fragmentation, this could also lead to a slow read and write process.
-At some point memcache and even a database could be just faster, as they use a <a href="https://en.wikipedia.org/wiki/Hash_table">hash table</a>, which has on average a O(1) speed, as long they don&rsquo;t have hash collisions.
+At some point memcache and even a database could be just faster, as they use a <a href="https://en.wikipedia.org/wiki/Hash_table">hash table</a>, which has on average a O(1) speed, as long they don't have hash collisions.
 Why does APCU not use a hash map? No idea, maybe you know? On top of that, APCU also seems not be able to store data at some point, as some people report on an <a href="https://github.com/krakjoe/apcu/issues/127">issue</a>.</p>
-
-<p>So questions I couldn&rsquo;t answer?</p>
-
+<p>So questions I couldn't answer?</p>
 <ul>
-<li>Where is this deadlock coming from?</li>
-<li>Is APCU designed for the kind of data of Drupal (200k single entries) but also a lot of small entries (classloader entries)?</li>
-<li>Is APCU fast enough (faster than other caching solutions (redis, memcache)) once you have a lot of entries in there?</li>
-<li>Is the increment example from above atomic?</li>
-<li>Why does APCU uses per default just 257, even it would support so much more?</li>
-</ul>
-
+<li>
+<p>Where is this deadlock coming from?</p>
+</li>
+<li>
+<p>Is APCU designed for the kind of data of Drupal (200k single entries) but also a lot of small entries (classloader entries)?</p>
+</li>
+<li>
+<p>Is APCU fast enough (faster than other caching solutions (redis, memcache)) once you have a lot of entries in there?</p>
+</li>
+<li>
+<p>Is the increment example from above atomic?</p>
+</li>
+<li>
+<p>Why does APCU uses per default just 257, even it would support so much more?</p>
 <p><a href="https://github.com/krakjoe/apcu/blob/b8c585a3af69d4151b9b53c1dbc81d9b637de6a1/apcue/apcue.c#L95">source 1</a> passes 10 as second parameter.
-  <a href="https://github.com/krakjoe/apcu/blob/9cb0c427f3f79853ea3cb48999776e6209e5f601/apc_cache.c#L261">source 2</a> uses this number for calculating the amount of slots:
-  So this results in 257 slots by default.</p>
-
+<a href="https://github.com/krakjoe/apcu/blob/9cb0c427f3f79853ea3cb48999776e6209e5f601/apc_cache.c#L261">source 2</a> uses this number for calculating the amount of slots:
+So this results in 257 slots by default.</p>
+</li>
+</ul>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#999;font-style:italic">/* calculate number of slots */</span>
 nslots = make_prime(size_hint &gt; <span style="color:#3677a9">0</span> ? size_hint : <span style="color:#3677a9">2000</span>);</code></pre></div>
-
 <ul>
 <li>Is APCU worth to use?</li>
 <li>What kind of cache entries should be stored in APCU? Small ones, big ones, etc.?</li>
 <li>This blog post is hard to understand? Please create issues and fork it: <a href="https://github.com/dawehner/dawehner.github.com">https://github.com/dawehner/dawehner.github.com</a></li>
 <li>Please give feedback, or answer some of the questions below &hellip;</li>
 </ul>
-
 <h2 id="fix-for-the-problem-described-above">Fix for the problem described above</h2>
-
 <p>Actually as result I decided to disable APCU at least on my local machine due to the deadlock.</p>
 
     </div>

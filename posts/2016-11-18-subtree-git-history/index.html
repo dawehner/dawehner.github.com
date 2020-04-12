@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>Extract a folder from a git repo into its own repo - Daniel Wehner&#39;s blog</title>
@@ -55,26 +55,17 @@
     
 
     <div class="article-content">
-      
-
-<p>Let&rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.</p>
-
+      <p>Let's assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.</p>
 <p>Now there are a two of possiblities:</p>
-
 <ul>
 <li>Copy the files and give a shit about the history</li>
 <li>Extract the history from an existing repo.</li>
 </ul>
-
 <p>But how would you extract a history from an existing repo?</p>
-
 <h3 id="extract-history-from-existing-repo">Extract history from existing repo.</h3>
-
 <p>Step 1: Clone the existing repo into a new one:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone existingrepo new_opensource_repo
 <span style="color:#24909d">cd</span> new_opensource_repo</code></pre></div>
-
 <p>Step 2: Remove every commit beside the ones in the subfolder:
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git filter-branch --prune-empty --subdirectory-filter YOUR_FOLDER_NAME master</code></pre></div></p>
 

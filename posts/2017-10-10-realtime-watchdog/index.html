@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>Realtime watchdog powered by PHP, Drupal and Elm - Daniel Wehner&#39;s blog</title>
@@ -55,51 +55,35 @@
     
 
     <div class="article-content">
-      
-
-<h2 id="motivation">Motivation</h2>
-
+      <h2 id="motivation">Motivation</h2>
 <p>For my own interest, so mostly for the sake of learning new things, I <a href="https://gitlab.com/dawehner/admin_ui_elm">try</a> to implement some classical Drupal UIs in ELM.</p>
-
 <p>One of them is the dblog UI.</p>
-
 <p>The classical dblog UI allows you to see the latest log entries, filter and sort by them.
 On top of that I wanted to actually make use of the capabilities of a modern UI:</p>
-
-<p>Let&rsquo;s stream log entries to the browser:</p>
-
+<p>Let's stream log entries to the browser:</p>
 <iframe width="630" height="473" src="https://youtube.com/embed/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
-
 <h2 id="implementation">Implementation</h2>
-
 <figure>
     <img src="/img/debugger.jpg"/> <figcaption>
             <h4>Slack debugger</h4>
         </figcaption>
 </figure>
 
-
 <p>A few weeks ago a friend told me: &ldquo;Do you want to know how to open the chrome debugger in slack? Just press 5 times on the icon of your team.&rdquo; A few minutes later we figured out how communication happens in slack:</p>
-
 <ul>
 <li>Sending messages is using HTTP requests to some server</li>
 <li>Retrieving messages is using websockets from another port</li>
 </ul>
-
 <p>Given that having a similar architecture for log streaming seems not to be the worst idea.</p>
-
 <h3 id="the-server">The server</h3>
-
 <p>In order to provide real time capabilities each client needs to keep up a websocket connection
 to a server. There are great services out there like <a href="https://pusher.com/">pusher.com</a>, but I
 wanted to experiment with my own.</p>
-
-<p>The tools I&rsquo;m using are based upon <a href="http://reactphp.org">reactphp</a>. Don&rsquo;t mix it up with the JS library.</p>
-
+<p>The tools I'm using are based upon <a href="http://reactphp.org">reactphp</a>. Don't mix it up with the JS library.</p>
 <p>The server consists of three parts:</p>
-
 <ul>
-<li><p>A HTTP server listening to incoming POST requests which push new log entries
+<li>
+<p>A HTTP server listening to incoming POST requests which push new log entries
 and stores the POST body.
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
 <span style="color:#40ffff">$server</span> = <span style="color:#6ab825;font-weight:bold">new</span> \React\Http\Server(<span style="color:#6ab825;font-weight:bold">function</span> (Psr\Http\Message\ServerRequestInterface <span style="color:#40ffff">$request</span>) <span style="color:#6ab825;font-weight:bold">use</span> (&amp;<span style="color:#40ffff">$my_server</span>) {
@@ -113,11 +97,12 @@ and stores the POST body.
 
 <span style="color:#40ffff">$socket</span> = <span style="color:#6ab825;font-weight:bold">new</span> React\Socket\Server(<span style="color:#3677a9">8080</span>, <span style="color:#40ffff">$loop</span>);
 <span style="color:#40ffff">$server</span>-&gt;<span style="color:#bbb">listen</span>(<span style="color:#40ffff">$socket</span>);
-</code></pre></div></p></li>
-
-<li><p>A websocket server which has a connection to every client</p></li>
+</code></pre></div></p>
+</li>
+<li>
+<p>A websocket server which has a connection to every client</p>
+</li>
 </ul>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
 <span style="color:#999;font-style:italic">// Actual logic of the websocket server. This is 
 </span><span style="color:#999;font-style:italic">// what all the clients connect to.
@@ -154,12 +139,10 @@ and stores the POST body.
 <span style="color:#40ffff">$app</span>-&gt;<span style="color:#bbb">route</span>(<span style="color:#ed9d13">&#39;/test&#39;</span>, <span style="color:#40ffff">$my_server</span>, <span style="color:#6ab825;font-weight:bold">array</span>(<span style="color:#ed9d13">&#39;*&#39;</span>));
 <span style="color:#40ffff">$app</span>-&gt;<span style="color:#bbb">route</span>(<span style="color:#ed9d13">&#39;/echo&#39;</span>, <span style="color:#6ab825;font-weight:bold">new</span> Ratchet\Server\EchoServer, <span style="color:#6ab825;font-weight:bold">array</span>(<span style="color:#ed9d13">&#39;*&#39;</span>));
 </code></pre></div>
-
 <ul>
 <li>Once the HTTP server retrieved the post request, we call the websocket server
 which has all connections open.</li>
 </ul>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
 <span style="color:#40ffff">$server</span> = <span style="color:#6ab825;font-weight:bold">new</span> \React\Http\Server(<span style="color:#6ab825;font-weight:bold">function</span> (Psr\Http\Message\ServerRequestInterface <span style="color:#40ffff">$request</span>) <span style="color:#6ab825;font-weight:bold">use</span> (&amp;<span style="color:#40ffff">$my_server</span>) {
    <span style="color:#999;font-style:italic">// ...
@@ -176,32 +159,23 @@ which has all connections open.</li>
 </span><span style="color:#999;font-style:italic"></span>      <span style="color:#40ffff">$my_server</span>-&gt;<span style="color:#bbb">sendMessages</span>(<span style="color:#40ffff">$content</span>);
     });
 </code></pre></div>
-
 <p>I start this server simply by using <code>php server.php</code>. On production you want to ensure
 its running using for example supervisord.</p>
-
 <h3 id="drupal-side">Drupal side</h3>
-
 <p>On the Drupal side we want to push every dblog entry to this server via HTTP, as this is
 a really easy to use protocol as a client.
 Therefore we implemented a logger, see <a href="https://gitlab.com/dawehner/admin_ui_elm/blob/8.x-1.x/dblog_websocket/src/Logger.php">gitlab</a>.</p>
-
 <h3 id="client">Client</h3>
-
 <p>Browsers have good support for websockets:
 Connecting a websocket in JS is relatively easy:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#6ab825;font-weight:bold">new</span> WebSocket(<span style="color:#ed9d13">&#39;ws://localhost:8081/test&#39;</span>)).addEventListener(<span style="color:#ed9d13">&#39;message&#39;</span>, (event) =&gt; {
     console.log(<span style="color:#ed9d13">&#39;Message from server &#39;</span>, event.data);
 });
 </code></pre></div>
-
 <p>For the actual client code we are using <a href="http://elm-lang.org/">Elm</a>, a delightful language to robust implement web apps.
-I won&rsquo;t go into detail how this works in elm, because the <a href="https://guide.elm-lang.org/architecture/effects/web_sockets.html">official guide</a> is simply well written.
+I won't go into detail how this works in elm, because the <a href="https://guide.elm-lang.org/architecture/effects/web_sockets.html">official guide</a> is simply well written.
 The elm code can be found on <a href="https://gitlab.com/dawehner/admin_ui_elm/blob/8.x-1.x/elm-dblog/src/App.elm">gitlab</a>.</p>
-
 <h2 id="summary">Summary</h2>
-
 <p>I know this code is by far not production code, but it shows how much is possible with some client side logic. Do you have other ideas what could be real time?</p>
 
     </div>

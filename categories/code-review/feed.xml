@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code review on Daniel Wehner&#39;s blog</title>
@@ -17,8 +17,8 @@
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/posts/2017-09-07-emoji-code-review/</guid>
-      <description>Problem From my personal experience the hardest part of projects isn&amp;rsquo;t the technical side nor the project managment side or anything like this, its communication. Communication problems leads to demotivation, hours of lost work etc.
-A small subset of this space is communicating clearly in code reviews. Many people use tools like github to basically comment on bits of code, but there is no semantic meaning attached to each comment.</description>
+      <description>Problem From my personal experience the hardest part of projects isn&#39;t the technical side nor the project managment side or anything like this, its communication. Communication problems leads to demotivation, hours of lost work etc.
+A small subset of this space is communicating clearly in code reviews. Many people use tools like github to basically comment on bits of code, but there is no semantic meaning attached to each comment. Given that people need to extract exactly what each comment might mean.</description>
     </item>
     
   </channel>

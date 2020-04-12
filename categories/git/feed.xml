@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Daniel Wehner&#39;s blog</title>
@@ -30,7 +30,8 @@ which gets all the logs and I was able to cherry-pick from there on.</descriptio
       
       <guid>https://dawehner.github.io/posts/2017-05-11-clear-render-cache-on-template-changes/</guid>
       <description>Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.
-On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.</description>
+On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.
+As solution we have written a script which invalidates the render cache when someone touches a template.</description>
     </item>
     
     <item>
@@ -50,7 +51,7 @@ Therefore we are using this small little bit in composer.json:
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/posts/2016-11-18-subtree-git-history/</guid>
-      <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
+      <description>Let&#39;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
  Copy the files and give a shit about the history Extract the history from an existing repo.  But how would you extract a history from an existing repo?
 Extract history from existing repo.</description>

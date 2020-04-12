@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>Using tar the easy way - Daniel Wehner&#39;s blog</title>
@@ -55,11 +55,9 @@
     
 
     <div class="article-content">
-      <p>[Tar](<a href="https://en.wikipedia.org/wiki/Tar_(computing">https://en.wikipedia.org/wiki/Tar_(computing</a>) (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators
+      <p>[Tar](<a href="https://en.wikipedia.org/wiki/Tar_(computing)">https://en.wikipedia.org/wiki/Tar_(computing)</a> (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators
 and users of unix like systems. It allows you to create archives of files and extract them later.</p>
-
 <p>Traditionally people learn it by copying examples:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># Create / extract tar file</span>
 tar cf example.tar file folder file2
 tar xf example.tar file
@@ -72,19 +70,15 @@ tar jxf example.tar.bz2
 <span style="color:#999;font-style:italic"># Create / extract tar.xz file</span>
 tar Jxf example.tar.xf file folder file2
 tar Jcf example.tar.xf</code></pre></div>
-
 <p>The parameters contains three different bits:</p>
-
 <ul>
 <li>f (you want to deal with a file instead of something from stdin/stdout)</li>
-<li>x (extract) or create/compress &copy;</li>
+<li>x (extract) or create/compress (c)</li>
 <li>z/j/J (deal with different file types). This one is certainly the hardest one to remember.</li>
 </ul>
-
-<p>It turns out, you <strong>don&rsquo;t</strong> actually have to bother with it. Modern version of tar (both the BSD and GNU version)
+<p>It turns out, you <strong>don't</strong> actually have to bother with it. Modern version of tar (both the BSD and GNU version)
 <strong>extract</strong> the filetype out of the file extension you specify <strong>automatically</strong>.
 So all you need for the examples above is:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># Create / extract tar file</span>
 tar cf example.tar file folder file2
 tar xf example.tar file
@@ -97,9 +91,7 @@ tar xf example.tar.bz2
 <span style="color:#999;font-style:italic"># Create / extract tar.xz file</span>
 tar xf example.tar.xf file folder file2
 tar cf example.tar.xf</code></pre></div>
-
 <p><strong>TL;DR; Forget about jJz on tar, it is not needed</strong>.</p>
-
 <p>Final tip: If you want to see which files got extracted, put &ldquo;v&rdquo; on it as well.</p>
 
     </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>Automatically clear the render cache when templates change - Daniel Wehner&#39;s blog</title>
@@ -55,21 +55,13 @@
     
 
     <div class="article-content">
-      
-
-<p>Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.</p>
-
+      <p>Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.</p>
 <p>On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.</p>
-
 <p>As solution we have written a script which invalidates the render cache when someone touches a template.</p>
-
 <h2 id="show-me-the-code">Show me the code!!</h2>
-
 <p>We used a tool which listens to changes in the file system.
 Everytime a file changes we call a script, which then clears the render cache.</p>
-
 <p>Required steps to set it up:</p>
-
 <ul>
 <li>Install fswatch
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  brew install fswatch</code></pre></div></li>
@@ -116,7 +108,6 @@ Everytime a file changes we call a script, which then clears the render cache.</
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fswatch -0 . | xargs -0 -I {} -t sh -c <span style="color:#ed9d13">&#39;php scripts/name/template-render-invalidator.php {}&#39;</span></code></pre></div></li>
 <li>For some extra goodness place this in a composer script.</li>
 </ul>
-
 <p>Have you done anything similar and maybe solved it different?</p>
 
     </div>

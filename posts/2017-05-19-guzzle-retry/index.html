@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <title>Retry HTTP requests - Daniel Wehner&#39;s blog</title>
@@ -55,36 +55,25 @@
     
 
     <div class="article-content">
-      
-
-<h2 id="problem">Problem</h2>
-
+      <h2 id="problem">Problem</h2>
 <p>As a matter of life we all learn stuff fails. This might be frame with our
 favourite picture, the street in front of our house, or more likely requests to APIs.</p>
-
 <p>A call to a 3rd/2nd party API can fail due to various reasons:</p>
-
 <ul>
 <li>The client / server is under high load, which results into a timeout potentially</li>
 <li>The internet routes packages weird</li>
 <li>Currently something along the stack is deployed</li>
-<li>The universe just doesn&rsquo;t like you for a second.</li>
+<li>The universe just doesn't like you for a second.</li>
 </ul>
-
 <p>When you detect a failing request you can do many things</p>
-
 <ul>
 <li>You catch the error, log it and present the user a nice message</li>
 <li>Ideally you pass along a do not cache header, so your reverse proxy/CMS takes that into account</li>
 </ul>
-
-<p>Still, your user doesn&rsquo;t see the content of the page. This might be okay when the other server is down,
+<p>Still, your user doesn't see the content of the page. This might be okay when the other server is down,
 but as layed out above, this might not be true.</p>
-
 <h2 id="solution">Solution</h2>
-
 <p>A common strategy is to retry for:</p>
-
 <ul>
 <li>1 second</li>
 <li>2 seconds</li>
@@ -92,14 +81,10 @@ but as layed out above, this might not be true.</p>
 <li>8 seconds</li>
 <li>&hellip;</li>
 </ul>
-
 <p>You get the idea. Its using this expotential scheme to not bombard the other server in case
 its actually down.</p>
-
 <h2 id="solution-in-guzzle">Solution in guzzle</h2>
-
 <p>Guzzle, the most common HTTP library in PHP makes this possible out of the box:</p>
-
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
 
 <span style="color:#6ab825;font-weight:bold">require_once</span> <span style="color:#40ffff">__DIR__</span> . <span style="color:#ed9d13">&#39;/vendor/autoload.php&#39;</span>;
@@ -115,9 +100,7 @@ its actually down.</p>
 </span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#40ffff">$retry</span> &lt; <span style="color:#3677a9">10</span>;
 }));
 </code></pre></div>
-
-<p>Note, in previous versions of this snippet we didn&rsquo;t checked for the value.</p>
-
+<p>Note, in previous versions of this snippet we didn't checked for the value.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
 <span style="color:#40ffff">$client</span> = <span style="color:#6ab825;font-weight:bold">new</span> \GuzzleHttp\Client([<span style="color:#ed9d13">&#39;handler&#39;</span> =&gt; <span style="color:#40ffff">$handler_stack</span>]);
 
