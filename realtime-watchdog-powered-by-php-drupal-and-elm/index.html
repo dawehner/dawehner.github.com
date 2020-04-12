@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>Realtime watchdog powered by PHP, Drupal and Elm - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Realtime watchdog powered by PHP, Drupal and Elm - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="webmention" href="https://webmention.io/dawehner.github.io/webmention" />
+<link rel="pingback" href="https://webmention.io/dawehner.github.io/xmlrpc" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article h-entry">
+    <h1 class="article-title p-name">Realtime watchdog powered by PHP, Drupal and Elm</h1>
+    
+
+    <div class="article-content e-content">
+      <h2 id="motivation">Motivation</h2>
+<p>For my own interest, so mostly for the sake of learning new things, I <a href="https://gitlab.com/dawehner/admin_ui_elm">try</a> to implement some classical Drupal UIs in ELM.</p>
+<p>One of them is the dblog UI.</p>
+<p>The classical dblog UI allows you to see the latest log entries, filter and sort by them.
+On top of that I wanted to actually make use of the capabilities of a modern UI:</p>
+<p>Let's stream log entries to the browser:</p>
+<iframe width="630" height="473" src="https://youtube.com/embed/H0EINy-cYZo" frameborder="0" allowfullscreen></iframe>
+<h2 id="implementation">Implementation</h2>
+<figure>
+    <img src="/img/debugger.jpg"/> <figcaption>
+            <h4>Slack debugger</h4>
+        </figcaption>
+</figure>
+
+<p>A few weeks ago a friend told me: &ldquo;Do you want to know how to open the chrome debugger in slack? Just press 5 times on the icon of your team.&rdquo; A few minutes later we figured out how communication happens in slack:</p>
+<ul>
+<li>Sending messages is using HTTP requests to some server</li>
+<li>Retrieving messages is using websockets from another port</li>
+</ul>
+<p>Given that having a similar architecture for log streaming seems not to be the worst idea.</p>
+<h3 id="the-server">The server</h3>
+<p>In order to provide real time capabilities each client needs to keep up a websocket connection
+to a server. There are great services out there like <a href="https://pusher.com/">pusher.com</a>, but I
+wanted to experiment with my own.</p>
+<p>The tools I'm using are based upon <a href="http://reactphp.org">reactphp</a>. Don't mix it up with the JS library.</p>
+<p>The server consists of three parts:</p>
+<ul>
+<li>
+<p>A HTTP server listening to incoming POST requests which push new log entries
+and stores the POST body.
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
+<span style="color:#40ffff">$server</span> = <span style="color:#6ab825;font-weight:bold">new</span> \React\Http\Server(<span style="color:#6ab825;font-weight:bold">function</span> (Psr\Http\Message\ServerRequestInterface <span style="color:#40ffff">$request</span>) <span style="color:#6ab825;font-weight:bold">use</span> (&amp;<span style="color:#40ffff">$my_server</span>) {
+  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">new</span> Promise(<span style="color:#6ab825;font-weight:bold">function</span> (<span style="color:#40ffff">$resolve</span>, <span style="color:#40ffff">$reject</span>) <span style="color:#6ab825;font-weight:bold">use</span> (<span style="color:#40ffff">$request</span>, &amp;<span style="color:#40ffff">$my_server</span>) {
+    <span style="color:#40ffff">$content</span> = <span style="color:#ed9d13">&#39;&#39;</span>;
+    <span style="color:#40ffff">$request</span>-&gt;<span style="color:#bbb">getBody</span>()-&gt;<span style="color:#bbb">on</span>(<span style="color:#ed9d13">&#39;data&#39;</span>, <span style="color:#6ab825;font-weight:bold">function</span> (<span style="color:#40ffff">$data</span>) <span style="color:#6ab825;font-weight:bold">use</span> (&amp;<span style="color:#40ffff">$content</span>) {
+      <span style="color:#40ffff">$content</span> .= <span style="color:#40ffff">$data</span>;
+    });
+  });
+});
+
+<span style="color:#40ffff">$socket</span> = <span style="color:#6ab825;font-weight:bold">new</span> React\Socket\Server(<span style="color:#3677a9">8080</span>, <span style="color:#40ffff">$loop</span>);
+<span style="color:#40ffff">$server</span>-&gt;<span style="color:#bbb">listen</span>(<span style="color:#40ffff">$socket</span>);
+</code></pre></div></p>
+</li>
+<li>
+<p>A websocket server which has a connection to every client</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
+<span style="color:#999;font-style:italic">// Actual logic of the websocket server. This is 
+</span><span style="color:#999;font-style:italic">// what all the clients connect to.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">class</span> <span style="color:#447fcf;text-decoration:underline">MyServer</span> <span style="color:#6ab825;font-weight:bold">implements</span> MessageComponentInterface {
+
+  <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">function</span> __construct() {
+      <span style="color:#40ffff">$this</span>-&gt;<span style="color:#bbb">clients</span> = [];
+  }
+
+  <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">function</span> <span style="color:#447fcf">onOpen</span>(\Ratchet\ConnectionInterface <span style="color:#40ffff">$conn</span>) {
+      <span style="color:#40ffff">$this</span>-&gt;<span style="color:#bbb">clients</span>[] = <span style="color:#40ffff">$conn</span>;
+  }
+
+  <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">function</span> <span style="color:#447fcf">onClose</span>(\Ratchet\ConnectionInterface <span style="color:#40ffff">$conn</span>) { }
+
+  <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">function</span> <span style="color:#447fcf">onError</span>(\Ratchet\ConnectionInterface <span style="color:#40ffff">$conn</span>, \Exception <span style="color:#40ffff">$e</span>) {
+      <span style="color:#40ffff">$conn</span>-&gt;<span style="color:#bbb">close</span>();
+  }
+
+  <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">function</span> <span style="color:#447fcf">onMessage</span>(\Ratchet\ConnectionInterface <span style="color:#40ffff">$from</span>, <span style="color:#40ffff">$msg</span>) { }
+
+  <span style="color:#6ab825;font-weight:bold">public</span> <span style="color:#6ab825;font-weight:bold">function</span> <span style="color:#447fcf">sendMessages</span>(<span style="color:#40ffff">$message</span>) {
+    <span style="color:#ed9d13">/** @var \Ratchet\WebSocket\WsConnection $client */</span>
+    <span style="color:#6ab825;font-weight:bold">foreach</span> (<span style="color:#40ffff">$this</span>-&gt;<span style="color:#bbb">clients</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#40ffff">$client</span>) {
+      <span style="color:#40ffff">$client</span>-&gt;<span style="color:#bbb">send</span>(<span style="color:#40ffff">$message</span>);
+    }
+  }
+
+}
+
+<span style="color:#999;font-style:italic">// Setup code for websocket server.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">$app</span> = <span style="color:#6ab825;font-weight:bold">new</span> Ratchet\App(<span style="color:#ed9d13">&#39;localhost&#39;</span>, <span style="color:#3677a9">8081</span>, <span style="color:#ed9d13">&#39;127.0.0.1&#39;</span>, <span style="color:#40ffff">$loop</span>);
+<span style="color:#40ffff">$my_server</span> = <span style="color:#6ab825;font-weight:bold">new</span> MyServer();
+<span style="color:#40ffff">$app</span>-&gt;<span style="color:#bbb">route</span>(<span style="color:#ed9d13">&#39;/test&#39;</span>, <span style="color:#40ffff">$my_server</span>, <span style="color:#6ab825;font-weight:bold">array</span>(<span style="color:#ed9d13">&#39;*&#39;</span>));
+<span style="color:#40ffff">$app</span>-&gt;<span style="color:#bbb">route</span>(<span style="color:#ed9d13">&#39;/echo&#39;</span>, <span style="color:#6ab825;font-weight:bold">new</span> Ratchet\Server\EchoServer, <span style="color:#6ab825;font-weight:bold">array</span>(<span style="color:#ed9d13">&#39;*&#39;</span>));
+</code></pre></div>
+<ul>
+<li>Once the HTTP server retrieved the post request, we call the websocket server
+which has all connections open.</li>
+</ul>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
+<span style="color:#40ffff">$server</span> = <span style="color:#6ab825;font-weight:bold">new</span> \React\Http\Server(<span style="color:#6ab825;font-weight:bold">function</span> (Psr\Http\Message\ServerRequestInterface <span style="color:#40ffff">$request</span>) <span style="color:#6ab825;font-weight:bold">use</span> (&amp;<span style="color:#40ffff">$my_server</span>) {
+   <span style="color:#999;font-style:italic">// ...
+</span><span style="color:#999;font-style:italic"></span>
+    <span style="color:#40ffff">$request</span>-&gt;<span style="color:#bbb">getBody</span>()-&gt;<span style="color:#bbb">on</span>(<span style="color:#ed9d13">&#39;end&#39;</span>, <span style="color:#6ab825;font-weight:bold">function</span> () <span style="color:#6ab825;font-weight:bold">use</span> (<span style="color:#40ffff">$resolve</span>, &amp;<span style="color:#40ffff">$content</span>, &amp;<span style="color:#40ffff">$my_server</span>) {
+      <span style="color:#40ffff">$response</span> = <span style="color:#6ab825;font-weight:bold">new</span> React\Http\Response(
+        <span style="color:#3677a9">200</span>,
+        <span style="color:#6ab825;font-weight:bold">array</span>(<span style="color:#ed9d13">&#39;Content-Type&#39;</span> =&gt; <span style="color:#ed9d13">&#39;text/plain&#39;</span>),
+        <span style="color:#ed9d13">&#34;Ok</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">&#34;</span>
+      );
+      <span style="color:#40ffff">$resolve</span>(<span style="color:#40ffff">$response</span>);
+
+      <span style="color:#999;font-style:italic">// This is the important bit.
+</span><span style="color:#999;font-style:italic"></span>      <span style="color:#40ffff">$my_server</span>-&gt;<span style="color:#bbb">sendMessages</span>(<span style="color:#40ffff">$content</span>);
+    });
+</code></pre></div>
+<p>I start this server simply by using <code>php server.php</code>. On production you want to ensure
+its running using for example supervisord.</p>
+<h3 id="drupal-side">Drupal side</h3>
+<p>On the Drupal side we want to push every dblog entry to this server via HTTP, as this is
+a really easy to use protocol as a client.
+Therefore we implemented a logger, see <a href="https://gitlab.com/dawehner/admin_ui_elm/blob/8.x-1.x/dblog_websocket/src/Logger.php">gitlab</a>.</p>
+<h3 id="client">Client</h3>
+<p>Browsers have good support for websockets:
+Connecting a websocket in JS is relatively easy:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#6ab825;font-weight:bold">new</span> WebSocket(<span style="color:#ed9d13">&#39;ws://localhost:8081/test&#39;</span>)).addEventListener(<span style="color:#ed9d13">&#39;message&#39;</span>, (event) =&gt; {
+    console.log(<span style="color:#ed9d13">&#39;Message from server &#39;</span>, event.data);
+});
+</code></pre></div>
+<p>For the actual client code we are using <a href="http://elm-lang.org/">Elm</a>, a delightful language to robust implement web apps.
+I won't go into detail how this works in elm, because the <a href="https://guide.elm-lang.org/architecture/effects/web_sockets.html">official guide</a> is simply well written.
+The elm code can be found on <a href="https://gitlab.com/dawehner/admin_ui_elm/blob/8.x-1.x/elm-dblog/src/App.elm">gitlab</a>.</p>
+<h2 id="summary">Summary</h2>
+<p>I know this code is by far not production code, but it shows how much is possible with some client side logic. Do you have other ideas what could be real time?</p>
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+      <hr>
+      <li>
+        <i
+          class="fa fa-category p-category"></i><a
+          href="/categories/elm">elm</a><a
+          href="/categories/php">php</a><a
+          href="/categories/websockets">websockets</a><a
+          href="/categories/realtime">realtime</a><a
+          href="/categories/drupal">drupal</a>
+      </li>
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="" type="application/rss+xml"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

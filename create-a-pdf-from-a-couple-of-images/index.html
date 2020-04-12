@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>Create a PDF from a couple of images - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Create a PDF from a couple of images - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="webmention" href="https://webmention.io/dawehner.github.io/webmention" />
+<link rel="pingback" href="https://webmention.io/dawehner.github.io/xmlrpc" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article h-entry">
+    <h1 class="article-title p-name">Create a PDF from a couple of images</h1>
+    
+
+    <div class="article-content e-content">
+      <p>Sometimes you just want to create a PDF from a couple of scanned document papers.
+One solution could be of course to embed these pages into LibreOffice / Word and then use a PDF printer to get it.
+Some people though like tools on the shell.</p>
+<p>Therefore we can use imagemagick, which is probably already installed on your system.
+It provides a command line util called <code>convert</code>.
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert first-image.png second-image.png image.png result.pdf</code></pre></div></p>
+<p>Maybe a bit too easy.</p>
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+      <hr>
+      <li>
+        <i
+          class="fa fa-category p-category"></i><a
+          href="/categories/shell">shell</a>
+      </li>
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="" type="application/rss+xml"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

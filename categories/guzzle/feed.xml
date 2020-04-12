@@ -13,10 +13,10 @@
     
     <item>
       <title>Retry HTTP requests</title>
-      <link>https://dawehner.github.io/posts/2017-05-19-guzzle-retry/</link>
+      <link>https://dawehner.github.io/retry-http-requests/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/posts/2017-05-19-guzzle-retry/</guid>
+      <guid>https://dawehner.github.io/retry-http-requests/</guid>
       <description>Problem As a matter of life we all learn stuff fails. This might be frame with our favourite picture, the street in front of our house, or more likely requests to APIs.
 A call to a 3rd/2nd party API can fail due to various reasons:
  The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&#39;t like you for a second.</description>

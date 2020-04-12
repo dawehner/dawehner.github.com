@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>Retry HTTP requests - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Retry HTTP requests - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="webmention" href="https://webmention.io/dawehner.github.io/webmention" />
+<link rel="pingback" href="https://webmention.io/dawehner.github.io/xmlrpc" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article h-entry">
+    <h1 class="article-title p-name">Retry HTTP requests</h1>
+    
+
+    <div class="article-content e-content">
+      <h2 id="problem">Problem</h2>
+<p>As a matter of life we all learn stuff fails. This might be frame with our
+favourite picture, the street in front of our house, or more likely requests to APIs.</p>
+<p>A call to a 3rd/2nd party API can fail due to various reasons:</p>
+<ul>
+<li>The client / server is under high load, which results into a timeout potentially</li>
+<li>The internet routes packages weird</li>
+<li>Currently something along the stack is deployed</li>
+<li>The universe just doesn't like you for a second.</li>
+</ul>
+<p>When you detect a failing request you can do many things</p>
+<ul>
+<li>You catch the error, log it and present the user a nice message</li>
+<li>Ideally you pass along a do not cache header, so your reverse proxy/CMS takes that into account</li>
+</ul>
+<p>Still, your user doesn't see the content of the page. This might be okay when the other server is down,
+but as layed out above, this might not be true.</p>
+<h2 id="solution">Solution</h2>
+<p>A common strategy is to retry for:</p>
+<ul>
+<li>1 second</li>
+<li>2 seconds</li>
+<li>4 seconds</li>
+<li>8 seconds</li>
+<li>&hellip;</li>
+</ul>
+<p>You get the idea. Its using this expotential scheme to not bombard the other server in case
+its actually down.</p>
+<h2 id="solution-in-guzzle">Solution in guzzle</h2>
+<p>Guzzle, the most common HTTP library in PHP makes this possible out of the box:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
+
+<span style="color:#6ab825;font-weight:bold">require_once</span> <span style="color:#40ffff">__DIR__</span> . <span style="color:#ed9d13">&#39;/vendor/autoload.php&#39;</span>;
+
+<span style="color:#40ffff">$handler_stack</span> = \GuzzleHttp\HandlerStack::<span style="color:#bbb">create</span>();
+<span style="color:#40ffff">$handler_stack</span>-&gt;<span style="color:#bbb">push</span>(\GuzzleHttp\Middleware::<span style="color:#bbb">retry</span>(<span style="color:#6ab825;font-weight:bold">function</span>(<span style="color:#40ffff">$retry</span>, <span style="color:#40ffff">$request</span>, <span style="color:#40ffff">$value</span>, <span style="color:#40ffff">$reason</span>) {
+  <span style="color:#999;font-style:italic">// If we have a value already, we should be able to proceed quickly.
+</span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">if</span> (<span style="color:#40ffff">$value</span> !== <span style="color:#6ab825;font-weight:bold">NULL</span>) {
+    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#6ab825;font-weight:bold">FALSE</span>;
+  }
+  
+  <span style="color:#999;font-style:italic">// Reject after 10 retries.
+</span><span style="color:#999;font-style:italic"></span>  <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#40ffff">$retry</span> &lt; <span style="color:#3677a9">10</span>;
+}));
+</code></pre></div>
+<p>Note, in previous versions of this snippet we didn't checked for the value.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
+<span style="color:#40ffff">$client</span> = <span style="color:#6ab825;font-weight:bold">new</span> \GuzzleHttp\Client([<span style="color:#ed9d13">&#39;handler&#39;</span> =&gt; <span style="color:#40ffff">$handler_stack</span>]);
+
+<span style="color:#40ffff">$client</span>-&gt;<span style="color:#bbb">get</span>(<span style="color:#ed9d13">&#39;http://google.com&#39;</span>);
+</code></pre></div>
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+      <hr>
+      <li>
+        <i
+          class="fa fa-category p-category"></i><a
+          href="/categories/php">php</a><a
+          href="/categories/guzzle">guzzle</a>
+      </li>
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="" type="application/rss+xml"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

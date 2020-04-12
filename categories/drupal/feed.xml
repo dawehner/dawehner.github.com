@@ -13,10 +13,10 @@
     
     <item>
       <title>Quickstarting Drupal 8</title>
-      <link>https://dawehner.github.io/posts/2018-05-03-drupal-quick-start/</link>
+      <link>https://dawehner.github.io/quickstarting-drupal-8/</link>
       <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/posts/2018-05-03-drupal-quick-start/</guid>
+      <guid>https://dawehner.github.io/quickstarting-drupal-8/</guid>
       <description>Before and around Drupalcon Nashville there was a lot of discussion around improving the first time experience. Things we achieved for example is a new Drupal.org homepage with a clear focus on 3 different userstories.
 One small work we have been doing can be seen in the following video:
  Drupal quickstart from daniel wehner on Vimeo.
@@ -25,10 +25,10 @@ To summarize this video: It should be possible to start Drupal as quickly as pos
     
     <item>
       <title>Realtime watchdog powered by PHP, Drupal and Elm</title>
-      <link>https://dawehner.github.io/posts/2017-10-10-realtime-watchdog/</link>
+      <link>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/posts/2017-10-10-realtime-watchdog/</guid>
+      <guid>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</guid>
       <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
 One of them is the dblog UI.
 The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:

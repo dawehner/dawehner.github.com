@@ -13,10 +13,10 @@
     
     <item>
       <title>Using tar the easy way</title>
-      <link>https://dawehner.github.io/posts/2017-02-22-tar-commands/</link>
+      <link>https://dawehner.github.io/using-tar-the-easy-way/</link>
       <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/posts/2017-02-22-tar-commands/</guid>
+      <guid>https://dawehner.github.io/using-tar-the-easy-way/</guid>
       <description>[Tar](https://en.wikipedia.org/wiki/Tar_(computing) (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators and users of unix like systems. It allows you to create archives of files and extract them later.
 Traditionally people learn it by copying examples:
 # Create / extract tar file tar cf example.tar file folder file2 tar xf example.tar file # Create / extract tar.gz file tar zcf example.tar.gz file folder file2 tar zxf example.</description>
@@ -24,20 +24,20 @@ Traditionally people learn it by copying examples:
     
     <item>
       <title>Create a PDF from a couple of images</title>
-      <link>https://dawehner.github.io/posts/2016-11-11-create-pdf-from-images/</link>
+      <link>https://dawehner.github.io/create-a-pdf-from-a-couple-of-images/</link>
       <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/posts/2016-11-11-create-pdf-from-images/</guid>
+      <guid>https://dawehner.github.io/create-a-pdf-from-a-couple-of-images/</guid>
       <description>Sometimes you just want to create a PDF from a couple of scanned document papers. One solution could be of course to embed these pages into LibreOffice / Word and then use a PDF printer to get it. Some people though like tools on the shell.
 Therefore we can use imagemagick, which is probably already installed on your system. It provides a command line util called convert. convert first-image.png second-image.png image.</description>
     </item>
     
     <item>
       <title>Get notified on slow commands</title>
-      <link>https://dawehner.github.io/posts/2015-11-19-notify-long-commands/</link>
+      <link>https://dawehner.github.io/get-notified-on-slow-commands/</link>
       <pubDate>Thu, 19 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/posts/2015-11-19-notify-long-commands/</guid>
+      <guid>https://dawehner.github.io/get-notified-on-slow-commands/</guid>
       <description>We are all lazy and we get distracted. One thing happens often… You run some slow command in your shell, switch to the browser, and bam… you are distracted.
 What about sending an OS notification? Every time any command needs longer to run than let’s say 10 seconds then there is some notification to show so you can get right back to work each time.
 Note: This is for Fish shell, which is a modern shell and really nice to use.</description>

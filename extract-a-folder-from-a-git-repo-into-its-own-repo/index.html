@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>Extract a folder from a git repo into its own repo - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Extract a folder from a git repo into its own repo - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="webmention" href="https://webmention.io/dawehner.github.io/webmention" />
+<link rel="pingback" href="https://webmention.io/dawehner.github.io/xmlrpc" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article h-entry">
+    <h1 class="article-title p-name">Extract a folder from a git repo into its own repo</h1>
+    
+
+    <div class="article-content e-content">
+      <p>Let's assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.</p>
+<p>Now there are a two of possiblities:</p>
+<ul>
+<li>Copy the files and give a shit about the history</li>
+<li>Extract the history from an existing repo.</li>
+</ul>
+<p>But how would you extract a history from an existing repo?</p>
+<h3 id="extract-history-from-existing-repo">Extract history from existing repo.</h3>
+<p>Step 1: Clone the existing repo into a new one:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone existingrepo new_opensource_repo
+<span style="color:#24909d">cd</span> new_opensource_repo</code></pre></div>
+<p>Step 2: Remove every commit beside the ones in the subfolder:
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git filter-branch --prune-empty --subdirectory-filter YOUR_FOLDER_NAME master</code></pre></div></p>
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+      <hr>
+      <li>
+        <i
+          class="fa fa-category p-category"></i><a
+          href="/categories/git">git</a>
+      </li>
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="" type="application/rss+xml"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

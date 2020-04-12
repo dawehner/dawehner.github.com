@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>Using tar the easy way - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Using tar the easy way - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="webmention" href="https://webmention.io/dawehner.github.io/webmention" />
+<link rel="pingback" href="https://webmention.io/dawehner.github.io/xmlrpc" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article h-entry">
+    <h1 class="article-title p-name">Using tar the easy way</h1>
+    
+
+    <div class="article-content e-content">
+      <p>[Tar](<a href="https://en.wikipedia.org/wiki/Tar_(computing)">https://en.wikipedia.org/wiki/Tar_(computing)</a> (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators
+and users of unix like systems. It allows you to create archives of files and extract them later.</p>
+<p>Traditionally people learn it by copying examples:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># Create / extract tar file</span>
+tar cf example.tar file folder file2
+tar xf example.tar file
+<span style="color:#999;font-style:italic"># Create / extract tar.gz file</span>
+tar zcf example.tar.gz file folder file2
+tar zxf example.tar.gz
+<span style="color:#999;font-style:italic"># Create / extract tar.bz2 file</span>
+tar jcf example.tar.bz2 file folder file2
+tar jxf example.tar.bz2
+<span style="color:#999;font-style:italic"># Create / extract tar.xz file</span>
+tar Jxf example.tar.xf file folder file2
+tar Jcf example.tar.xf</code></pre></div>
+<p>The parameters contains three different bits:</p>
+<ul>
+<li>f (you want to deal with a file instead of something from stdin/stdout)</li>
+<li>x (extract) or create/compress (c)</li>
+<li>z/j/J (deal with different file types). This one is certainly the hardest one to remember.</li>
+</ul>
+<p>It turns out, you <strong>don't</strong> actually have to bother with it. Modern version of tar (both the BSD and GNU version)
+<strong>extract</strong> the filetype out of the file extension you specify <strong>automatically</strong>.
+So all you need for the examples above is:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#999;font-style:italic"># Create / extract tar file</span>
+tar cf example.tar file folder file2
+tar xf example.tar file
+<span style="color:#999;font-style:italic"># Create / extract tar.gz file</span>
+tar cf example.tar.gz file folder file2
+tar xf example.tar.gz
+<span style="color:#999;font-style:italic"># Create / extract tar.bz2 file</span>
+tar cf example.tar.bz2 file folder file2
+tar xf example.tar.bz2
+<span style="color:#999;font-style:italic"># Create / extract tar.xz file</span>
+tar xf example.tar.xf file folder file2
+tar cf example.tar.xf</code></pre></div>
+<p><strong>TL;DR; Forget about jJz on tar, it is not needed</strong>.</p>
+<p>Final tip: If you want to see which files got extracted, put &ldquo;v&rdquo; on it as well.</p>
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+      <hr>
+      <li>
+        <i
+          class="fa fa-category p-category"></i><a
+          href="/categories/shell">shell</a><a
+          href="/categories/unix">unix</a>
+      </li>
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="" type="application/rss+xml"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>Make sense of your watchdog entries - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Make sense of your watchdog entries - Daniel Wehner&#39;s blog">
+
+
+
+  
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+
+
+
+
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="webmention" href="https://webmention.io/dawehner.github.io/webmention" />
+<link rel="pingback" href="https://webmention.io/dawehner.github.io/xmlrpc" />
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dawehner.github.io/" class="nav-logo">
+    <img src="https://dawehner.github.io/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/projects">Projects</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article h-entry">
+    <h1 class="article-title p-name">Make sense of your watchdog entries</h1>
+    
+
+    <div class="article-content e-content">
+      <p>Websites have errors, which are ideally logged.
+Logging though is one thing, you also need to make some sense out of them.</p>
+<p>In an ideal world you would have some logging server like <a href="https://www.graylog.org/">graylog</a> or similar.
+Sadly this is not avaiable on every site.</p>
+<p>Here is an example of just looking at error messages stored in the database, but the general toolsuite could be applied to everything.</p>
+<h2 id="get-the-data">Get the data</h2>
+<p>We use drush to fetch the error messages from drupal:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">drush watchdog-show --count=<span style="color:#3677a9">1000000</span> --type=php --format=json &gt; errors.json</code></pre></div>
+<p>This writes out all PHP entries in watchdog into the errors.json file. Of course you could use SQL for that as well,
+but who isn't lazy.</p>
+<h2 id="look-at-the-data">Look at the data.</h2>
+<p>We have the data as json, which is super nice. Of course we could use PHP or any other scripting language
+and iterate over all entries to make sense out of them, but is that elegant, not really.</p>
+<p>Let`s use python for that!</p>
+<p>There is a package called pandas, which pretty much gives you the same kind of operations to data like SQL for
+any kind of data source. (SQL, CSV, JSON etc.).</p>
+<p>First load the data into pandas:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pandas</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">pd</span>
+
+result = pd.read_json(<span style="color:#ed9d13"></span><span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">errors.json</span><span style="color:#ed9d13">&#34;</span>, orient=<span style="color:#ed9d13"></span><span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">index</span><span style="color:#ed9d13">&#34;</span>)</code></pre></div>
+<p>Result is a thing called dataframe, which is basically an enhanced array/hashmap.</p>
+<p>This allows you to do some simple things:</p>
+<ul>
+<li>Show the available keys: <code>result.keys()</code>: <code>Index([u'date', u'hostname', u'link', u'location', u'message', u'referer', u'severity', u'type', u'uid', u'wid'], dtype='object')</code></li>
+<li>Select a specific column: <code>result['wid']</code></li>
+<li>Select multiple columns: <code>result[['message', 'wid']]</code></li>
+<li>Select a specific row: <code>result[509247]</code></li>
+<li>Count the amount of rows: <code>result.count()</code>. This method counts column, but you can combine it with selecting a specific column: <code>result[['wid']].count()</code></li>
+</ul>
+<p>Now we want to know which error message appeared how often. Therefore pandas
+offers grouping the result.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">result.groupby(<span style="color:#ed9d13"></span><span style="color:#ed9d13">&#39;</span><span style="color:#ed9d13">message</span><span style="color:#ed9d13">&#39;</span>)</code></pre></div>
+<p>This gives us an array of dataframes, one for each possible message, which you can work with again:
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_by_message = result.groupby(<span style="color:#ed9d13"></span><span style="color:#ed9d13">&#39;</span><span style="color:#ed9d13">message</span><span style="color:#ed9d13">&#39;</span>).count()[<span style="color:#ed9d13"></span><span style="color:#ed9d13">&#39;</span><span style="color:#ed9d13">wid</span><span style="color:#ed9d13">&#39;</span>]</code></pre></div></p>
+<h2 id="visualization">Visualization</h2>
+<p>And if you really want you could even visuallize it, if you want:
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_by_message.plot(kind=<span style="color:#ed9d13"></span><span style="color:#ed9d13">&#34;</span><span style="color:#ed9d13">bar</span><span style="color:#ed9d13">&#34;</span>)</code></pre></div></p>
+<figure>
+    <img src="/img/watchdog-plot.png"/> <figcaption>
+            <h4>Visualization</h4>
+        </figcaption>
+</figure>
+
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+      <hr>
+      <li>
+        <i
+          class="fa fa-category p-category"></i><a
+          href="/categories/python">python</a><a
+          href="/categories/drush">drush</a>
+      </li>
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="" type="application/rss+xml"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
