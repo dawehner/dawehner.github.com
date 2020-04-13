@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Mooncop (Tom Gauld)</title>
-      <link>https://dawehner.github.io/mooncop-tom-gauld/</link>
-      <pubDate>Wed, 19 Feb 2020 17:48:05 +0000</pubDate>
-      
-      <guid>https://dawehner.github.io/mooncop-tom-gauld/</guid>
-      <description>Good Reads</description>
-    </item>
-    
-    <item>
       <title>Profiling PHP in ddev using tideways locally</title>
       <link>https://dawehner.github.io/profiling-php-in-ddev-using-tideways-locally/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
@@ -39,15 +30,6 @@
 Here I will describe some setup used with ddev but the general setup can be adopted to any other PHP setup.
 Note: There are at least two cloud services out there providing profiling for PHP
  https://blackfire.io https://tideways.com/  Both are great and I recommend using them, this blog post though describes a setup which runs all locally.</description>
-    </item>
-    
-    <item>
-      <title>Permanent record</title>
-      <link>https://dawehner.github.io/permanent-record/</link>
-      <pubDate>Tue, 19 Nov 2019 17:48:05 +0000</pubDate>
-      
-      <guid>https://dawehner.github.io/permanent-record/</guid>
-      <description>wikipedia</description>
     </item>
     
     <item>
@@ -90,15 +72,6 @@ End of October I stumbled upon digital wellbeing on Android: It allows you to se
 One small work we have been doing can be seen in the following video:
  Drupal quickstart from daniel wehner on Vimeo.
 To summarize this video: It should be possible to start Drupal as quickly as possible:</description>
-    </item>
-    
-    <item>
-      <title>Live 3.0</title>
-      <link>https://dawehner.github.io/live-3.0/</link>
-      <pubDate>Thu, 19 Apr 2018 17:48:05 +0000</pubDate>
-      
-      <guid>https://dawehner.github.io/live-3.0/</guid>
-      <description>wikipedia link</description>
     </item>
     
     <item>
