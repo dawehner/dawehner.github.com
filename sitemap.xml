@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dawehner.github.io/</loc>
+    <lastmod>2020-04-25T09:08:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dawehner.github.io/shader/</loc>
+    <lastmod>2020-04-25T09:08:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dawehner.github.io/shaders/some-colours/</loc>
+    <lastmod>2020-04-25T09:08:31+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dawehner.github.io/categories/</loc>
     <lastmod>2020-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</loc>
-    <lastmod>2020-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dawehner.github.io/</loc>
     <lastmod>2020-04-12T00:00:00+00:00</lastmod>
   </url>
   
