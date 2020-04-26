@@ -12,11 +12,20 @@
     
     
     <item>
-      <title>Some colours</title>
-      <link>https://dawehner.github.io/shaders/some-colours/</link>
+      <title>Pink floyd</title>
+      <link>https://dawehner.github.io/shaders/pink-floyd/</link>
       <pubDate>Sat, 25 Apr 2020 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/shaders/some-colours/</guid>
+      <guid>https://dawehner.github.io/shaders/pink-floyd/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Spinning wheel</title>
+      <link>https://dawehner.github.io/shaders/spinning-wheel/</link>
+      <pubDate>Sat, 25 Apr 2020 09:08:31 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/shaders/spinning-wheel/</guid>
       <description>  </description>
     </item>
     
