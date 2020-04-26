@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photos on Daniel Wehner&#39;s blog</title>
+    <link>https://dawehner.github.io/photo/</link>
+    <description>Recent content in Photos on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dawehner.github.io/photo/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>phpvxctnI</title>
+      <link>https://dawehner.github.io/photo/phpvxctni/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/photo/phpvxctni/</guid>
+      <description>phpvxctnI
+published on 2020-04-26
+ </description>
+    </item>
+    
+  </channel>
+</rss>
