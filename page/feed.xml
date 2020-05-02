@@ -27,7 +27,7 @@
       
       <guid>https://dawehner.github.io/projects/</guid>
       <description>This page links and describes some of my personal projects.
- A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.org and Github  </description>
+ A list of GLSL (OpenGL Shading Language) experiments A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.</description>
     </item>
     
   </channel>
