@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 15:50:40 +0000</lastBuildDate>
     
 	<atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The wind of change</title>
+      <link>https://dawehner.github.io/the-wind-of-change/</link>
+      <pubDate>Sun, 26 Jul 2020 15:50:40 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/the-wind-of-change/</guid>
+      <description>The podcast “the wind of change” is a story about a song changing the history.
+Listen to an exciting season of investigative journalism packed up in a good story:
+https://crooked.com/podcast-series/wind-of-change/</description>
+    </item>
     
     <item>
       <title>Convert openssh key to RSA PEM</title>
