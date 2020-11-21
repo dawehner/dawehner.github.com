@@ -50,7 +50,7 @@ Note: There are at least two cloud services out there providing profiling for PH
       
       <guid>https://dawehner.github.io/find-out-that-an-application-is-listen-on-a-given-port/</guid>
       <description>Choose one of those:
-lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 3030 </description>
+sudo lsof -i :3030 lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 3030 </description>
     </item>
     
     <item>

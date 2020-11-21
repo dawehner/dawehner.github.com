@@ -62,7 +62,8 @@
 
     <div class="article-content e-content">
       <p>Choose one of those:</p>
-<pre><code>lsof -i | grep LISTEN | grep 3030
+<pre><code>sudo lsof -i :3030
+lsof -i | grep LISTEN | grep 3030
 netstat -ltnp | grep -w ':3030'
 fuser 3030
 </code></pre>
