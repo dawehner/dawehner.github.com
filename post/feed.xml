@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jul 2020 15:50:40 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Nov 2020 10:32:30 +0000</lastBuildDate>
     
 	<atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Convert html files to markdown using pandoc</title>
+      <link>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</link>
+      <pubDate>Sun, 29 Nov 2020 10:32:30 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</guid>
+      <description>You can convert html files to markdown files using a various set of tools.
+Pandoc can be really useful, as its a tool being able to handle all kind of markup language and converting between them.
+Here is an example converting HTML files to markdown files.
+nix-shell -p pandoc pandoc input.html -t markdown -f html -s -o output.md </description>
+    </item>
     
     <item>
       <title>The wind of change</title>

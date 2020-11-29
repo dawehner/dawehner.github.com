@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.74.3" />
 
 
-<title>Posts - Daniel Wehner&#39;s blog</title>
-<meta property="og:title" content="Posts - Daniel Wehner&#39;s blog">
+<title>Convert html files to markdown using pandoc - Daniel Wehner&#39;s blog</title>
+<meta property="og:title" content="Convert html files to markdown using pandoc - Daniel Wehner&#39;s blog">
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-<link href="/post/feed.xml" rel="alternate" type="application/rss+xml"
+<link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
 <link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all" />
@@ -51,82 +51,30 @@
 </nav>
       </header>
 
-
 <main class="content" role="main">
-
-  <div class="list">
+  <article class="article h-entry">
+    <h2 class="article-title p-name">Convert html files to markdown using pandoc</h2>
+    
+    <span class="article-duration">1 min read</span>
+    <span class="article-date"><time class="dt-published"
+        datetime="29 Nov 20 10:32 ">2020-11-29</time></span>
     
 
-    <article class="list-item" class="h-entry">
-  <a class="p-name e-content u-url" href="https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/">Lua for all the things on your mac v1</a>
-  <time class="list-item-date dt-published">
-    2015-11-22
-  </time>
-</article>
+    <div class="article-content e-content">
+      <p>You can convert html files to markdown files using a various set of tools.</p>
+<p>Pandoc can be really useful, as its a tool being able to handle all kind of markup language and converting between them.</p>
+<p>Here is an example converting HTML files to markdown files.</p>
+<pre><code>nix-shell -p pandoc
+pandoc input.html -t markdown -f html -s -o output.md
+</code></pre>
+    </div>
 
-    
+    <ul class="article-taxonomy">
+      
 
-    <article class="list-item" class="h-entry">
-  <a class="p-name e-content u-url" href="https://dawehner.github.io/get-notified-on-slow-commands/">Get notified on slow commands</a>
-  <time class="list-item-date dt-published">
-    2015-11-19
-  </time>
-</article>
-
-    
-
-    <article class="list-item" class="h-entry">
-  <a class="p-name e-content u-url" href="https://dawehner.github.io/pretty-print-your-json/">Pretty print your json</a>
-  <time class="list-item-date dt-published">
-    2015-10-18
-  </time>
-</article>
-
-    
-  </div>
-
-  
-
-
-<ul class="page-links">
-  <li 
-    >
-    <a href="/post/" aria-label="Previous"><span aria-hidden="true">&lt;&#160;</span></a>
-  </li>
-  
-  
-  
-  
-  
-   
-    
-    
-  
-  
-    <li
-      ><a href="/post/">1</a>
-    </li>
-    
-  
-  
-  
-  
-   
-    
-    
-  
-  
-    <li
-      class="page-links-active"><a href="/post/page/2/">2</a>
-    </li>
-    
-  
-  <li
-    class="page-links-disabled">
-    <a href="" aria-label="Next"><span aria-hidden="true">&#160;&gt;</span></a>
-  </li>
-</ul>
-
+      
+    </ul>
+  </article>
 
 </main>
 
@@ -143,7 +91,7 @@
 
   <ul class="footer-links">
     <li>
-      <a href="/post/feed.xml" type="application/rss+xml"><i
+      <a href="" type="application/rss+xml"><i
           class="fa fa-rss"></i> RSS feed</a>
     </li>
     <li>
