@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Nov 2020 10:32:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 11:45:14 +0000</lastBuildDate>
     
 	<atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My translation workflow</title>
+      <link>https://dawehner.github.io/my-translation-workflow/</link>
+      <pubDate>Sun, 06 Dec 2020 11:45:14 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/my-translation-workflow/</guid>
+      <description>Coming from my native language german, I got used to speak, write and think in English all day long. Still from time to time I have both english and german terms I want to get translated. At the same time I want to track my progress of terms over time.
+Therefore I&amp;rsquo;m using Alfred and a custom workflow. Let&amp;rsquo;s have a look what it does:
+You see: I can type in a word and retrieve a translation.</description>
+    </item>
     
     <item>
       <title>Convert html files to markdown using pandoc</title>
