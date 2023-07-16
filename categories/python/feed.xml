@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/python/</link>
+    <link>https://daniel.town/categories/python/</link>
     <description>Recent content in python on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/python/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/python/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Make sense of your watchdog entries</title>
-      <link>https://dawehner.github.io/make-sense-of-your-watchdog-entries/</link>
+      <link>https://daniel.town/make-sense-of-your-watchdog-entries/</link>
       <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/make-sense-of-your-watchdog-entries/</guid>
+      <guid>https://daniel.town/make-sense-of-your-watchdog-entries/</guid>
       <description>Websites have errors, which are ideally logged. Logging though is one thing, you also need to make some sense out of them.
 In an ideal world you would have some logging server like graylog or similar. Sadly this is not avaiable on every site.
 Here is an example of just looking at error messages stored in the database, but the general toolsuite could be applied to everything.
@@ -21,10 +21,10 @@ Get the data We use drush to fetch the error messages from drupal:</description>
     
     <item>
       <title>Pretty print your json</title>
-      <link>https://dawehner.github.io/pretty-print-your-json/</link>
+      <link>https://daniel.town/pretty-print-your-json/</link>
       <pubDate>Sun, 18 Oct 2015 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/pretty-print-your-json/</guid>
+      <guid>https://daniel.town/pretty-print-your-json/</guid>
       <description>Due to its simplicity compared to other formats like XML, JSON these days is completly ruling the marking of remote APIs, like REST.
 Let&amp;rsquo;s have a look at one small problem which occurs quite often: curl &amp;#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;amp;format=application/json&amp;#34; {&amp;#34;metaData&amp;#34;:{&amp;#34;apiVersion&amp;#34;:&amp;#34;0.2&amp;#34;,&amp;#34;warning&amp;#34;:&amp;#34;ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-Änderungen informiert zu werden&amp;#34;,&amp;#34;copyright&amp;#34;:&amp;#34;Copyright (C) 2014 Daniel Naber (www.danielnaber.de)&amp;#34;,&amp;#34;license&amp;#34;:&amp;#34;GNU LESSER GENERAL PUBLIC LICENSE Version 2.1&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;http://www.openthesaurus.de&amp;#34;,&amp;#34;date&amp;#34;:&amp;#34;Sun Oct 18 09:20:29 CEST 2015&amp;#34;},&amp;#34;synsets&amp;#34;:[{&amp;#34;id&amp;#34;:292,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Erprobung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]},{&amp;#34;id&amp;#34;:4398,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Kontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Leistungsnachweis&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;}]},{&amp;#34;id&amp;#34;:5752,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Klassenarbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Klausur&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Lernerfolgskontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schularbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schulaufgabe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Arbeit&amp;#34;,&amp;#34;level&amp;#34;:&amp;#34;umgangssprachlich&amp;#34;}]},{&amp;#34;id&amp;#34;:9138,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Experiment&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probelauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Studie&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testballon&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockenlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockentest&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]}]}⏎
 Pretty print So you are either a guru or extremly motivated to remember the open braces for your own, otherwise you need help to read the JSON properly.</description>

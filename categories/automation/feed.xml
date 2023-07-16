@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>automation on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/automation/</link>
+    <link>https://daniel.town/categories/automation/</link>
     <description>Recent content in automation on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/automation/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/automation/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lua for all the things on your mac v1</title>
-      <link>https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/</link>
+      <link>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</link>
       <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/</guid>
+      <guid>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</guid>
       <description>One thing people really like about OSX is that everything works and is easy to use, but what is easy is not necessarily the best for your particular usecase.
 This especially becomes important when it comes down to configurability / scriptablity. For my own purposes I use Hammerspoon which provides Lua wrappers for quite a lot of lower level APIs, so its easy to setup things a specific way.
 Just a quick list of what you can do with it:</description>

@@ -1,57 +1,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/feed.xml</link>
+    <link>https://daniel.town/feed.xml</link>
     <description>Recent content on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Dec 2020 11:45:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jul 2023 09:08:31 +0000</lastBuildDate>
     
-        <atom:link href="https://dawehner.github.io/feed.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://daniel.town/feed.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Boardgames</title>
+      <link>https://daniel.town/boardgame/</link>
+      <pubDate>Sun, 16 Jul 2023 09:08:31 +0000</pubDate>
+      
+      <guid>https://daniel.town/boardgame/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Posts</title>
-      <link>https://dawehner.github.io/post/</link>
+      <link>https://daniel.town/post/</link>
       <pubDate>Sun, 06 Dec 2020 11:45:14 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/post/</guid>
+      <guid>https://daniel.town/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Links</title>
-      <link>https://dawehner.github.io/link/</link>
+      <link>https://daniel.town/link/</link>
       <pubDate>Sat, 25 Jul 2020 14:25:45 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/link/</guid>
+      <guid>https://daniel.town/link/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shaders</title>
-      <link>https://dawehner.github.io/shader/</link>
+      <link>https://daniel.town/shader/</link>
       <pubDate>Sun, 03 May 2020 23:46:48 +0100</pubDate>
       
-      <guid>https://dawehner.github.io/shader/</guid>
+      <guid>https://daniel.town/shader/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Media</title>
-      <link>https://dawehner.github.io/media/</link>
+      <link>https://daniel.town/media/</link>
       <pubDate>Fri, 10 Apr 2020 17:48:05 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/media/</guid>
+      <guid>https://daniel.town/media/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pages</title>
-      <link>https://dawehner.github.io/page/</link>
+      <link>https://daniel.town/page/</link>
       <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/page/</guid>
+      <guid>https://daniel.town/page/</guid>
       <description></description>
     </item>
     

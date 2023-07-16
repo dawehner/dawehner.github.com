@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/page/</link>
+    <link>https://daniel.town/page/</link>
     <description>Recent content in Pages on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/page/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/page/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://dawehner.github.io/about/</link>
+      <link>https://daniel.town/about/</link>
       <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/about/</guid>
+      <guid>https://daniel.town/about/</guid>
       <description>Daniel Wehner (he / him / his) Engineer, runner, climber, rower in London @da_wehner Twitter dawehner Github A lists of podcasts I enjoy listening to can be found here</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://dawehner.github.io/projects/</link>
+      <link>https://daniel.town/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/projects/</guid>
+      <guid>https://daniel.town/projects/</guid>
       <description>This page links and describes some of my personal projects.
 A list of GLSL (OpenGL Shading Language) experiments A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.</description>
     </item>

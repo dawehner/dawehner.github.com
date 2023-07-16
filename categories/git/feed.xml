@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/git/</link>
+    <link>https://daniel.town/categories/git/</link>
     <description>Recent content in git on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/git/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/git/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Access inaccessible git commits</title>
-      <link>https://dawehner.github.io/access-inaccessible-git-commits/</link>
+      <link>https://daniel.town/access-inaccessible-git-commits/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/access-inaccessible-git-commits/</guid>
+      <guid>https://daniel.town/access-inaccessible-git-commits/</guid>
       <description>Note: This is mostly a personal note, but maybe helpful for others
 I accidentally removed a local branch using git branch -D local-branch, but I forgot to push the last commit.
 I found this on the interwebs. git log -reflog
@@ -21,10 +21,10 @@ which gets all the logs and I was able to cherry-pick from there on.</descriptio
     
     <item>
       <title>Automatically clear the render cache when templates change</title>
-      <link>https://dawehner.github.io/automatically-clear-the-render-cache-when-templates-change/</link>
+      <link>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</link>
       <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/automatically-clear-the-render-cache-when-templates-change/</guid>
+      <guid>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</guid>
       <description>Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.
 On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.
 As solution we have written a script which invalidates the render cache when someone touches a template.</description>
@@ -32,10 +32,10 @@ As solution we have written a script which invalidates the render cache when som
     
     <item>
       <title>Clone a non composer repo with composer</title>
-      <link>https://dawehner.github.io/clone-a-non-composer-repo-with-composer/</link>
+      <link>https://daniel.town/clone-a-non-composer-repo-with-composer/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/clone-a-non-composer-repo-with-composer/</guid>
+      <guid>https://daniel.town/clone-a-non-composer-repo-with-composer/</guid>
       <description>There are some usecases where you want to integrate arbitrary libraries into your system. One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files. In Drupal we wanted to synchronize these information.
 Therefore we are using this small little bit in composer.json:
 { &amp;#34;repositories&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;package&amp;#34;, &amp;#34;package&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;namespace/name&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;dev-master&amp;#34;, &amp;#34;source&amp;#34;: { &amp;#34;url&amp;#34;: &amp;#34;https://github.com/example/example-repo.git&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;git&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;master&amp;#34; } } } ] } Once this is done you can use:</description>
@@ -43,10 +43,10 @@ Therefore we are using this small little bit in composer.json:
     
     <item>
       <title>Extract a folder from a git repo into its own repo</title>
-      <link>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</link>
+      <link>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</link>
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
+      <guid>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
       <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
 Copy the files and give a shit about the history Extract the history from an existing repo. But how would you extract a history from an existing repo?
@@ -55,10 +55,10 @@ Extract history from existing repo. Step 1: Clone the existing repo into a new o
     
     <item>
       <title>Remove all merged local branches</title>
-      <link>https://dawehner.github.io/remove-all-merged-local-branches/</link>
+      <link>https://daniel.town/remove-all-merged-local-branches/</link>
       <pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/remove-all-merged-local-branches/</guid>
+      <guid>https://daniel.town/remove-all-merged-local-branches/</guid>
       <description>When you use git you often create a hell lot of custom branches. This is annoying.
 With using a PR based workflow this results into proper merges, so we can truncate those branches.
 git checkout master git branch --merged | grep -v &amp;#34;\*&amp;#34; | xargs -n 1 git branch -d </description>

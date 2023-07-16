@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/post/</link>
+    <link>https://daniel.town/post/</link>
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Dec 2020 11:45:14 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 11:45:14 +0000</lastBuildDate><atom:link href="https://daniel.town/post/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My translation workflow</title>
-      <link>https://dawehner.github.io/my-translation-workflow/</link>
+      <link>https://daniel.town/my-translation-workflow/</link>
       <pubDate>Sun, 06 Dec 2020 11:45:14 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/my-translation-workflow/</guid>
+      <guid>https://daniel.town/my-translation-workflow/</guid>
       <description>Coming from my native language german, I got used to speak, write and think in English all day long. Still from time to time I have both english and german terms I want to get translated. At the same time I want to track my progress of terms over time.
 Therefore I&amp;rsquo;m using Alfred and a custom workflow. Let&amp;rsquo;s have a look what it does:
 You see: I can type in a word and retrieve a translation.</description>
@@ -20,10 +20,10 @@ You see: I can type in a word and retrieve a translation.</description>
     
     <item>
       <title>Convert html files to markdown using pandoc</title>
-      <link>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</link>
+      <link>https://daniel.town/convert-html-files-to-markdown-using-pandoc/</link>
       <pubDate>Sun, 29 Nov 2020 10:32:30 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</guid>
+      <guid>https://daniel.town/convert-html-files-to-markdown-using-pandoc/</guid>
       <description>You can convert html files to markdown files using a various set of tools.
 Pandoc can be really useful, as its a tool being able to handle all kind of markup language and converting between them.
 Here is an example converting HTML files to markdown files.
@@ -32,19 +32,19 @@ nix-shell -p pandoc pandoc input.html -t markdown -f html -s -o output.md </desc
     
     <item>
       <title>Good bash error handling</title>
-      <link>https://dawehner.github.io/good-bash-error-handling/</link>
+      <link>https://daniel.town/good-bash-error-handling/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/good-bash-error-handling/</guid>
+      <guid>https://daniel.town/good-bash-error-handling/</guid>
       <description>It follows a small bunch of</description>
     </item>
     
     <item>
       <title>The wind of change</title>
-      <link>https://dawehner.github.io/the-wind-of-change/</link>
+      <link>https://daniel.town/the-wind-of-change/</link>
       <pubDate>Sun, 26 Jul 2020 15:50:40 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/the-wind-of-change/</guid>
+      <guid>https://daniel.town/the-wind-of-change/</guid>
       <description>The podcast “the wind of change” is a story about a song changing the history.
 Listen to an exciting season of investigative journalism packed up in a good story:
 https://crooked.com/podcast-series/wind-of-change/</description>
@@ -52,19 +52,19 @@ https://crooked.com/podcast-series/wind-of-change/</description>
     
     <item>
       <title>Convert openssh key to RSA PEM</title>
-      <link>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</link>
+      <link>https://daniel.town/convert-openssh-key-to-rsa-pem/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</guid>
+      <guid>https://daniel.town/convert-openssh-key-to-rsa-pem/</guid>
       <description># Generate the ssh key ssh-keygen -t rsa -b 4096 -f /tmp/key # Convert it to a PEM file ssh-keygen -p -m PEM -f /tmp/key </description>
     </item>
     
     <item>
       <title>Profiling PHP in ddev using tideways locally</title>
-      <link>https://dawehner.github.io/profiling-php-in-ddev-using-tideways-locally/</link>
+      <link>https://daniel.town/profiling-php-in-ddev-using-tideways-locally/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/profiling-php-in-ddev-using-tideways-locally/</guid>
+      <guid>https://daniel.town/profiling-php-in-ddev-using-tideways-locally/</guid>
       <description>From time to time one runs into some performance problems, for example in PHP applications. The request might be slow or a batch process is leaking memory.
 Here I will describe some setup used with ddev but the general setup can be adopted to any other PHP setup.
 Note: There are at least two cloud services out there providing profiling for PHP
@@ -73,40 +73,40 @@ https://blackfire.io https://tideways.com/ Both are great and I recommend using 
     
     <item>
       <title>Find out that an application is listen on a given port</title>
-      <link>https://dawehner.github.io/find-out-that-an-application-is-listen-on-a-given-port/</link>
+      <link>https://daniel.town/find-out-that-an-application-is-listen-on-a-given-port/</link>
       <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/find-out-that-an-application-is-listen-on-a-given-port/</guid>
+      <guid>https://daniel.town/find-out-that-an-application-is-listen-on-a-given-port/</guid>
       <description>Choose one of those:
 sudo lsof -i :3030 lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &amp;#39;:3030&amp;#39; fuser 3030 </description>
     </item>
     
     <item>
       <title>Show largest mysql tables</title>
-      <link>https://dawehner.github.io/show-largest-mysql-tables/</link>
+      <link>https://daniel.town/show-largest-mysql-tables/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/show-largest-mysql-tables/</guid>
+      <guid>https://daniel.town/show-largest-mysql-tables/</guid>
       <description>Here is a small sql commando to show the largest mysql tables on your system.
 SELECT CONCAT(table_schema, &amp;#39;.&amp;#39;, table_name), CONCAT(ROUND(table_rows / 1000000, 2), &amp;#39;M&amp;#39;) rows, CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) DATA, CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) idx, CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) total_size, ROUND(index_length / data_length, 2) idxfrac FROM information_schema.</description>
     </item>
     
     <item>
       <title>Seeing the screen in black and white</title>
-      <link>https://dawehner.github.io/seeing-the-screen-in-black-and-white/</link>
+      <link>https://daniel.town/seeing-the-screen-in-black-and-white/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/seeing-the-screen-in-black-and-white/</guid>
+      <guid>https://daniel.town/seeing-the-screen-in-black-and-white/</guid>
       <description>Recently I&amp;rsquo;ve been thinking a lot about what matters to me. As many people I struggle with spending too much time on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit let&amp;rsquo;s you feel good temporarily, but as long you don&amp;rsquo;t consume it purposefully, it didn&amp;rsquo;t really give me anything longterm.
 End of October I stumbled upon digital wellbeing on Android: It allows you to set a certain time of the night, at which notifications gets disabled and your screen becomes black and white.</description>
     </item>
     
     <item>
       <title>Quickstarting Drupal 8</title>
-      <link>https://dawehner.github.io/quickstarting-drupal-8/</link>
+      <link>https://daniel.town/quickstarting-drupal-8/</link>
       <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/quickstarting-drupal-8/</guid>
+      <guid>https://daniel.town/quickstarting-drupal-8/</guid>
       <description>Before and around Drupalcon Nashville there was a lot of discussion around improving the first time experience. Things we achieved for example is a new Drupal.org homepage with a clear focus on 3 different userstories.
 One small work we have been doing can be seen in the following video:
 Drupal quickstart from daniel wehner on Vimeo.
@@ -115,10 +115,10 @@ To summarize this video: It should be possible to start Drupal as quickly as pos
     
     <item>
       <title>Realtime watchdog powered by PHP, Drupal and Elm</title>
-      <link>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</link>
+      <link>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</guid>
+      <guid>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</guid>
       <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
 One of them is the dblog UI.
 The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:
@@ -127,20 +127,20 @@ Let&amp;rsquo;s stream log entries to the browser:</description>
     
     <item>
       <title>Emoji code review</title>
-      <link>https://dawehner.github.io/emoji-code-review/</link>
+      <link>https://daniel.town/emoji-code-review/</link>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/emoji-code-review/</guid>
+      <guid>https://daniel.town/emoji-code-review/</guid>
       <description>Problem From my personal experience the hardest part of projects isn&amp;rsquo;t the technical side nor the project managment side or anything like this, its communication. Communication problems leads to demotivation, hours of lost work etc.
 A small subset of this space is communicating clearly in code reviews. Many people use tools like github to basically comment on bits of code, but there is no semantic meaning attached to each comment. Given that people need to extract exactly what each comment might mean.</description>
     </item>
     
     <item>
       <title>Access inaccessible git commits</title>
-      <link>https://dawehner.github.io/access-inaccessible-git-commits/</link>
+      <link>https://daniel.town/access-inaccessible-git-commits/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/access-inaccessible-git-commits/</guid>
+      <guid>https://daniel.town/access-inaccessible-git-commits/</guid>
       <description>Note: This is mostly a personal note, but maybe helpful for others
 I accidentally removed a local branch using git branch -D local-branch, but I forgot to push the last commit.
 I found this on the interwebs. git log -reflog
@@ -149,10 +149,10 @@ which gets all the logs and I was able to cherry-pick from there on.</descriptio
     
     <item>
       <title>Retry HTTP requests</title>
-      <link>https://dawehner.github.io/retry-http-requests/</link>
+      <link>https://daniel.town/retry-http-requests/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/retry-http-requests/</guid>
+      <guid>https://daniel.town/retry-http-requests/</guid>
       <description>Problem As a matter of life we all learn stuff fails. This might be frame with our favourite picture, the street in front of our house, or more likely requests to APIs.
 A call to a 3rd/2nd party API can fail due to various reasons:
 The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&amp;rsquo;t like you for a second.</description>
@@ -160,10 +160,10 @@ The client / server is under high load, which results into a timeout potentially
     
     <item>
       <title>Automatically clear the render cache when templates change</title>
-      <link>https://dawehner.github.io/automatically-clear-the-render-cache-when-templates-change/</link>
+      <link>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</link>
       <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/automatically-clear-the-render-cache-when-templates-change/</guid>
+      <guid>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</guid>
       <description>Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.
 On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.
 As solution we have written a script which invalidates the render cache when someone touches a template.</description>
@@ -171,10 +171,10 @@ As solution we have written a script which invalidates the render cache when som
     
     <item>
       <title>Clone a non composer repo with composer</title>
-      <link>https://dawehner.github.io/clone-a-non-composer-repo-with-composer/</link>
+      <link>https://daniel.town/clone-a-non-composer-repo-with-composer/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/clone-a-non-composer-repo-with-composer/</guid>
+      <guid>https://daniel.town/clone-a-non-composer-repo-with-composer/</guid>
       <description>There are some usecases where you want to integrate arbitrary libraries into your system. One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files. In Drupal we wanted to synchronize these information.
 Therefore we are using this small little bit in composer.json:
 { &amp;#34;repositories&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;package&amp;#34;, &amp;#34;package&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;namespace/name&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;dev-master&amp;#34;, &amp;#34;source&amp;#34;: { &amp;#34;url&amp;#34;: &amp;#34;https://github.com/example/example-repo.git&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;git&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;master&amp;#34; } } } ] } Once this is done you can use:</description>
@@ -182,10 +182,10 @@ Therefore we are using this small little bit in composer.json:
     
     <item>
       <title>Using tar the easy way</title>
-      <link>https://dawehner.github.io/using-tar-the-easy-way/</link>
+      <link>https://daniel.town/using-tar-the-easy-way/</link>
       <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/using-tar-the-easy-way/</guid>
+      <guid>https://daniel.town/using-tar-the-easy-way/</guid>
       <description>[Tar](https://en.wikipedia.org/wiki/Tar_(computing) (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators and users of unix like systems. It allows you to create archives of files and extract them later.
 Traditionally people learn it by copying examples:
 # Create / extract tar file tar cf example.tar file folder file2 tar xf example.tar file # Create / extract tar.gz file tar zcf example.tar.gz file folder file2 tar zxf example.</description>
@@ -193,20 +193,20 @@ Traditionally people learn it by copying examples:
     
     <item>
       <title>APCU and some ramblings</title>
-      <link>https://dawehner.github.io/apcu-and-some-ramblings/</link>
+      <link>https://daniel.town/apcu-and-some-ramblings/</link>
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/apcu-and-some-ramblings/</guid>
+      <guid>https://daniel.town/apcu-and-some-ramblings/</guid>
       <description>Introduction to APCU One integral part of Drupal 8 is its quite aggressive caching. One subpart is the usage of APC(u) for caching things in the critical path of the system. Let&amp;rsquo;s first see what APC(u) is and then see some potential problems with it.
 Since PHP 5.6 we have an opcode cache built into PHP, so the previous package APC is not longer needed. There was a small component of APCU, which is basically a key value store shared between all instances of PHP on a single node.</description>
     </item>
     
     <item>
       <title>Extract a folder from a git repo into its own repo</title>
-      <link>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</link>
+      <link>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</link>
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
+      <guid>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
       <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
 Copy the files and give a shit about the history Extract the history from an existing repo. But how would you extract a history from an existing repo?
@@ -215,20 +215,20 @@ Extract history from existing repo. Step 1: Clone the existing repo into a new o
     
     <item>
       <title>Create a PDF from a couple of images</title>
-      <link>https://dawehner.github.io/create-a-pdf-from-a-couple-of-images/</link>
+      <link>https://daniel.town/create-a-pdf-from-a-couple-of-images/</link>
       <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/create-a-pdf-from-a-couple-of-images/</guid>
+      <guid>https://daniel.town/create-a-pdf-from-a-couple-of-images/</guid>
       <description>Sometimes you just want to create a PDF from a couple of scanned document papers. One solution could be of course to embed these pages into LibreOffice / Word and then use a PDF printer to get it. Some people though like tools on the shell.
 Therefore we can use imagemagick, which is probably already installed on your system. It provides a command line util called convert. convert first-image.png second-image.png image.</description>
     </item>
     
     <item>
       <title>Make sense of your watchdog entries</title>
-      <link>https://dawehner.github.io/make-sense-of-your-watchdog-entries/</link>
+      <link>https://daniel.town/make-sense-of-your-watchdog-entries/</link>
       <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/make-sense-of-your-watchdog-entries/</guid>
+      <guid>https://daniel.town/make-sense-of-your-watchdog-entries/</guid>
       <description>Websites have errors, which are ideally logged. Logging though is one thing, you also need to make some sense out of them.
 In an ideal world you would have some logging server like graylog or similar. Sadly this is not avaiable on every site.
 Here is an example of just looking at error messages stored in the database, but the general toolsuite could be applied to everything.
@@ -237,10 +237,10 @@ Get the data We use drush to fetch the error messages from drupal:</description>
     
     <item>
       <title>Remove all merged local branches</title>
-      <link>https://dawehner.github.io/remove-all-merged-local-branches/</link>
+      <link>https://daniel.town/remove-all-merged-local-branches/</link>
       <pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/remove-all-merged-local-branches/</guid>
+      <guid>https://daniel.town/remove-all-merged-local-branches/</guid>
       <description>When you use git you often create a hell lot of custom branches. This is annoying.
 With using a PR based workflow this results into proper merges, so we can truncate those branches.
 git checkout master git branch --merged | grep -v &amp;#34;\*&amp;#34; | xargs -n 1 git branch -d </description>
@@ -248,10 +248,10 @@ git checkout master git branch --merged | grep -v &amp;#34;\*&amp;#34; | xargs -
     
     <item>
       <title>Lua for all the things on your mac v1</title>
-      <link>https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/</link>
+      <link>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</link>
       <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/</guid>
+      <guid>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</guid>
       <description>One thing people really like about OSX is that everything works and is easy to use, but what is easy is not necessarily the best for your particular usecase.
 This especially becomes important when it comes down to configurability / scriptablity. For my own purposes I use Hammerspoon which provides Lua wrappers for quite a lot of lower level APIs, so its easy to setup things a specific way.
 Just a quick list of what you can do with it:</description>
@@ -259,10 +259,10 @@ Just a quick list of what you can do with it:</description>
     
     <item>
       <title>Get notified on slow commands</title>
-      <link>https://dawehner.github.io/get-notified-on-slow-commands/</link>
+      <link>https://daniel.town/get-notified-on-slow-commands/</link>
       <pubDate>Thu, 19 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/get-notified-on-slow-commands/</guid>
+      <guid>https://daniel.town/get-notified-on-slow-commands/</guid>
       <description>We are all lazy and we get distracted. One thing happens often… You run some slow command in your shell, switch to the browser, and bam… you are distracted.
 What about sending an OS notification? Every time any command needs longer to run than let’s say 10 seconds then there is some notification to show so you can get right back to work each time.
 Note: This is for Fish shell, which is a modern shell and really nice to use.</description>
@@ -270,10 +270,10 @@ Note: This is for Fish shell, which is a modern shell and really nice to use.</d
     
     <item>
       <title>Pretty print your json</title>
-      <link>https://dawehner.github.io/pretty-print-your-json/</link>
+      <link>https://daniel.town/pretty-print-your-json/</link>
       <pubDate>Sun, 18 Oct 2015 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/pretty-print-your-json/</guid>
+      <guid>https://daniel.town/pretty-print-your-json/</guid>
       <description>Due to its simplicity compared to other formats like XML, JSON these days is completly ruling the marking of remote APIs, like REST.
 Let&amp;rsquo;s have a look at one small problem which occurs quite often: curl &amp;#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;amp;format=application/json&amp;#34; {&amp;#34;metaData&amp;#34;:{&amp;#34;apiVersion&amp;#34;:&amp;#34;0.2&amp;#34;,&amp;#34;warning&amp;#34;:&amp;#34;ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-Änderungen informiert zu werden&amp;#34;,&amp;#34;copyright&amp;#34;:&amp;#34;Copyright (C) 2014 Daniel Naber (www.danielnaber.de)&amp;#34;,&amp;#34;license&amp;#34;:&amp;#34;GNU LESSER GENERAL PUBLIC LICENSE Version 2.1&amp;#34;,&amp;#34;source&amp;#34;:&amp;#34;http://www.openthesaurus.de&amp;#34;,&amp;#34;date&amp;#34;:&amp;#34;Sun Oct 18 09:20:29 CEST 2015&amp;#34;},&amp;#34;synsets&amp;#34;:[{&amp;#34;id&amp;#34;:292,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Erprobung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]},{&amp;#34;id&amp;#34;:4398,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Kontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Leistungsnachweis&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;}]},{&amp;#34;id&amp;#34;:5752,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Klassenarbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Klausur&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Lernerfolgskontrolle&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Prüfung&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schularbeit&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Schulaufgabe&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Arbeit&amp;#34;,&amp;#34;level&amp;#34;:&amp;#34;umgangssprachlich&amp;#34;}]},{&amp;#34;id&amp;#34;:9138,&amp;#34;categories&amp;#34;:[],&amp;#34;terms&amp;#34;:[{&amp;#34;term&amp;#34;:&amp;#34;Experiment&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Probelauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Studie&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Test&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testballon&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Testlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockenlauf&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Trockentest&amp;#34;},{&amp;#34;term&amp;#34;:&amp;#34;Versuch&amp;#34;}]}]}⏎
 Pretty print So you are either a guru or extremly motivated to remember the open braces for your own, otherwise you need help to read the JSON properly.</description>

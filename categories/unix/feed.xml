@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>unix on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/unix/</link>
+    <link>https://daniel.town/categories/unix/</link>
     <description>Recent content in unix on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2017 09:08:31 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/unix/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2017 09:08:31 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/unix/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using tar the easy way</title>
-      <link>https://dawehner.github.io/using-tar-the-easy-way/</link>
+      <link>https://daniel.town/using-tar-the-easy-way/</link>
       <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/using-tar-the-easy-way/</guid>
+      <guid>https://daniel.town/using-tar-the-easy-way/</guid>
       <description>[Tar](https://en.wikipedia.org/wiki/Tar_(computing) (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators and users of unix like systems. It allows you to create archives of files and extract them later.
 Traditionally people learn it by copying examples:
 # Create / extract tar file tar cf example.tar file folder file2 tar xf example.tar file # Create / extract tar.gz file tar zcf example.tar.gz file folder file2 tar zxf example.</description>

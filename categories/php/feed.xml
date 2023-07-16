@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>php on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/php/</link>
+    <link>https://daniel.town/categories/php/</link>
     <description>Recent content in php on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/php/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/php/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Realtime watchdog powered by PHP, Drupal and Elm</title>
-      <link>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</link>
+      <link>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</guid>
+      <guid>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</guid>
       <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
 One of them is the dblog UI.
 The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:
@@ -21,10 +21,10 @@ Let&amp;rsquo;s stream log entries to the browser:</description>
     
     <item>
       <title>Retry HTTP requests</title>
-      <link>https://dawehner.github.io/retry-http-requests/</link>
+      <link>https://daniel.town/retry-http-requests/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/retry-http-requests/</guid>
+      <guid>https://daniel.town/retry-http-requests/</guid>
       <description>Problem As a matter of life we all learn stuff fails. This might be frame with our favourite picture, the street in front of our house, or more likely requests to APIs.
 A call to a 3rd/2nd party API can fail due to various reasons:
 The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&amp;rsquo;t like you for a second.</description>
@@ -32,10 +32,10 @@ The client / server is under high load, which results into a timeout potentially
     
     <item>
       <title>APCU and some ramblings</title>
-      <link>https://dawehner.github.io/apcu-and-some-ramblings/</link>
+      <link>https://daniel.town/apcu-and-some-ramblings/</link>
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/apcu-and-some-ramblings/</guid>
+      <guid>https://daniel.town/apcu-and-some-ramblings/</guid>
       <description>Introduction to APCU One integral part of Drupal 8 is its quite aggressive caching. One subpart is the usage of APC(u) for caching things in the critical path of the system. Let&amp;rsquo;s first see what APC(u) is and then see some potential problems with it.
 Since PHP 5.6 we have an opcode cache built into PHP, so the previous package APC is not longer needed. There was a small component of APCU, which is basically a key value store shared between all instances of PHP on a single node.</description>
     </item>

@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/tags/</link>
+    <link>https://daniel.town/tags/</link>
     <description>Recent content in Tags on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://dawehner.github.io/tags/feed.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://daniel.town/tags/feed.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

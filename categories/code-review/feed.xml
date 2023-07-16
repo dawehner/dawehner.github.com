@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code review on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/code-review/</link>
+    <link>https://daniel.town/categories/code-review/</link>
     <description>Recent content in code review on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/code-review/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/code-review/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emoji code review</title>
-      <link>https://dawehner.github.io/emoji-code-review/</link>
+      <link>https://daniel.town/emoji-code-review/</link>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/emoji-code-review/</guid>
+      <guid>https://daniel.town/emoji-code-review/</guid>
       <description>Problem From my personal experience the hardest part of projects isn&amp;rsquo;t the technical side nor the project managment side or anything like this, its communication. Communication problems leads to demotivation, hours of lost work etc.
 A small subset of this space is communicating clearly in code reviews. Many people use tools like github to basically comment on bits of code, but there is no semantic meaning attached to each comment. Given that people need to extract exactly what each comment might mean.</description>
     </item>

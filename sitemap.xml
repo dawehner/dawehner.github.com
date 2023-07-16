@@ -2,200 +2,206 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dawehner.github.io/</loc>
+    <loc>https://daniel.town/boardgame/</loc>
+    <lastmod>2023-07-16T09:08:31+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/</loc>
+    <lastmod>2023-07-16T09:08:31+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/boardgame/terraforming-mars/</loc>
+    <lastmod>2023-07-16T09:08:31+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/my-translation-workflow/</loc>
     <lastmod>2020-12-06T11:45:14+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/my-translation-workflow/</loc>
+    <loc>https://daniel.town/post/</loc>
     <lastmod>2020-12-06T11:45:14+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/post/</loc>
-    <lastmod>2020-12-06T11:45:14+00:00</lastmod>
-  </url><url>
-    <loc>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</loc>
+    <loc>https://daniel.town/convert-html-files-to-markdown-using-pandoc/</loc>
     <lastmod>2020-11-29T10:32:30+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/bash/</loc>
+    <loc>https://daniel.town/categories/bash/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/</loc>
+    <loc>https://daniel.town/categories/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/good-bash-error-handling/</loc>
+    <loc>https://daniel.town/good-bash-error-handling/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/the-wind-of-change/</loc>
+    <loc>https://daniel.town/the-wind-of-change/</loc>
     <lastmod>2020-07-26T15:50:40+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/link/</loc>
+    <loc>https://daniel.town/link/</loc>
     <lastmod>2020-07-25T14:25:45+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/theirtube-filter-bubble-for-the-rest-of-us/</loc>
+    <loc>https://daniel.town/theirtube-filter-bubble-for-the-rest-of-us/</loc>
     <lastmod>2020-07-25T14:25:45+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/shaders/2020-circles/</loc>
+    <loc>https://daniel.town/shaders/2020-circles/</loc>
     <lastmod>2020-05-03T23:46:48+01:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/shader/</loc>
+    <loc>https://daniel.town/shader/</loc>
     <lastmod>2020-05-03T23:46:48+01:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/shaders/pink-floyd/</loc>
+    <loc>https://daniel.town/shaders/pink-floyd/</loc>
     <lastmod>2020-04-25T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/shaders/spinning-wheel/</loc>
+    <loc>https://daniel.town/shaders/spinning-wheel/</loc>
     <lastmod>2020-04-25T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/convert-openssh-key-to-rsa-pem/</loc>
+    <loc>https://daniel.town/convert-openssh-key-to-rsa-pem/</loc>
     <lastmod>2020-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/ssh/</loc>
+    <loc>https://daniel.town/categories/ssh/</loc>
     <lastmod>2020-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/media/2020-hook/</loc>
+    <loc>https://daniel.town/media/2020-hook/</loc>
     <lastmod>2020-04-10T17:48:05+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/media/</loc>
+    <loc>https://daniel.town/media/</loc>
     <lastmod>2020-04-10T17:48:05+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/media/2020-mooncop/</loc>
+    <loc>https://daniel.town/media/2020-mooncop/</loc>
     <lastmod>2020-02-19T17:48:05+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/profiling-php-in-ddev-using-tideways-locally/</loc>
+    <loc>https://daniel.town/profiling-php-in-ddev-using-tideways-locally/</loc>
     <lastmod>2019-12-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/media/2019-permanent_record/</loc>
+    <loc>https://daniel.town/media/2019-permanent_record/</loc>
     <lastmod>2019-11-19T17:48:05+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/find-out-that-an-application-is-listen-on-a-given-port/</loc>
+    <loc>https://daniel.town/find-out-that-an-application-is-listen-on-a-given-port/</loc>
     <lastmod>2019-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/mysql/</loc>
+    <loc>https://daniel.town/categories/mysql/</loc>
     <lastmod>2019-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/show-largest-mysql-tables/</loc>
+    <loc>https://daniel.town/show-largest-mysql-tables/</loc>
     <lastmod>2019-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/display/</loc>
+    <loc>https://daniel.town/categories/display/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/focus/</loc>
+    <loc>https://daniel.town/categories/focus/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/seeing-the-screen-in-black-and-white/</loc>
+    <loc>https://daniel.town/seeing-the-screen-in-black-and-white/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/drupal/</loc>
+    <loc>https://daniel.town/categories/drupal/</loc>
     <lastmod>2018-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/quickstarting-drupal-8/</loc>
+    <loc>https://daniel.town/quickstarting-drupal-8/</loc>
     <lastmod>2018-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/media/2018-live_30/</loc>
+    <loc>https://daniel.town/media/2018-live_30/</loc>
     <lastmod>2018-04-19T17:48:05+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/about/</loc>
+    <loc>https://daniel.town/about/</loc>
     <lastmod>2018-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/page/</loc>
+    <loc>https://daniel.town/page/</loc>
     <lastmod>2018-02-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/elm/</loc>
+    <loc>https://daniel.town/categories/elm/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/php/</loc>
+    <loc>https://daniel.town/categories/php/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/realtime/</loc>
+    <loc>https://daniel.town/categories/realtime/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/realtime-watchdog-powered-by-php-drupal-and-elm/</loc>
+    <loc>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/websockets/</loc>
+    <loc>https://daniel.town/categories/websockets/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/code-review/</loc>
+    <loc>https://daniel.town/categories/code-review/</loc>
     <lastmod>2017-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/emoji-code-review/</loc>
+    <loc>https://daniel.town/emoji-code-review/</loc>
     <lastmod>2017-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/github/</loc>
+    <loc>https://daniel.town/categories/github/</loc>
     <lastmod>2017-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/access-inaccessible-git-commits/</loc>
+    <loc>https://daniel.town/access-inaccessible-git-commits/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/git/</loc>
+    <loc>https://daniel.town/categories/git/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/guzzle/</loc>
+    <loc>https://daniel.town/categories/guzzle/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/retry-http-requests/</loc>
+    <loc>https://daniel.town/retry-http-requests/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/automatically-clear-the-render-cache-when-templates-change/</loc>
+    <loc>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</loc>
     <lastmod>2017-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/clone-a-non-composer-repo-with-composer/</loc>
+    <loc>https://daniel.town/clone-a-non-composer-repo-with-composer/</loc>
     <lastmod>2017-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/composer/</loc>
+    <loc>https://daniel.town/categories/composer/</loc>
     <lastmod>2017-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/shell/</loc>
+    <loc>https://daniel.town/categories/shell/</loc>
     <lastmod>2017-02-22T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/unix/</loc>
+    <loc>https://daniel.town/categories/unix/</loc>
     <lastmod>2017-02-22T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/using-tar-the-easy-way/</loc>
+    <loc>https://daniel.town/using-tar-the-easy-way/</loc>
     <lastmod>2017-02-22T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/apcu-and-some-ramblings/</loc>
+    <loc>https://daniel.town/apcu-and-some-ramblings/</loc>
     <lastmod>2016-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</loc>
+    <loc>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</loc>
     <lastmod>2016-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/create-a-pdf-from-a-couple-of-images/</loc>
+    <loc>https://daniel.town/create-a-pdf-from-a-couple-of-images/</loc>
     <lastmod>2016-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/drush/</loc>
+    <loc>https://daniel.town/categories/drush/</loc>
     <lastmod>2016-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/make-sense-of-your-watchdog-entries/</loc>
+    <loc>https://daniel.town/make-sense-of-your-watchdog-entries/</loc>
     <lastmod>2016-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/python/</loc>
+    <loc>https://daniel.town/categories/python/</loc>
     <lastmod>2016-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/remove-all-merged-local-branches/</loc>
+    <loc>https://daniel.town/remove-all-merged-local-branches/</loc>
     <lastmod>2015-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/automation/</loc>
+    <loc>https://daniel.town/categories/automation/</loc>
     <lastmod>2015-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/hammerspoon/</loc>
+    <loc>https://daniel.town/categories/hammerspoon/</loc>
     <lastmod>2015-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/</loc>
+    <loc>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</loc>
     <lastmod>2015-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/fish/</loc>
+    <loc>https://daniel.town/categories/fish/</loc>
     <lastmod>2015-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/get-notified-on-slow-commands/</loc>
+    <loc>https://daniel.town/get-notified-on-slow-commands/</loc>
     <lastmod>2015-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/pretty-print-your-json/</loc>
+    <loc>https://daniel.town/pretty-print-your-json/</loc>
     <lastmod>2015-10-18T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/categories/rest/</loc>
+    <loc>https://daniel.town/categories/rest/</loc>
     <lastmod>2015-10-18T09:08:31+00:00</lastmod>
   </url><url>
-    <loc>https://dawehner.github.io/projects/</loc>
+    <loc>https://daniel.town/projects/</loc>
   </url><url>
-    <loc>https://dawehner.github.io/tags/</loc>
+    <loc>https://daniel.town/tags/</loc>
   </url>
 </urlset>

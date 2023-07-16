@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/mysql/</link>
+    <link>https://daniel.town/categories/mysql/</link>
     <description>Recent content in mysql on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/mysql/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/mysql/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Show largest mysql tables</title>
-      <link>https://dawehner.github.io/show-largest-mysql-tables/</link>
+      <link>https://daniel.town/show-largest-mysql-tables/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/show-largest-mysql-tables/</guid>
+      <guid>https://daniel.town/show-largest-mysql-tables/</guid>
       <description>Here is a small sql commando to show the largest mysql tables on your system.
 SELECT CONCAT(table_schema, &amp;#39;.&amp;#39;, table_name), CONCAT(ROUND(table_rows / 1000000, 2), &amp;#39;M&amp;#39;) rows, CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) DATA, CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) idx, CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) total_size, ROUND(index_length / data_length, 2) idxfrac FROM information_schema.</description>
     </item>

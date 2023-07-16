@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>display on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/display/</link>
+    <link>https://daniel.town/categories/display/</link>
     <description>Recent content in display on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/display/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/display/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Seeing the screen in black and white</title>
-      <link>https://dawehner.github.io/seeing-the-screen-in-black-and-white/</link>
+      <link>https://daniel.town/seeing-the-screen-in-black-and-white/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/seeing-the-screen-in-black-and-white/</guid>
+      <guid>https://daniel.town/seeing-the-screen-in-black-and-white/</guid>
       <description>Recently I&amp;rsquo;ve been thinking a lot about what matters to me. As many people I struggle with spending too much time on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit let&amp;rsquo;s you feel good temporarily, but as long you don&amp;rsquo;t consume it purposefully, it didn&amp;rsquo;t really give me anything longterm.
 End of October I stumbled upon digital wellbeing on Android: It allows you to set a certain time of the night, at which notifications gets disabled and your screen becomes black and white.</description>
     </item>

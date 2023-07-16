@@ -2,215 +2,215 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Daniel Wehner&#39;s blog</title>
-    <link>https://dawehner.github.io/categories/</link>
+    <link>https://daniel.town/categories/</link>
     <description>Recent content in Categories on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bash</title>
-      <link>https://dawehner.github.io/categories/bash/</link>
+      <link>https://daniel.town/categories/bash/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/bash/</guid>
+      <guid>https://daniel.town/categories/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssh</title>
-      <link>https://dawehner.github.io/categories/ssh/</link>
+      <link>https://daniel.town/categories/ssh/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/ssh/</guid>
+      <guid>https://daniel.town/categories/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mysql</title>
-      <link>https://dawehner.github.io/categories/mysql/</link>
+      <link>https://daniel.town/categories/mysql/</link>
       <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/mysql/</guid>
+      <guid>https://daniel.town/categories/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>display</title>
-      <link>https://dawehner.github.io/categories/display/</link>
+      <link>https://daniel.town/categories/display/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/display/</guid>
+      <guid>https://daniel.town/categories/display/</guid>
       <description></description>
     </item>
     
     <item>
       <title>focus</title>
-      <link>https://dawehner.github.io/categories/focus/</link>
+      <link>https://daniel.town/categories/focus/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/focus/</guid>
+      <guid>https://daniel.town/categories/focus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>drupal</title>
-      <link>https://dawehner.github.io/categories/drupal/</link>
+      <link>https://daniel.town/categories/drupal/</link>
       <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/drupal/</guid>
+      <guid>https://daniel.town/categories/drupal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>elm</title>
-      <link>https://dawehner.github.io/categories/elm/</link>
+      <link>https://daniel.town/categories/elm/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/elm/</guid>
+      <guid>https://daniel.town/categories/elm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>php</title>
-      <link>https://dawehner.github.io/categories/php/</link>
+      <link>https://daniel.town/categories/php/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/php/</guid>
+      <guid>https://daniel.town/categories/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>realtime</title>
-      <link>https://dawehner.github.io/categories/realtime/</link>
+      <link>https://daniel.town/categories/realtime/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/realtime/</guid>
+      <guid>https://daniel.town/categories/realtime/</guid>
       <description></description>
     </item>
     
     <item>
       <title>websockets</title>
-      <link>https://dawehner.github.io/categories/websockets/</link>
+      <link>https://daniel.town/categories/websockets/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/websockets/</guid>
+      <guid>https://daniel.town/categories/websockets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>code review</title>
-      <link>https://dawehner.github.io/categories/code-review/</link>
+      <link>https://daniel.town/categories/code-review/</link>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/code-review/</guid>
+      <guid>https://daniel.town/categories/code-review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>https://dawehner.github.io/categories/github/</link>
+      <link>https://daniel.town/categories/github/</link>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/github/</guid>
+      <guid>https://daniel.town/categories/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>https://dawehner.github.io/categories/git/</link>
+      <link>https://daniel.town/categories/git/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/git/</guid>
+      <guid>https://daniel.town/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>guzzle</title>
-      <link>https://dawehner.github.io/categories/guzzle/</link>
+      <link>https://daniel.town/categories/guzzle/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/guzzle/</guid>
+      <guid>https://daniel.town/categories/guzzle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>composer</title>
-      <link>https://dawehner.github.io/categories/composer/</link>
+      <link>https://daniel.town/categories/composer/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/composer/</guid>
+      <guid>https://daniel.town/categories/composer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shell</title>
-      <link>https://dawehner.github.io/categories/shell/</link>
+      <link>https://daniel.town/categories/shell/</link>
       <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/shell/</guid>
+      <guid>https://daniel.town/categories/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>unix</title>
-      <link>https://dawehner.github.io/categories/unix/</link>
+      <link>https://daniel.town/categories/unix/</link>
       <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/unix/</guid>
+      <guid>https://daniel.town/categories/unix/</guid>
       <description></description>
     </item>
     
     <item>
       <title>drush</title>
-      <link>https://dawehner.github.io/categories/drush/</link>
+      <link>https://daniel.town/categories/drush/</link>
       <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/drush/</guid>
+      <guid>https://daniel.town/categories/drush/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://dawehner.github.io/categories/python/</link>
+      <link>https://daniel.town/categories/python/</link>
       <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/python/</guid>
+      <guid>https://daniel.town/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>automation</title>
-      <link>https://dawehner.github.io/categories/automation/</link>
+      <link>https://daniel.town/categories/automation/</link>
       <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/automation/</guid>
+      <guid>https://daniel.town/categories/automation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hammerspoon</title>
-      <link>https://dawehner.github.io/categories/hammerspoon/</link>
+      <link>https://daniel.town/categories/hammerspoon/</link>
       <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/hammerspoon/</guid>
+      <guid>https://daniel.town/categories/hammerspoon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fish</title>
-      <link>https://dawehner.github.io/categories/fish/</link>
+      <link>https://daniel.town/categories/fish/</link>
       <pubDate>Thu, 19 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/fish/</guid>
+      <guid>https://daniel.town/categories/fish/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST</title>
-      <link>https://dawehner.github.io/categories/rest/</link>
+      <link>https://daniel.town/categories/rest/</link>
       <pubDate>Sun, 18 Oct 2015 09:08:31 +0000</pubDate>
       
-      <guid>https://dawehner.github.io/categories/rest/</guid>
+      <guid>https://daniel.town/categories/rest/</guid>
       <description></description>
     </item>
     
