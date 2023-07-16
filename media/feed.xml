@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Media on Daniel Wehner&#39;s blog</title>
+    <title>media on Daniel Wehner&#39;s blog</title>
     <link>https://dawehner.github.io/media/</link>
-    <description>Recent content in Media on Daniel Wehner&#39;s blog</description>
+    <description>Recent content in media on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Apr 2020 17:48:05 +0000</lastBuildDate>
-    
-	<atom:link href="https://dawehner.github.io/media/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 10 Apr 2020 17:48:05 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/media/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hook</title>
       <link>https://dawehner.github.io/media/2020-hook/</link>
@@ -35,7 +31,8 @@
       <pubDate>Tue, 19 Nov 2019 17:48:05 +0000</pubDate>
       
       <guid>https://dawehner.github.io/media/2019-permanent_record/</guid>
-      <description>wikipedia</description>
+      <description>Snown explained his reasoning behind revealing the world the state of surveilance.
+Wikipedia link of the book</description>
     </item>
     
     <item>

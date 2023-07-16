@@ -6,10 +6,50 @@
     <description>Recent content in Posts on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 11:45:14 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My translation workflow</title>
+      <link>https://dawehner.github.io/my-translation-workflow/</link>
+      <pubDate>Sun, 06 Dec 2020 11:45:14 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/my-translation-workflow/</guid>
+      <description>Coming from my native language german, I got used to speak, write and think in English all day long. Still from time to time I have both english and german terms I want to get translated. At the same time I want to track my progress of terms over time.
+Therefore I&amp;rsquo;m using Alfred and a custom workflow. Let&amp;rsquo;s have a look what it does:
+You see: I can type in a word and retrieve a translation.</description>
+    </item>
     
-	<atom:link href="https://dawehner.github.io/post/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert html files to markdown using pandoc</title>
+      <link>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</link>
+      <pubDate>Sun, 29 Nov 2020 10:32:30 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/convert-html-files-to-markdown-using-pandoc/</guid>
+      <description>You can convert html files to markdown files using a various set of tools.
+Pandoc can be really useful, as its a tool being able to handle all kind of markup language and converting between them.
+Here is an example converting HTML files to markdown files.
+nix-shell -p pandoc pandoc input.html -t markdown -f html -s -o output.md </description>
+    </item>
     
+    <item>
+      <title>Good bash error handling</title>
+      <link>https://dawehner.github.io/good-bash-error-handling/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/good-bash-error-handling/</guid>
+      <description>It follows a small bunch of
+ </description>
+    </item>
+    
+    <item>
+      <title>The wind of change</title>
+      <link>https://dawehner.github.io/the-wind-of-change/</link>
+      <pubDate>Sun, 26 Jul 2020 15:50:40 +0000</pubDate>
+      
+      <guid>https://dawehner.github.io/the-wind-of-change/</guid>
+      <description>The podcast “the wind of change” is a story about a song changing the history.
+Listen to an exciting season of investigative journalism packed up in a good story:
+https://crooked.com/podcast-series/wind-of-change/</description>
+    </item>
     
     <item>
       <title>Convert openssh key to RSA PEM</title>
@@ -39,7 +79,7 @@ Note: There are at least two cloud services out there providing profiling for PH
       
       <guid>https://dawehner.github.io/find-out-that-an-application-is-listen-on-a-given-port/</guid>
       <description>Choose one of those:
-lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 3030 </description>
+sudo lsof -i :3030 lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 3030 </description>
     </item>
     
     <item>
@@ -49,7 +89,7 @@ lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 
       
       <guid>https://dawehner.github.io/show-largest-mysql-tables/</guid>
       <description>Here is a small sql commando to show the largest mysql tables on your system.
-SELECT CONCAT(table_schema, &amp;#39;.&amp;#39;, table_name), CONCAT(ROUND(table_rows / 1000000, 2), &amp;#39;M&amp;#39;) rows, CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) DATA, CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) idx, CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) total_size, ROUND(index_length / data_length, 2) idxfrac FROM information_schema.</description>
+SELECTCONCAT(table_schema,&amp;#39;.&amp;#39;,table_name),CONCAT(ROUND(table_rows/1000000,2),&amp;#39;M&amp;#39;)rows,CONCAT(ROUND(data_length/(1024*1024*1024),2),&amp;#39;G&amp;#39;)DATA,CONCAT(ROUND(index_length/(1024*1024*1024),2),&amp;#39;G&amp;#39;)idx,CONCAT(ROUND((data_length+index_length)/(1024*1024*1024),2),&amp;#39;G&amp;#39;)total_size,ROUND(index_length/data_length,2)idxfracFROMinformation_schema.TABLESORDERBYdata_length+index_lengthDESCLIMIT10; Thank you http://www.mysqlperformanceblog.com/2008/02/04/finding-out-largest-tables-on-mysql-server/ for the code.</description>
     </item>
     
     <item>
@@ -138,7 +178,7 @@ As solution we have written a script which invalidates the render cache when som
       <guid>https://dawehner.github.io/clone-a-non-composer-repo-with-composer/</guid>
       <description>There are some usecases where you want to integrate arbitrary libraries into your system. One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files. In Drupal we wanted to synchronize these information.
 Therefore we are using this small little bit in composer.json:
-{ &amp;#34;repositories&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;package&amp;#34;, &amp;#34;package&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;namespace/name&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;dev-master&amp;#34;, &amp;#34;source&amp;#34;: { &amp;#34;url&amp;#34;: &amp;#34;https://github.com/example/example-repo.git&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;git&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;master&amp;#34; } } } ] }  Once this is done you can use:</description>
+{ &amp;#34;repositories&amp;#34;: [ { &amp;#34;type&amp;#34;: &amp;#34;package&amp;#34;, &amp;#34;package&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;namespace/name&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;dev-master&amp;#34;, &amp;#34;source&amp;#34;: { &amp;#34;url&amp;#34;: &amp;#34;https://github.com/example/example-repo.git&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;git&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;master&amp;#34; } } } ] } Once this is done you can use:</description>
     </item>
     
     <item>

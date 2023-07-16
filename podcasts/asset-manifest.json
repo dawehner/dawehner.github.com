@@ -1,0 +1,16 @@
+{
+  "main.js": "/static/js/main.49af35f6.chunk.js",
+  "main.js.map": "/static/js/main.49af35f6.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.1b922744.js",
+  "runtime~main.js.map": "/static/js/runtime~main.1b922744.js.map",
+  "vendors~main.js": "/static/js/vendors~main.b17b319b.chunk.js",
+  "vendors~main.js.map": "/static/js/vendors~main.b17b319b.chunk.js.map",
+  "./service-worker.js": "/./service-worker.js",
+  "antennapod-feeds.json": "/antennapod-feeds.json",
+  "antennapod-feeds.opml": "/antennapod-feeds.opml",
+  "favicon.ico": "/favicon.ico",
+  "index.html": "/index.html",
+  "logo.svg": "/logo.svg",
+  "manifest.json": "/manifest.json",
+  "precache-manifest.afd4ca2a515954466f455396bc04022a.js": "/precache-manifest.afd4ca2a515954466f455396bc04022a.js"
+}

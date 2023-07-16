@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.69.2" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <title>Make sense of your watchdog entries - Daniel Wehner&#39;s blog</title>
@@ -21,23 +21,22 @@
 <link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
-<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all" />
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css" />
 <link rel="webmention" href="https://webmention.io/daniel.town/webmention" />
 <link rel="pingback" href="https://webmention.io/daniel.town/xmlrpc" />
-<link rel="authorization_endpoint" href="https://indieauth.com/auth">
-<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
   <a href="https://dawehner.github.io/" class="nav-logo">
-    <img src="https://dawehner.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
-         alt="Logo">
+    <h1 class="sr-only">Daniel Wehner&#39;s blog</h1>
+    <img src="https://dawehner.github.io/images/logo.png" width="50"
+      height="50" alt="Logo">
   </a>
 
   <ul class="nav-links">
@@ -50,13 +49,11 @@
     
   </ul>
 </nav>
-
       </header>
-
 
 <main class="content" role="main">
   <article class="article h-entry">
-    <h1 class="article-title p-name">Make sense of your watchdog entries</h1>
+    <h2 class="article-title p-name">Make sense of your watchdog entries</h2>
     
     <span class="article-duration">2 min read</span>
     <span class="article-date"><time class="dt-published"
@@ -71,7 +68,7 @@ Sadly this is not avaiable on every site.</p>
 <p>Here is an example of just looking at error messages stored in the database, but the general toolsuite could be applied to everything.</p>
 <h2 id="get-the-data">Get the data</h2>
 <p>We use drush to fetch the error messages from drupal:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">drush watchdog-show --count=<span style="color:#3677a9">1000000</span> --type=php --format=json &gt; errors.json</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">drush watchdog-show --count=<span style="color:#3677a9">1000000</span> --type=php --format=json &gt; errors.json</code></pre></div>
 <p>This writes out all PHP entries in watchdog into the errors.json file. Of course you could use SQL for that as well,
 but who isn&rsquo;t lazy.</p>
 <h2 id="look-at-the-data">Look at the data.</h2>
@@ -81,7 +78,7 @@ and iterate over all entries to make sense out of them, but is that elegant, not
 <p>There is a package called pandas, which pretty much gives you the same kind of operations to data like SQL for
 any kind of data source. (SQL, CSV, JSON etc.).</p>
 <p>First load the data into pandas:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pandas</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">pd</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pandas</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">pd</span>
 
 result = pd.read_json(<span style="color:#ed9d13">&#34;errors.json&#34;</span>, orient=<span style="color:#ed9d13">&#34;index&#34;</span>)</code></pre></div>
 <p>Result is a thing called dataframe, which is basically an enhanced array/hashmap.</p>
@@ -95,14 +92,13 @@ result = pd.read_json(<span style="color:#ed9d13">&#34;errors.json&#34;</span>, 
 </ul>
 <p>Now we want to know which error message appeared how often. Therefore pandas
 offers grouping the result.</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">result.groupby(<span style="color:#ed9d13">&#39;message&#39;</span>)</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">result.groupby(<span style="color:#ed9d13">&#39;message&#39;</span>)</code></pre></div>
 <p>This gives us an array of dataframes, one for each possible message, which you can work with again:
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_by_message = result.groupby(<span style="color:#ed9d13">&#39;message&#39;</span>).count()[<span style="color:#ed9d13">&#39;wid&#39;</span>]</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_by_message = result.groupby(<span style="color:#ed9d13">&#39;message&#39;</span>).count()[<span style="color:#ed9d13">&#39;wid&#39;</span>]</code></pre></div></p>
 <h2 id="visualization">Visualization</h2>
 <p>And if you really want you could even visuallize it, if you want:
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_by_message.plot(kind=<span style="color:#ed9d13">&#34;bar&#34;</span>)</code></pre></div></p>
-<figure>
-    <img src="/img/watchdog-plot.png"/> <figcaption>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count_by_message.plot(kind=<span style="color:#ed9d13">&#34;bar&#34;</span>)</code></pre></div></p>
+<figure><img src="/img/watchdog-plot.png"/><figcaption>
             <h4>Visualization</h4>
         </figcaption>
 </figure>
@@ -122,6 +118,7 @@ offers grouping the result.</p>
       
 
       
+    </ul>
   </article>
 
 </main>
@@ -143,10 +140,13 @@ offers grouping the result.</p>
           class="fa fa-rss"></i> RSS feed</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+      <a class="u-url" rel="me" href="https://github.com/dawehner"><i class="fa fa-github"></i> Github</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+      <a class="u-url" rel="me" href="https://twitter.com/da_wehner"><i class="fa fa-twitter"></i> Twitter</a>
+    </li>
+    <li>
+      <a class="u-url" rel="me" href="https://chaos.social/@Dawehner"><i class="fa fa-mastodon"></i> Mastodon</a>
     </li>
   </ul>
 </footer>

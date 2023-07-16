@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.69.2" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <title>Automatically clear the render cache when templates change - Daniel Wehner&#39;s blog</title>
@@ -21,23 +21,22 @@
 <link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
-<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all" />
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css" />
 <link rel="webmention" href="https://webmention.io/daniel.town/webmention" />
 <link rel="pingback" href="https://webmention.io/daniel.town/xmlrpc" />
-<link rel="authorization_endpoint" href="https://indieauth.com/auth">
-<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
   <a href="https://dawehner.github.io/" class="nav-logo">
-    <img src="https://dawehner.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
-         alt="Logo">
+    <h1 class="sr-only">Daniel Wehner&#39;s blog</h1>
+    <img src="https://dawehner.github.io/images/logo.png" width="50"
+      height="50" alt="Logo">
   </a>
 
   <ul class="nav-links">
@@ -50,13 +49,11 @@
     
   </ul>
 </nav>
-
       </header>
-
 
 <main class="content" role="main">
   <article class="article h-entry">
-    <h1 class="article-title p-name">Automatically clear the render cache when templates change</h1>
+    <h2 class="article-title p-name">Automatically clear the render cache when templates change</h2>
     
     <span class="article-duration">2 min read</span>
     <span class="article-date"><time class="dt-published"
@@ -73,9 +70,9 @@ Everytime a file changes we call a script, which then clears the render cache.</
 <p>Required steps to set it up:</p>
 <ul>
 <li>Install fswatch
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  brew install fswatch</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  brew install fswatch</code></pre></div></li>
 <li>Add a php helper script:
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#cd2828;font-weight:bold">&lt;?php</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">&lt;?php
 
 <span style="color:#ed9d13">/**
 </span><span style="color:#ed9d13"> * @file
@@ -105,16 +102,15 @@ Everytime a file changes we call a script, which then clears the render cache.</
     <span style="color:#40ffff">$cache_invalidator</span> = <span style="color:#40ffff">$kernel</span>-&gt;<span style="color:#bbb">getContainer</span>()-&gt;<span style="color:#bbb">get</span>(<span style="color:#ed9d13">&#39;cache_tags.invalidator&#39;</span>);
     <span style="color:#40ffff">$cache_invalidator</span>-&gt;<span style="color:#bbb">invalidateTags</span>([<span style="color:#ed9d13">&#39;rendered&#39;</span>]);
 
-    <span style="color:#6ab825;font-weight:bold">print</span> <span style="color:#ed9d13">&#34;File </span><span style="color:#ed9d13">{</span>$basename<span style="color:#ed9d13">}</span><span style="color:#ed9d13"> changed; render cache cleared.&#34;</span>;
+    <span style="color:#6ab825;font-weight:bold">print</span> <span style="color:#ed9d13">&#34;File </span><span style="color:#ed9d13">{</span><span style="color:#40ffff">$basename</span><span style="color:#ed9d13">}</span><span style="color:#ed9d13"> changed; render cache cleared.&#34;</span>;
   }
 }
 <span style="color:#6ab825;font-weight:bold">else</span> {
   <span style="color:#6ab825;font-weight:bold">print</span> <span style="color:#ed9d13">&#34;File argument needed&#34;</span>;
   <span style="color:#6ab825;font-weight:bold">exit</span>(<span style="color:#3677a9">1</span>);
-}
-</code></pre></div></li>
+}</code></pre></div></li>
 <li>Actually listen to filesystem events:
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fswatch -0 . | xargs -0 -I {} -t sh -c <span style="color:#ed9d13">&#39;php scripts/name/template-render-invalidator.php {}&#39;</span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fswatch -0 . | xargs -0 -I {} -t sh -c <span style="color:#ed9d13">&#39;php scripts/name/template-render-invalidator.php {}&#39;</span></code></pre></div></li>
 <li>For some extra goodness place this in a composer script.</li>
 </ul>
 <p>Have you done anything similar and maybe solved it different?</p>
@@ -132,6 +128,7 @@ Everytime a file changes we call a script, which then clears the render cache.</
       
 
       
+    </ul>
   </article>
 
 </main>
@@ -153,10 +150,13 @@ Everytime a file changes we call a script, which then clears the render cache.</
           class="fa fa-rss"></i> RSS feed</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+      <a class="u-url" rel="me" href="https://github.com/dawehner"><i class="fa fa-github"></i> Github</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+      <a class="u-url" rel="me" href="https://twitter.com/da_wehner"><i class="fa fa-twitter"></i> Twitter</a>
+    </li>
+    <li>
+      <a class="u-url" rel="me" href="https://chaos.social/@Dawehner"><i class="fa fa-mastodon"></i> Mastodon</a>
     </li>
   </ul>
 </footer>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.69.2" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <title>Get notified on slow commands - Daniel Wehner&#39;s blog</title>
@@ -21,23 +21,22 @@
 <link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
-<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all" />
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css" />
 <link rel="webmention" href="https://webmention.io/daniel.town/webmention" />
 <link rel="pingback" href="https://webmention.io/daniel.town/xmlrpc" />
-<link rel="authorization_endpoint" href="https://indieauth.com/auth">
-<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
   <a href="https://dawehner.github.io/" class="nav-logo">
-    <img src="https://dawehner.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
-         alt="Logo">
+    <h1 class="sr-only">Daniel Wehner&#39;s blog</h1>
+    <img src="https://dawehner.github.io/images/logo.png" width="50"
+      height="50" alt="Logo">
   </a>
 
   <ul class="nav-links">
@@ -50,13 +49,11 @@
     
   </ul>
 </nav>
-
       </header>
-
 
 <main class="content" role="main">
   <article class="article h-entry">
-    <h1 class="article-title p-name">Get notified on slow commands</h1>
+    <h2 class="article-title p-name">Get notified on slow commands</h2>
     
     <span class="article-duration">2 min read</span>
     <span class="article-date"><time class="dt-published"
@@ -73,7 +70,7 @@
 <p>After each command a new line is printed and the shell prints out the prompt.
 At that time, we could provide a notification.</p>
 <p>Let’s create a new file and call it functions/rprompt.fish</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6ab825;font-weight:bold">function</span> fish_right_prompt
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6ab825;font-weight:bold">function</span> fish_right_prompt
     <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#24909d">test</span> <span style="color:#40ffff">$CMD_DURATION</span>
         <span style="color:#999;font-style:italic"># Store duration of last command</span>
         <span style="color:#24909d">set</span> duration (<span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$CMD_DURATION</span><span style="color:#ed9d13"> 1000&#34;</span> | awk <span style="color:#ed9d13">&#39;{printf &#34;%.3fs&#34;, $1 / $2}&#39;</span>)
@@ -99,7 +96,7 @@ At that time, we could provide a notification.</p>
     end
 end</code></pre></div>
 <p>Reference rprompt.fish inside the main fish config file: <code>~/.config/fish/config.fish</code>:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">. ~/.config/fish/functions/rprompt.fish</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">. ~/.config/fish/functions/rprompt.fish</code></pre></div>
 
     </div>
 
@@ -115,6 +112,7 @@ end</code></pre></div>
       
 
       
+    </ul>
   </article>
 
 </main>
@@ -136,10 +134,13 @@ end</code></pre></div>
           class="fa fa-rss"></i> RSS feed</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+      <a class="u-url" rel="me" href="https://github.com/dawehner"><i class="fa fa-github"></i> Github</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+      <a class="u-url" rel="me" href="https://twitter.com/da_wehner"><i class="fa fa-twitter"></i> Twitter</a>
+    </li>
+    <li>
+      <a class="u-url" rel="me" href="https://chaos.social/@Dawehner"><i class="fa fa-mastodon"></i> Mastodon</a>
     </li>
   </ul>
 </footer>

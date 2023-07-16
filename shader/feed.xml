@@ -6,11 +6,7 @@
     <description>Recent content in Shaders on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 May 2020 23:46:48 +0100</lastBuildDate>
-    
-	<atom:link href="https://dawehner.github.io/shader/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 03 May 2020 23:46:48 +0100</lastBuildDate><atom:link href="https://dawehner.github.io/shader/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2020 Circles</title>
       <link>https://dawehner.github.io/shaders/2020-circles/</link>

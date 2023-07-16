@@ -6,11 +6,7 @@
     <description>Recent content in hammerspoon on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://dawehner.github.io/categories/hammerspoon/feed.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 22 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/categories/hammerspoon/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lua for all the things on your mac v1</title>
       <link>https://dawehner.github.io/lua-for-all-the-things-on-your-mac-v1/</link>

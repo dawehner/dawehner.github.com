@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.69.2" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <title>APCU and some ramblings - Daniel Wehner&#39;s blog</title>
@@ -21,23 +21,22 @@
 <link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
-<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all" />
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css" />
 <link rel="webmention" href="https://webmention.io/daniel.town/webmention" />
 <link rel="pingback" href="https://webmention.io/daniel.town/xmlrpc" />
-<link rel="authorization_endpoint" href="https://indieauth.com/auth">
-<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
   <a href="https://dawehner.github.io/" class="nav-logo">
-    <img src="https://dawehner.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
-         alt="Logo">
+    <h1 class="sr-only">Daniel Wehner&#39;s blog</h1>
+    <img src="https://dawehner.github.io/images/logo.png" width="50"
+      height="50" alt="Logo">
   </a>
 
   <ul class="nav-links">
@@ -50,13 +49,11 @@
     
   </ul>
 </nav>
-
       </header>
-
 
 <main class="content" role="main">
   <article class="article h-entry">
-    <h1 class="article-title p-name">APCU and some ramblings</h1>
+    <h2 class="article-title p-name">APCU and some ramblings</h2>
     
     <span class="article-duration">4 min read</span>
     <span class="article-date"><time class="dt-published"
@@ -120,7 +117,7 @@ Why does APCU not use a hash map? No idea, maybe you know? On top of that, APCU 
 So this results in 257 slots by default.</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#999;font-style:italic">/* calculate number of slots */</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#999;font-style:italic">/* calculate number of slots */</span>
 nslots = make_prime(size_hint &gt; <span style="color:#3677a9">0</span> ? size_hint : <span style="color:#3677a9">2000</span>);</code></pre></div>
 <ul>
 <li>Is APCU worth to use?</li>
@@ -144,6 +141,7 @@ nslots = make_prime(size_hint &gt; <span style="color:#3677a9">0</span> ? size_h
       
 
       
+    </ul>
   </article>
 
 </main>
@@ -165,10 +163,13 @@ nslots = make_prime(size_hint &gt; <span style="color:#3677a9">0</span> ? size_h
           class="fa fa-rss"></i> RSS feed</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+      <a class="u-url" rel="me" href="https://github.com/dawehner"><i class="fa fa-github"></i> Github</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+      <a class="u-url" rel="me" href="https://twitter.com/da_wehner"><i class="fa fa-twitter"></i> Twitter</a>
+    </li>
+    <li>
+      <a class="u-url" rel="me" href="https://chaos.social/@Dawehner"><i class="fa fa-mastodon"></i> Mastodon</a>
     </li>
   </ul>
 </footer>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.69.2" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
 <title>Pretty print your json - Daniel Wehner&#39;s blog</title>
@@ -21,23 +21,22 @@
 <link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
-<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css">
+<link rel="stylesheet" href="https://dawehner.github.io/css/main.css" media="all" />
+<link rel="stylesheet" href="https://dawehner.github.io/css/fonts.css" />
 <link rel="webmention" href="https://webmention.io/daniel.town/webmention" />
 <link rel="pingback" href="https://webmention.io/daniel.town/xmlrpc" />
-<link rel="authorization_endpoint" href="https://indieauth.com/auth">
-<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link rel="micropub" href="https://dawehner-images-micropub.herokuapp.com/micropub" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
   <a href="https://dawehner.github.io/" class="nav-logo">
-    <img src="https://dawehner.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
-         alt="Logo">
+    <h1 class="sr-only">Daniel Wehner&#39;s blog</h1>
+    <img src="https://dawehner.github.io/images/logo.png" width="50"
+      height="50" alt="Logo">
   </a>
 
   <ul class="nav-links">
@@ -50,13 +49,11 @@
     
   </ul>
 </nav>
-
       </header>
-
 
 <main class="content" role="main">
   <article class="article h-entry">
-    <h1 class="article-title p-name">Pretty print your json</h1>
+    <h2 class="article-title p-name">Pretty print your json</h2>
     
     <span class="article-duration">1 min read</span>
     <span class="article-date"><time class="dt-published"
@@ -67,14 +64,14 @@
       <p>Due to its simplicity compared to other formats like XML, JSON these days is completly
 ruling the marking of remote APIs, like REST.</p>
 <p>Let&rsquo;s have a look at one small problem which occurs quite often:
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#ed9d13">&#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;format=application/json&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#ed9d13">&#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;format=application/json&#34;</span>
 
 {<span style="color:#ed9d13">&#34;metaData&#34;</span>:{<span style="color:#ed9d13">&#34;apiVersion&#34;</span>:<span style="color:#ed9d13">&#34;0.2&#34;</span>,<span style="color:#ed9d13">&#34;warning&#34;</span>:<span style="color:#ed9d13">&#34;ACHTUNG: Bitte vor ernsthafter Nutzung feedback@openthesaurus.de kontaktieren, um bei API-Änderungen informiert zu werden&#34;</span>,<span style="color:#ed9d13">&#34;copyright&#34;</span>:<span style="color:#ed9d13">&#34;Copyright (C) 2014 Daniel Naber (www.danielnaber.de)&#34;</span>,<span style="color:#ed9d13">&#34;license&#34;</span>:<span style="color:#ed9d13">&#34;GNU LESSER GENERAL PUBLIC LICENSE Version 2.1&#34;</span>,<span style="color:#ed9d13">&#34;source&#34;</span>:<span style="color:#ed9d13">&#34;http://www.openthesaurus.de&#34;</span>,<span style="color:#ed9d13">&#34;date&#34;</span>:<span style="color:#ed9d13">&#34;Sun Oct 18 09:20:29 CEST 2015&#34;</span>},<span style="color:#ed9d13">&#34;synsets&#34;</span>:[{<span style="color:#ed9d13">&#34;id&#34;</span>:292,<span style="color:#ed9d13">&#34;categories&#34;</span>:[],<span style="color:#ed9d13">&#34;terms&#34;</span>:[{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Erprobung&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Probe&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Prüfung&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Test&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Versuch&#34;</span>}]},{<span style="color:#ed9d13">&#34;id&#34;</span>:4398,<span style="color:#ed9d13">&#34;categories&#34;</span>:[],<span style="color:#ed9d13">&#34;terms&#34;</span>:[{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Kontrolle&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Leistungsnachweis&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Prüfung&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Test&#34;</span>}]},{<span style="color:#ed9d13">&#34;id&#34;</span>:5752,<span style="color:#ed9d13">&#34;categories&#34;</span>:[],<span style="color:#ed9d13">&#34;terms&#34;</span>:[{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Klassenarbeit&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Klausur&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Lernerfolgskontrolle&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Prüfung&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Schularbeit&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Schulaufgabe&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Test&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Arbeit&#34;</span>,<span style="color:#ed9d13">&#34;level&#34;</span>:<span style="color:#ed9d13">&#34;umgangssprachlich&#34;</span>}]},{<span style="color:#ed9d13">&#34;id&#34;</span>:9138,<span style="color:#ed9d13">&#34;categories&#34;</span>:[],<span style="color:#ed9d13">&#34;terms&#34;</span>:[{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Experiment&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Probelauf&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Studie&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Test&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Testballon&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Testlauf&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Trockenlauf&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Trockentest&#34;</span>},{<span style="color:#ed9d13">&#34;term&#34;</span>:<span style="color:#ed9d13">&#34;Versuch&#34;</span>}]}]}⏎</code></pre></div></p>
 <h2 id="pretty-print">Pretty print</h2>
 <p>So you are either a guru or extremly motivated to remember the open braces for your own, otherwise you need
 help to read the JSON properly.
 One small trick which is pretty useful with the following helper tool:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#ed9d13">&#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;format=application/json&#34;</span> | python -m json.tool
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#ed9d13">&#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;format=application/json&#34;</span> | python -m json.tool
 
 {
     <span style="color:#ed9d13">&#34;metaData&#34;</span>: {
@@ -92,9 +89,9 @@ One small trick which is pretty useful with the following helper tool:</p>
 <h1 id="colors">Colors!</h1>
 <p>Another cool package is pygmentize, which colorizes the output.
 To install use
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">easy_install|pip|conda install  pygmentize</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">easy_install|pip|conda install  pygmentize</code></pre></div></p>
 <p>Then you pip that at the end and you get colored output:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a61717;background-color:#e3d2d2">curl</span> <span style="color:#ed9d13">&#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;format=application/json&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">|</span> <span style="color:#a61717;background-color:#e3d2d2">python</span> <span style="color:#a61717;background-color:#e3d2d2">-m</span> <span style="color:#a61717;background-color:#e3d2d2">json.tool</span> <span style="color:#a61717;background-color:#e3d2d2">|</span> <span style="color:#a61717;background-color:#e3d2d2">pygmentize</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a61717;background-color:#e3d2d2">curl</span> <span style="color:#ed9d13">&#34;https://www.openthesaurus.de/synonyme/search?q=test&amp;format=application/json&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">|</span> <span style="color:#a61717;background-color:#e3d2d2">python</span> <span style="color:#a61717;background-color:#e3d2d2">-m</span> <span style="color:#a61717;background-color:#e3d2d2">json.tool</span> <span style="color:#a61717;background-color:#e3d2d2">|</span> <span style="color:#a61717;background-color:#e3d2d2">pygmentize</span></code></pre></div>
 <p>For more sophisticated usecases checkout out [Postman][postman].</p>
 
     </div>
@@ -111,6 +108,7 @@ To install use
       
 
       
+    </ul>
   </article>
 
 </main>
@@ -132,10 +130,13 @@ To install use
           class="fa fa-rss"></i> RSS feed</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://github.com/dawehner" rel="me"><i class="fa fa-github"></i> Github</a>
+      <a class="u-url" rel="me" href="https://github.com/dawehner"><i class="fa fa-github"></i> Github</a>
     </li>
     <li>
-      <a class="u-url" rel="me" href="https://twitter.com/da_wehner" rel="me"><i class="fa fa-twitter"></i> Twitter</a>
+      <a class="u-url" rel="me" href="https://twitter.com/da_wehner"><i class="fa fa-twitter"></i> Twitter</a>
+    </li>
+    <li>
+      <a class="u-url" rel="me" href="https://chaos.social/@Dawehner"><i class="fa fa-mastodon"></i> Mastodon</a>
     </li>
   </ul>
 </footer>
