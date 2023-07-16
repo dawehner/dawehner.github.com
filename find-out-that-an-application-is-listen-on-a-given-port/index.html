@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.115.3">
 
 
 <title>Find out that an application is listen on a given port - Daniel Wehner&#39;s blog</title>
@@ -64,7 +64,7 @@
       <p>Choose one of those:</p>
 <pre tabindex="0"><code>sudo lsof -i :3030
 lsof -i | grep LISTEN | grep 3030
-netstat -ltnp | grep -w ':3030'
+netstat -ltnp | grep -w &#39;:3030&#39;
 fuser 3030
 </code></pre>
     </div>

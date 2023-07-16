@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.115.3">
 
 
 <title>Extract a folder from a git repo into its own repo - Daniel Wehner&#39;s blog</title>
@@ -70,10 +70,10 @@
 <p>But how would you extract a history from an existing repo?</p>
 <h3 id="extract-history-from-existing-repo">Extract history from existing repo.</h3>
 <p>Step 1: Clone the existing repo into a new one:</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone existingrepo new_opensource_repo
-<span style="color:#24909d">cd</span> new_opensource_repo</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone existingrepo new_opensource_repo
+</span></span><span style="display:flex;"><span><span style="color:#24909d">cd</span> new_opensource_repo</span></span></code></pre></div>
 <p>Step 2: Remove every commit beside the ones in the subfolder:
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git filter-branch --prune-empty --subdirectory-filter YOUR_FOLDER_NAME master</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git filter-branch --prune-empty --subdirectory-filter YOUR_FOLDER_NAME master</span></span></code></pre></div></p>
 
     </div>
 

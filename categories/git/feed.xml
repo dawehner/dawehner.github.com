@@ -49,8 +49,8 @@ Therefore we are using this small little bit in composer.json:
       <guid>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
       <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
- Copy the files and give a shit about the history Extract the history from an existing repo.  But how would you extract a history from an existing repo?
-Extract history from existing repo.</description>
+Copy the files and give a shit about the history Extract the history from an existing repo. But how would you extract a history from an existing repo?
+Extract history from existing repo. Step 1: Clone the existing repo into a new one:</description>
     </item>
     
     <item>

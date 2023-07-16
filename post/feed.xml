@@ -36,8 +36,7 @@ nix-shell -p pandoc pandoc input.html -t markdown -f html -s -o output.md </desc
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/good-bash-error-handling/</guid>
-      <description>It follows a small bunch of
- </description>
+      <description>It follows a small bunch of</description>
     </item>
     
     <item>
@@ -69,7 +68,7 @@ https://crooked.com/podcast-series/wind-of-change/</description>
       <description>From time to time one runs into some performance problems, for example in PHP applications. The request might be slow or a batch process is leaking memory.
 Here I will describe some setup used with ddev but the general setup can be adopted to any other PHP setup.
 Note: There are at least two cloud services out there providing profiling for PHP
- https://blackfire.io https://tideways.com/  Both are great and I recommend using them, this blog post though describes a setup which runs all locally.</description>
+https://blackfire.io https://tideways.com/ Both are great and I recommend using them, this blog post though describes a setup which runs all locally.</description>
     </item>
     
     <item>
@@ -79,7 +78,7 @@ Note: There are at least two cloud services out there providing profiling for PH
       
       <guid>https://dawehner.github.io/find-out-that-an-application-is-listen-on-a-given-port/</guid>
       <description>Choose one of those:
-sudo lsof -i :3030 lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#39;:3030&#39; fuser 3030 </description>
+sudo lsof -i :3030 lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &amp;#39;:3030&amp;#39; fuser 3030 </description>
     </item>
     
     <item>
@@ -89,7 +88,7 @@ sudo lsof -i :3030 lsof -i | grep LISTEN | grep 3030 netstat -ltnp | grep -w &#3
       
       <guid>https://dawehner.github.io/show-largest-mysql-tables/</guid>
       <description>Here is a small sql commando to show the largest mysql tables on your system.
-SELECTCONCAT(table_schema,&amp;#39;.&amp;#39;,table_name),CONCAT(ROUND(table_rows/1000000,2),&amp;#39;M&amp;#39;)rows,CONCAT(ROUND(data_length/(1024*1024*1024),2),&amp;#39;G&amp;#39;)DATA,CONCAT(ROUND(index_length/(1024*1024*1024),2),&amp;#39;G&amp;#39;)idx,CONCAT(ROUND((data_length+index_length)/(1024*1024*1024),2),&amp;#39;G&amp;#39;)total_size,ROUND(index_length/data_length,2)idxfracFROMinformation_schema.TABLESORDERBYdata_length+index_lengthDESCLIMIT10; Thank you http://www.mysqlperformanceblog.com/2008/02/04/finding-out-largest-tables-on-mysql-server/ for the code.</description>
+SELECT CONCAT(table_schema, &amp;#39;.&amp;#39;, table_name), CONCAT(ROUND(table_rows / 1000000, 2), &amp;#39;M&amp;#39;) rows, CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) DATA, CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) idx, CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) total_size, ROUND(index_length / data_length, 2) idxfrac FROM information_schema.</description>
     </item>
     
     <item>
@@ -110,7 +109,7 @@ End of October I stumbled upon digital wellbeing on Android: It allows you to se
       <guid>https://dawehner.github.io/quickstarting-drupal-8/</guid>
       <description>Before and around Drupalcon Nashville there was a lot of discussion around improving the first time experience. Things we achieved for example is a new Drupal.org homepage with a clear focus on 3 different userstories.
 One small work we have been doing can be seen in the following video:
- Drupal quickstart from daniel wehner on Vimeo.
+Drupal quickstart from daniel wehner on Vimeo.
 To summarize this video: It should be possible to start Drupal as quickly as possible:</description>
     </item>
     
@@ -156,7 +155,7 @@ which gets all the logs and I was able to cherry-pick from there on.</descriptio
       <guid>https://dawehner.github.io/retry-http-requests/</guid>
       <description>Problem As a matter of life we all learn stuff fails. This might be frame with our favourite picture, the street in front of our house, or more likely requests to APIs.
 A call to a 3rd/2nd party API can fail due to various reasons:
- The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&amp;rsquo;t like you for a second.</description>
+The client / server is under high load, which results into a timeout potentially The internet routes packages weird Currently something along the stack is deployed The universe just doesn&amp;rsquo;t like you for a second.</description>
     </item>
     
     <item>
@@ -210,8 +209,8 @@ Since PHP 5.6 we have an opcode cache built into PHP, so the previous package AP
       <guid>https://dawehner.github.io/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
       <description>Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.
 Now there are a two of possiblities:
- Copy the files and give a shit about the history Extract the history from an existing repo.  But how would you extract a history from an existing repo?
-Extract history from existing repo.</description>
+Copy the files and give a shit about the history Extract the history from an existing repo. But how would you extract a history from an existing repo?
+Extract history from existing repo. Step 1: Clone the existing repo into a new one:</description>
     </item>
     
     <item>

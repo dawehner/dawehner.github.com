@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.115.3">
 
 
 <title>Remove all merged local branches - Daniel Wehner&#39;s blog</title>
@@ -65,8 +65,8 @@
 This is annoying.</p>
 <p>With using a PR based workflow this results into proper merges, so
 we can truncate those branches.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
-git branch --merged | grep -v <span style="color:#ed9d13">&#34;\*&#34;</span> | xargs -n <span style="color:#3677a9">1</span> git branch -d</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout master
+</span></span><span style="display:flex;"><span>git branch --merged | grep -v <span style="color:#ed9d13">&#34;\*&#34;</span> | xargs -n <span style="color:#3677a9">1</span> git branch -d</span></span></code></pre></div>
 
     </div>
 

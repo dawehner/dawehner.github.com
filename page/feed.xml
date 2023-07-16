@@ -13,7 +13,7 @@
       <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dawehner.github.io/about/</guid>
-      <description>Daniel Wehner (he / him / his) Engineer, runner, climber, rower in London  @da_wehner Twitter dawehner Github   A lists of podcasts I enjoy listening to can be found here</description>
+      <description>Daniel Wehner (he / him / his) Engineer, runner, climber, rower in London @da_wehner Twitter dawehner Github A lists of podcasts I enjoy listening to can be found here</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       
       <guid>https://dawehner.github.io/projects/</guid>
       <description>This page links and describes some of my personal projects.
- A list of GLSL (OpenGL Shading Language) experiments A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.</description>
+A list of GLSL (OpenGL Shading Language) experiments A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.</description>
     </item>
     
   </channel>

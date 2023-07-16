@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.115.3">
 
 
 <title>Get notified on slow commands - Daniel Wehner&#39;s blog</title>
@@ -70,33 +70,33 @@
 <p>After each command a new line is printed and the shell prints out the prompt.
 At that time, we could provide a notification.</p>
 <p>Let’s create a new file and call it functions/rprompt.fish</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6ab825;font-weight:bold">function</span> fish_right_prompt
-    <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#24909d">test</span> <span style="color:#40ffff">$CMD_DURATION</span>
-        <span style="color:#999;font-style:italic"># Store duration of last command</span>
-        <span style="color:#24909d">set</span> duration (<span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$CMD_DURATION</span><span style="color:#ed9d13"> 1000&#34;</span> | awk <span style="color:#ed9d13">&#39;{printf &#34;%.3fs&#34;, $1 / $2}&#39;</span>)
-
-        <span style="color:#999;font-style:italic"># OS X notification when a command takes longer than notify_duration</span>
-        <span style="color:#24909d">set</span> notify_duration <span style="color:#3677a9">10000</span>
-        <span style="color:#24909d">set</span> exclude_cmd <span style="color:#ed9d13">&#34;zsh|bash|less|man|more|ssh|drush php&#34;</span>
-        <span style="color:#6ab825;font-weight:bold">if</span> begin
-                <span style="color:#24909d">test</span> <span style="color:#40ffff">$CMD_DURATION</span> -gt <span style="color:#40ffff">$notify_duration</span>
-                and <span style="color:#24909d">echo</span> <span style="color:#40ffff">$history</span>[1] | grep -vqE <span style="color:#ed9d13">&#34;^(</span><span style="color:#40ffff">$exclude_cmd</span><span style="color:#ed9d13">).*&#34;</span>
-            end
-
-            <span style="color:#999;font-style:italic"># Only show the notification if iTerm is not focused</span>
-            <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;
-</span><span style="color:#ed9d13">                tell application \&#34;System Events\&#34;
-</span><span style="color:#ed9d13">                    set activeApp to name of first application process whose frontmost is true
-</span><span style="color:#ed9d13">                    if \&#34;iTerm\&#34; is not in activeApp then
-</span><span style="color:#ed9d13">                        display notification \&#34;Finished in </span><span style="color:#40ffff">$duration</span><span style="color:#ed9d13">\&#34; with title \&#34;</span><span style="color:#40ffff">$history</span><span style="color:#ed9d13">[1]\&#34;
-</span><span style="color:#ed9d13">                    end if
-</span><span style="color:#ed9d13">                end tell
-</span><span style="color:#ed9d13">                &#34;</span> | osascript
-        end
-    end
-end</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">function</span> fish_right_prompt
+</span></span><span style="display:flex;"><span>    <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#24909d">test</span> <span style="color:#40ffff">$CMD_DURATION</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#999;font-style:italic"># Store duration of last command</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#24909d">set</span> duration (<span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;</span><span style="color:#40ffff">$CMD_DURATION</span><span style="color:#ed9d13"> 1000&#34;</span> | awk <span style="color:#ed9d13">&#39;{printf &#34;%.3fs&#34;, $1 / $2}&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#999;font-style:italic"># OS X notification when a command takes longer than notify_duration</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#24909d">set</span> notify_duration <span style="color:#3677a9">10000</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#24909d">set</span> exclude_cmd <span style="color:#ed9d13">&#34;zsh|bash|less|man|more|ssh|drush php&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">if</span> begin
+</span></span><span style="display:flex;"><span>                <span style="color:#24909d">test</span> <span style="color:#40ffff">$CMD_DURATION</span> -gt <span style="color:#40ffff">$notify_duration</span>
+</span></span><span style="display:flex;"><span>                and <span style="color:#24909d">echo</span> <span style="color:#40ffff">$history</span>[1] | grep -vqE <span style="color:#ed9d13">&#34;^(</span><span style="color:#40ffff">$exclude_cmd</span><span style="color:#ed9d13">).*&#34;</span>
+</span></span><span style="display:flex;"><span>            end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#999;font-style:italic"># Only show the notification if iTerm is not focused</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#24909d">echo</span> <span style="color:#ed9d13">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                tell application \&#34;System Events\&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                    set activeApp to name of first application process whose frontmost is true
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                    if \&#34;iTerm\&#34; is not in activeApp then
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                        display notification \&#34;Finished in </span><span style="color:#40ffff">$duration</span><span style="color:#ed9d13">\&#34; with title \&#34;</span><span style="color:#40ffff">$history</span><span style="color:#ed9d13">[1]\&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                    end if
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                end tell
+</span></span></span><span style="display:flex;"><span><span style="color:#ed9d13">                &#34;</span> | osascript
+</span></span><span style="display:flex;"><span>        end
+</span></span><span style="display:flex;"><span>    end
+</span></span><span style="display:flex;"><span>end</span></span></code></pre></div>
 <p>Reference rprompt.fish inside the main fish config file: <code>~/.config/fish/config.fish</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">. ~/.config/fish/functions/rprompt.fish</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. ~/.config/fish/functions/rprompt.fish</span></span></code></pre></div>
 
     </div>
 

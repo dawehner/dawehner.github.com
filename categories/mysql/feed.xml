@@ -14,7 +14,7 @@
       
       <guid>https://dawehner.github.io/show-largest-mysql-tables/</guid>
       <description>Here is a small sql commando to show the largest mysql tables on your system.
-SELECTCONCAT(table_schema,&amp;#39;.&amp;#39;,table_name),CONCAT(ROUND(table_rows/1000000,2),&amp;#39;M&amp;#39;)rows,CONCAT(ROUND(data_length/(1024*1024*1024),2),&amp;#39;G&amp;#39;)DATA,CONCAT(ROUND(index_length/(1024*1024*1024),2),&amp;#39;G&amp;#39;)idx,CONCAT(ROUND((data_length+index_length)/(1024*1024*1024),2),&amp;#39;G&amp;#39;)total_size,ROUND(index_length/data_length,2)idxfracFROMinformation_schema.TABLESORDERBYdata_length+index_lengthDESCLIMIT10; Thank you http://www.mysqlperformanceblog.com/2008/02/04/finding-out-largest-tables-on-mysql-server/ for the code.</description>
+SELECT CONCAT(table_schema, &amp;#39;.&amp;#39;, table_name), CONCAT(ROUND(table_rows / 1000000, 2), &amp;#39;M&amp;#39;) rows, CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) DATA, CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) idx, CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), &amp;#39;G&amp;#39;) total_size, ROUND(index_length / data_length, 2) idxfrac FROM information_schema.</description>
     </item>
     
   </channel>

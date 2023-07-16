@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>media on Daniel Wehner&#39;s blog</title>
+    <title>Media on Daniel Wehner&#39;s blog</title>
     <link>https://dawehner.github.io/media/</link>
-    <description>Recent content in media on Daniel Wehner&#39;s blog</description>
+    <description>Recent content in Media on Daniel Wehner&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Apr 2020 17:48:05 +0000</lastBuildDate><atom:link href="https://dawehner.github.io/media/feed.xml" rel="self" type="application/rss+xml" />

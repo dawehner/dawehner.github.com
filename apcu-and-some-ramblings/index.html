@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.115.3">
 
 
 <title>APCU and some ramblings - Daniel Wehner&#39;s blog</title>
@@ -117,8 +117,8 @@ Why does APCU not use a hash map? No idea, maybe you know? On top of that, APCU 
 So this results in 257 slots by default.</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#999;font-style:italic">/* calculate number of slots */</span>
-nslots = make_prime(size_hint &gt; <span style="color:#3677a9">0</span> ? size_hint : <span style="color:#3677a9">2000</span>);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#999;font-style:italic">/* calculate number of slots */</span>
+</span></span><span style="display:flex;"><span>nslots = <span style="color:#447fcf">make_prime</span>(size_hint &gt; <span style="color:#3677a9">0</span> ? size_hint : <span style="color:#3677a9">2000</span>);</span></span></code></pre></div>
 <ul>
 <li>Is APCU worth to use?</li>
 <li>What kind of cache entries should be stored in APCU? Small ones, big ones, etc.?</li>
