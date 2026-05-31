@@ -4,45 +4,44 @@
     <title>Media on Daniel Wehner&#39;s blog</title>
     <link>https://daniel.town/media/</link>
     <description>Recent content in Media on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Apr 2020 17:48:05 +0000</lastBuildDate><atom:link href="https://daniel.town/media/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2024 17:48:05 +0000</lastBuildDate>
+    <atom:link href="https://daniel.town/media/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tatort: Nachtsicht</title>
+      <link>https://daniel.town/media/2024-tatort/</link>
+      <pubDate>Sun, 25 Aug 2024 17:48:05 +0000</pubDate>
+      <guid>https://daniel.town/media/2024-tatort/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.ardmediathek.de/video/tatort/nachtsicht/ard/Y3JpZDovL3JhZGlvYnJlbWVuLmRlL2Y3MjU0MGQ5LWFjNzEtNGEyNS04MmI3LTU5YzViNGFlZDZhOS9lcGlzb2RlL3VybjphcmQ6c2hvdzoyNGE0MTg0M2NkOTE5ZmI4&#34;&gt;Quelle&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://daniel.town/assets/images/tatort.jpg&#34; alt=&#34;Kameraeinstellung&#34; title=&#34;Eine faszinierende Momentaufnahme einer Tür!&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Mir gefällt die Bildsprache. Hier wird klar die Familie hat etwas zu verbergen.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hook</title>
       <link>https://daniel.town/media/2020-hook/</link>
       <pubDate>Fri, 10 Apr 2020 17:48:05 +0000</pubDate>
-      
       <guid>https://daniel.town/media/2020-hook/</guid>
-      <description>IMDB</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.imdb.com/title/tt0102057/&#34;&gt;IMDB&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mooncop (Tom Gauld)</title>
       <link>https://daniel.town/media/2020-mooncop/</link>
       <pubDate>Wed, 19 Feb 2020 17:48:05 +0000</pubDate>
-      
       <guid>https://daniel.town/media/2020-mooncop/</guid>
-      <description>Good Reads</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/28116830-mooncop&#34;&gt;Good Reads&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Permanent record</title>
       <link>https://daniel.town/media/2019-permanent_record/</link>
       <pubDate>Tue, 19 Nov 2019 17:48:05 +0000</pubDate>
-      
       <guid>https://daniel.town/media/2019-permanent_record/</guid>
-      <description>Snown explained his reasoning behind revealing the world the state of surveilance.
-Wikipedia link of the book</description>
+      <description>&lt;p&gt;Snown explained his reasoning behind revealing the world the state of surveilance.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Permanent_Record_(autobiography)&#34;&gt;Wikipedia link of the book&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Live 3.0</title>
       <link>https://daniel.town/media/2018-live_30/</link>
       <pubDate>Thu, 19 Apr 2018 17:48:05 +0000</pubDate>
-      
       <guid>https://daniel.town/media/2018-live_30/</guid>
-      <description>wikipedia link</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Life_3.0&#34;&gt;wikipedia link&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

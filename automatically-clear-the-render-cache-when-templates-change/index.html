@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.115.3">
+<meta name="generator" content="Hugo 0.161.1">
 
 
 <title>Automatically clear the render cache when templates change - Daniel Wehner&#39;s blog</title>
@@ -21,8 +21,8 @@
 <link href="" rel="alternate" type="application/rss+xml"
   title="Daniel Wehner&#39;s blog" />
 
-<link rel="stylesheet" href="https://daniel.towncss/main.css" media="all" />
-<link rel="stylesheet" href="https://daniel.towncss/fonts.css" />
+<link rel="stylesheet" href="https://daniel.town/css/main.css" media="all" />
+<link rel="stylesheet" href="https://daniel.town/css/fonts.css" />
 <link rel="webmention" href="https://webmention.io/daniel.town/webmention" />
 <link rel="pingback" href="https://webmention.io/daniel.town/xmlrpc" />
 <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
@@ -33,9 +33,9 @@
     <div class="wrapper">
       <header class="header">
         <nav class="nav">
-  <a href="https://daniel.town" class="nav-logo">
+  <a href="https://daniel.town/" class="nav-logo">
     <h1 class="sr-only">Daniel Wehner&#39;s blog</h1>
-    <img src="https://daniel.townimages/logo.png" width="50"
+    <img src="https://daniel.town/images/logo.png" width="50"
       height="50" alt="Logo">
   </a>
 
@@ -72,9 +72,9 @@ Everytime a file changes we call a script, which then clears the render cache.</
 <p>Required steps to set it up:</p>
 <ul>
 <li>Install fswatch
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  brew install fswatch</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  brew install fswatch</span></span></code></pre></div></li>
 <li>Add a php helper script:
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>&lt;?php
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>&lt;?php
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ed9d13">/**
 </span></span></span><span style="display:flex;"><span><span style="color:#ed9d13"> * @file
@@ -85,7 +85,7 @@ Everytime a file changes we call a script, which then clears the render cache.</
 </span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">use</span> Symfony\Component\HttpFoundation\Request;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic">// Safeguard against any access via the webserver.
-</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">if</span> (php_sapi_name() !== <span style="color:#ed9d13">&#39;cli&#39;</span>) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">if</span> (php_sapi_name() !== <span style="color:#ed9d13">&#39;cli&#39;</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">exit</span>(<span style="color:#3677a9">1</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
@@ -94,13 +94,13 @@ Everytime a file changes we call a script, which then clears the render cache.</
 </span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">if</span> (strpos(<span style="color:#40ffff">$basename</span>, <span style="color:#ed9d13">&#39;html.twig&#39;</span>) !== <span style="color:#6ab825;font-weight:bold">FALSE</span>) {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// Bootstrap Drupal.
-</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#40ffff">$autoloader</span> = <span style="color:#6ab825;font-weight:bold">require_once</span> <span style="color:#40ffff">__DIR__</span> . <span style="color:#ed9d13">&#39;/../../web/autoload.php&#39;</span>;
+</span></span></span><span style="display:flex;"><span>    <span style="color:#40ffff">$autoloader</span> = <span style="color:#6ab825;font-weight:bold">require_once</span> <span style="color:#40ffff">__DIR__</span> . <span style="color:#ed9d13">&#39;/../../web/autoload.php&#39;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#40ffff">$kernel</span> = DrupalKernel::<span style="color:#bbb">createFromRequest</span>(Request::<span style="color:#bbb">createFromGlobals</span>(), <span style="color:#40ffff">$autoloader</span>, <span style="color:#ed9d13">&#39;prod&#39;</span>, <span style="color:#6ab825;font-weight:bold">TRUE</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#40ffff">$kernel</span>-&gt;<span style="color:#bbb">boot</span>();
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#999;font-style:italic">// Clear the render cache.
-</span></span></span><span style="display:flex;"><span><span style="color:#999;font-style:italic"></span>    <span style="color:#ed9d13">/** @var \Drupal\Core\Cache\CacheTagsInvalidatorInterface $cache_invalidator */</span>
+</span></span></span><span style="display:flex;"><span>    <span style="color:#ed9d13">/** @var \Drupal\Core\Cache\CacheTagsInvalidatorInterface $cache_invalidator */</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#40ffff">$cache_invalidator</span> = <span style="color:#40ffff">$kernel</span>-&gt;<span style="color:#bbb">getContainer</span>()-&gt;<span style="color:#bbb">get</span>(<span style="color:#ed9d13">&#39;cache_tags.invalidator&#39;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#40ffff">$cache_invalidator</span>-&gt;<span style="color:#bbb">invalidateTags</span>([<span style="color:#ed9d13">&#39;rendered&#39;</span>]);
 </span></span><span style="display:flex;"><span>
@@ -112,7 +112,7 @@ Everytime a file changes we call a script, which then clears the render cache.</
 </span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">exit</span>(<span style="color:#3677a9">1</span>);
 </span></span><span style="display:flex;"><span>}</span></span></code></pre></div></li>
 <li>Actually listen to filesystem events:
-<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fswatch -0 . | xargs -0 -I {} -t sh -c <span style="color:#ed9d13">&#39;php scripts/name/template-render-invalidator.php {}&#39;</span></span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fswatch -0 . | xargs -0 -I {} -t sh -c <span style="color:#ed9d13">&#39;php scripts/name/template-render-invalidator.php {}&#39;</span></span></span></code></pre></div></li>
 <li>For some extra goodness place this in a composer script.</li>
 </ul>
 <p>Have you done anything similar and maybe solved it different?</p>
@@ -149,7 +149,7 @@ Everytime a file changes we call a script, which then clears the render cache.</
   <ul class="footer-links">
     <li>
       <a href="" type="application/rss+xml"><i
-          class="fa fa-rss"></i> RSS feed</a>
+          class="fa fa-rss"></i> </a>
     </li>
     <li>
       <a class="u-url" rel="me" href="https://github.com/dawehner"><i class="fa fa-github"></i> Github</a>

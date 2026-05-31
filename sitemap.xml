@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://daniel.town/boardgame/</loc>
-    <lastmod>2023-07-16T09:08:31+00:00</lastmod>
-  </url><url>
     <loc>https://daniel.town/</loc>
-    <lastmod>2023-07-16T09:08:31+00:00</lastmod>
+    <lastmod>2024-08-25T17:48:05+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/media/</loc>
+    <lastmod>2024-08-25T17:48:05+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/media/2024-tatort/</loc>
+    <lastmod>2024-08-25T17:48:05+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/boardgame/</loc>
+    <lastmod>2023-07-16T22:15:31+00:00</lastmod>
+  </url><url>
+    <loc>https://daniel.town/boardgame/port-royal/</loc>
+    <lastmod>2023-07-16T22:15:31+00:00</lastmod>
   </url><url>
     <loc>https://daniel.town/boardgame/terraforming-mars/</loc>
     <lastmod>2023-07-16T09:08:31+00:00</lastmod>
@@ -57,9 +66,6 @@
     <lastmod>2020-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://daniel.town/media/2020-hook/</loc>
-    <lastmod>2020-04-10T17:48:05+00:00</lastmod>
-  </url><url>
-    <loc>https://daniel.town/media/</loc>
     <lastmod>2020-04-10T17:48:05+00:00</lastmod>
   </url><url>
     <loc>https://daniel.town/media/2020-mooncop/</loc>

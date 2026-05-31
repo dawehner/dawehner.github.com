@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>unix on Daniel Wehner&#39;s blog</title>
+    <title>Unix on Daniel Wehner&#39;s blog</title>
     <link>https://daniel.town/categories/unix/</link>
-    <description>Recent content in unix on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Unix on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2017 09:08:31 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/unix/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2017 09:08:31 +0000</lastBuildDate>
+    <atom:link href="https://daniel.town/categories/unix/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using tar the easy way</title>
       <link>https://daniel.town/using-tar-the-easy-way/</link>
       <pubDate>Wed, 22 Feb 2017 09:08:31 +0000</pubDate>
-      
       <guid>https://daniel.town/using-tar-the-easy-way/</guid>
-      <description>[Tar](https://en.wikipedia.org/wiki/Tar_(computing) (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators and users of unix like systems. It allows you to create archives of files and extract them later.
-Traditionally people learn it by copying examples:
-# Create / extract tar file tar cf example.tar file folder file2 tar xf example.tar file # Create / extract tar.gz file tar zcf example.tar.gz file folder file2 tar zxf example.</description>
+      <description>&lt;p&gt;[Tar](&lt;a href=&#34;https://en.wikipedia.org/wiki/Tar_(computing)&#34;&gt;https://en.wikipedia.org/wiki/Tar_(computing)&lt;/a&gt; (originally coming from Tape ARchive) is a common tool in the belt of both system adminstrators&#xA;and users of unix like systems. It allows you to create archives of files and extract them later.&lt;/p&gt;&#xA;&lt;p&gt;Traditionally people learn it by copying examples:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# Create / extract tar file&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar cf example.tar file folder file2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar xf example.tar file&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# Create / extract tar.gz file&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar zcf example.tar.gz file folder file2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar zxf example.tar.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# Create / extract tar.bz2 file&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar jcf example.tar.bz2 file folder file2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar jxf example.tar.bz2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# Create / extract tar.xz file&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar Jxf example.tar.xf file folder file2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar Jcf example.tar.xf&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;The parameters contains three different bits:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

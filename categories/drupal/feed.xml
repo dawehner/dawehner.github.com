@@ -1,35 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>drupal on Daniel Wehner&#39;s blog</title>
+    <title>Drupal on Daniel Wehner&#39;s blog</title>
     <link>https://daniel.town/categories/drupal/</link>
-    <description>Recent content in drupal on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Drupal on Daniel Wehner&#39;s blog</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/categories/drupal/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://daniel.town/categories/drupal/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quickstarting Drupal 8</title>
       <link>https://daniel.town/quickstarting-drupal-8/</link>
       <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://daniel.town/quickstarting-drupal-8/</guid>
-      <description>Before and around Drupalcon Nashville there was a lot of discussion around improving the first time experience. Things we achieved for example is a new Drupal.org homepage with a clear focus on 3 different userstories.
-One small work we have been doing can be seen in the following video:
-Drupal quickstart from daniel wehner on Vimeo.
-To summarize this video: It should be possible to start Drupal as quickly as possible:</description>
+      <description>&lt;p&gt;Before and around Drupalcon Nashville there &lt;a href=&#34;https://www.drupal.org/project/ideas/issues/2956879&#34;&gt;was&lt;/a&gt; &lt;a href=&#34;https://dri.es/three-ways-we-can-improve-drupal-evaluator-experience&#34;&gt;a&lt;/a&gt; &lt;a href=&#34;http://matthewgrasmick.com/compare-php-frameworks&#34;&gt;lot&lt;/a&gt; of discussion around improving the first time experience.&#xA;Things we achieved for example is a new Drupal.org homepage with a clear focus on 3 different userstories.&lt;/p&gt;&#xA;&lt;p&gt;One small work &lt;a href=&#34;https://www.drupal.org/project/drupal/issues/2911319&#34;&gt;we&lt;/a&gt; have been doing can be seen in the following video:&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://player.vimeo.com/video/267910793&#34; width=&#34;640&#34; height=&#34;386&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://vimeo.com/267910793&#34;&gt;Drupal quickstart&lt;/a&gt; from &lt;a href=&#34;https://vimeo.com/user7658757&#34;&gt;daniel wehner&lt;/a&gt; on &lt;a href=&#34;https://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;To summarize this video: It should be possible to start Drupal as quickly as possible:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Download Drupal&lt;/li&gt;&#xA;&lt;li&gt;Execute a single command: &lt;code&gt;php core/scripts/drupal quick-start&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Have a working Drupal opened upon a web browser automatically.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Having such a command is a big step forward.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Realtime watchdog powered by PHP, Drupal and Elm</title>
       <link>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://daniel.town/realtime-watchdog-powered-by-php-drupal-and-elm/</guid>
-      <description>Motivation For my own interest, so mostly for the sake of learning new things, I try to implement some classical Drupal UIs in ELM.
-One of them is the dblog UI.
-The classical dblog UI allows you to see the latest log entries, filter and sort by them. On top of that I wanted to actually make use of the capabilities of a modern UI:
-Let&amp;rsquo;s stream log entries to the browser:</description>
+      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;&#xA;&lt;p&gt;For my own interest, so mostly for the sake of learning new things, I &lt;a href=&#34;https://gitlab.com/dawehner/admin_ui_elm&#34;&gt;try&lt;/a&gt; to implement some classical Drupal UIs in ELM.&lt;/p&gt;&#xA;&lt;p&gt;One of them is the dblog UI.&lt;/p&gt;&#xA;&lt;p&gt;The classical dblog UI allows you to see the latest log entries, filter and sort by them.&#xA;On top of that I wanted to actually make use of the capabilities of a modern UI:&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s stream log entries to the browser:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

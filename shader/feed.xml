@@ -4,35 +4,30 @@
     <title>Shaders on Daniel Wehner&#39;s blog</title>
     <link>https://daniel.town/shader/</link>
     <description>Recent content in Shaders on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 May 2020 23:46:48 +0100</lastBuildDate><atom:link href="https://daniel.town/shader/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 May 2020 23:46:48 +0100</lastBuildDate>
+    <atom:link href="https://daniel.town/shader/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2020 Circles</title>
       <link>https://daniel.town/shaders/2020-circles/</link>
       <pubDate>Sun, 03 May 2020 23:46:48 +0100</pubDate>
-      
       <guid>https://daniel.town/shaders/2020-circles/</guid>
-      <description> </description>
+      <description>&lt;canvas class=&#34;glslCanvas&#34; data-fragment-url=&#34;data:text/plain;base64,CgojaWZkZWYgR0xfRVMKcHJlY2lzaW9uIG1lZGl1bXAgZmxvYXQ7CiNlbmRpZgoKdW5pZm9ybSB2ZWMyIHVfcmVzb2x1dGlvbjsKdW5pZm9ybSB2ZWMyIHVfbW91c2U7CnVuaWZvcm0gZmxvYXQgdV90aW1lOwoKZmxvYXQgY2lyY2xlKGluIHZlYzIgX3N0LCBpbiBmbG9hdCBfcmFkaXVzKXsKICAgIHZlYzIgZGlzdCA9IF9zdC12ZWMyKDAuNSk7CiAgICByZXR1cm4gMS4tc21vb3Roc3RlcChfcmFkaXVzLShfcmFkaXVzKjAuMDEpLAogICAgICAgICAgICAgICAgICAgICAgICAgX3JhZGl1cysoX3JhZGl1cyowLjAxKSwKICAgICAgICAgICAgICAgICAgICAgICAgIGRvdChkaXN0LGRpc3QpKjQuMCk7Cn0KCgp2b2lkIG1haW4oKSB7CiAgICB2ZWMyIHN0ID0gZ2xfRnJhZ0Nvb3JkLnh5L3VfcmVzb2x1dGlvbjsKICAgIAogICAgdmVjMyBjb2xvciA9IHZlYzMoc3QueCwgc3QueSwgc3QueCk7CiAgIAogICAgY29sb3IueCA9IGNpcmNsZShzdCwgMC41KTsKICAgIAogICAgY29sb3IueSA9IGNpcmNsZShzdCArIHZlYzIoY29zKHVfdGltZSksIDAuMCksIDAuNCk7CiAgICAKICAgIGNvbG9yLnogPSBjaXJjbGUoc3QgKyB2ZWMyKDAuMCwgc2luKDEuNSAqIHVfdGltZSkpLCAwLjQpOwogICAgCiAgICAKICAgIGdsX0ZyYWdDb2xvciA9IHZlYzQoY29sb3IsMS4wKTsKfQoK&#34; width=&#34;500&#34;&#xA;  height=&#34;500&#34;&gt;&#xA;&lt;/canvas&gt;&#xA;&#xA;&lt;script type=&#34;text/javascript&#34; src=&#34;https://daniel.town/js/GlslCanvas.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>Pink floyd</title>
       <link>https://daniel.town/shaders/pink-floyd/</link>
       <pubDate>Sat, 25 Apr 2020 09:08:31 +0000</pubDate>
-      
       <guid>https://daniel.town/shaders/pink-floyd/</guid>
-      <description> </description>
+      <description>&lt;canvas class=&#34;glslCanvas&#34; data-fragment-url=&#34;data:text/plain;base64,CgojaWZkZWYgR0xfRVMKcHJlY2lzaW9uIG1lZGl1bXAgZmxvYXQ7CiNlbmRpZgoKdW5pZm9ybSB2ZWMyIHVfcmVzb2x1dGlvbjsKdW5pZm9ybSB2ZWMyIHVfbW91c2U7CnVuaWZvcm0gZmxvYXQgdV90aW1lOwoKLy8gUGxvdCBhIGxpbmUgb24gWSB1c2luZyBhIHZhbHVlIGJldHdlZW4gMC4wLTEuMApmbG9hdCBsaW5lKHZlYzIgc3QsIGZsb2F0IHBjdCwgZmxvYXQgd2lkdGgpewogIHJldHVybiAgc21vb3Roc3RlcCggcGN0LXdpZHRoLCBwY3QsIHN0LnkpIC0KICAgICAgICAgIHNtb290aHN0ZXAoIHBjdCwgcGN0K3dpZHRoLCBzdC55KTsKfQoKdmVjMiByb3QodmVjMiBwb3MsIGZsb2F0IGFuZ2xlKSB7CiAgcmV0dXJuIHZlYzIoCiAgY29zKGFuZ2xlKSAqIHBvcy54IC0gc2luKGFuZ2xlKSAqIHBvcy55LAogIHNpbihhbmdsZSkgKiBwb3MueCArIGNvcyhhbmdsZSkgKiBwb3MueQogICk7Cn0KCnZvaWQgbWFpbigpIHsKICAgIHZlYzIgc3QgPSBnbF9GcmFnQ29vcmQueHkvdV9yZXNvbHV0aW9uOwoKICAgIGZsb2F0IHkgPSBzdC54OwoKICAgIHZlYzMgY29sb3IgPSB2ZWMzKHkpOwoKICAgIC8vIFBsb3QgYSBsaW5lCiAgICBmbG9hdCBwY3QgPSBsaW5lKHN0LCB5LCAwLjEpOwogICAgZmxvYXQgcGN0MiA9IGxpbmUoc3QsIHkrMC4wNSwgMC4wOCk7CiAgICBmbG9hdCBwY3QzID0gbGluZShzdCwgeS0wLjA2LCAwLjEyKTsKCiAgICBjb2xvciA9ICgxLjAgLSBwY3QpICogY29sb3IgKyBwY3QgKiB2ZWMzKDAuMCwxLjAsMC4wKTsKICAgIGNvbG9yICs9ICgxLjAgLSBwY3QyKSAqIGNvbG9yICsgcGN0MiAqIHZlYzMoMS4wLDAuMCwwLjApOwogICAgY29sb3IgKz0gKDEuMCAtIHBjdDMpICogY29sb3IgKyBwY3QzICogdmVjMygwLjAsMC4wLDEuMCk7CgogICAgZ2xfRnJhZ0NvbG9yID0gdmVjNChjb2xvciwxLjApOwp9Cgo=&#34; width=&#34;500&#34;&#xA;  height=&#34;500&#34;&gt;&#xA;&lt;/canvas&gt;&#xA;&#xA;&lt;script type=&#34;text/javascript&#34; src=&#34;https://daniel.town/js/GlslCanvas.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>Spinning wheel</title>
       <link>https://daniel.town/shaders/spinning-wheel/</link>
       <pubDate>Sat, 25 Apr 2020 09:08:31 +0000</pubDate>
-      
       <guid>https://daniel.town/shaders/spinning-wheel/</guid>
-      <description> </description>
+      <description>&lt;canvas class=&#34;glslCanvas&#34; data-fragment-url=&#34;data:text/plain;base64,CiNpZmRlZiBHTF9FUwpwcmVjaXNpb24gbWVkaXVtcCBmbG9hdDsKI2VuZGlmCgojZGVmaW5lIFRXT19QSSA2LjI4MzE4NTMwNzE4Cgp1bmlmb3JtIHZlYzIgdV9yZXNvbHV0aW9uOwp1bmlmb3JtIGZsb2F0IHVfdGltZTsKCi8vICBGdW5jdGlvbiBmcm9tIEnDsWlnbyBRdWlsZXMKLy8gIGh0dHBzOi8vd3d3LnNoYWRlcnRveS5jb20vdmlldy9Nc1MzV2MKdmVjMyBoc2IycmdiKCBpbiB2ZWMzIGMgKXsKICAgIHZlYzMgcmdiID0gY2xhbXAoYWJzKG1vZChjLngqNi4wK3ZlYzMoMC4wLDQuMCwyLjApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYuMCktMy4wKS0xLjAsCiAgICAgICAgICAgICAgICAgICAgIDAuMCwKICAgICAgICAgICAgICAgICAgICAgMS4wICk7CiAgICByZ2IgPSByZ2IqcmdiKigzLjAtMi4wKnJnYik7CiAgICByZXR1cm4gYy56ICogbWl4KCB2ZWMzKDEuMCksIHJnYiwgYy55KTsKfQoKdm9pZCBtYWluKCl7CiAgICB2ZWMyIHN0ID0gZ2xfRnJhZ0Nvb3JkLnh5L3VfcmVzb2x1dGlvbjsKICAgIHZlYzMgY29sb3IgPSB2ZWMzKDAuMCk7CiAgICAKICAgIHN0ICs9IHZlYzIoY29zKHVfdGltZSAqIDUuNSkgKiAwLjMsIHNpbih1X3RpbWUgKiAxLjEpICogMC4yKTsKCiAgICAvLyBVc2UgcG9sYXIgY29vcmRpbmF0ZXMgaW5zdGVhZCBvZiBjYXJ0ZXNpYW4KICAgIHZlYzIgdG9DZW50ZXIgPSB2ZWMyKDAuNSktc3Q7CiAgICBmbG9hdCBhbmdsZSA9IGF0YW4odG9DZW50ZXIueSx0b0NlbnRlci54ICkgKyBjb3ModV90aW1lICogMy4wKTsKICAgIGZsb2F0IHJhZGl1cyA9IGxlbmd0aCh0b0NlbnRlcikqMi4wOwoKICAgIC8vIE1hcCB0aGUgYW5nbGUgKC1QSSB0byBQSSkgdG8gdGhlIEh1ZSAoZnJvbSAwIHRvIDEpCiAgICAvLyBhbmQgdGhlIFNhdHVyYXRpb24gdG8gdGhlIHJhZGl1cwogICAgY29sb3IgPSBoc2IycmdiKHZlYzMoKGFuZ2xlL1RXT19QSSkrMC41LHJhZGl1cywxLjApKTsKICAgIAogICAgCiAgICAvLyBNYWtlIGEgZmlzaGV5ZQoKICAgIGdsX0ZyYWdDb2xvciA9IHZlYzQoY29sb3IsMS4wKTsKfQoKCg==&#34; width=&#34;500&#34;&#xA;  height=&#34;500&#34;&gt;&#xA;&lt;/canvas&gt;&#xA;&#xA;&lt;script type=&#34;text/javascript&#34; src=&#34;https://daniel.town/js/GlslCanvas.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
   </channel>
 </rss>

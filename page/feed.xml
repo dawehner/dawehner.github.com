@@ -4,27 +4,23 @@
     <title>Pages on Daniel Wehner&#39;s blog</title>
     <link>https://daniel.town/page/</link>
     <description>Recent content in Pages on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://daniel.town/page/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://daniel.town/page/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://daniel.town/about/</link>
       <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://daniel.town/about/</guid>
-      <description>Daniel Wehner (he / him / his) Engineer, runner, climber, rower in London @da_wehner Twitter dawehner Github A lists of podcasts I enjoy listening to can be found here</description>
+      <description>&lt;section class=&#34;h-card&#34;&gt;&#xA;  &lt;p&gt;&#xA;    &lt;a class=&#34;p-name u-url u-uid&#34; href=&#34;https://daniel.town&#34;&gt;Daniel Wehner&lt;/a&gt;&#xA;    &lt;span&gt;(&lt;a class=&#34;u-pronoun&#34; href=&#34;https://pronoun.is/he&#34;&gt;he / him / his&lt;/a&gt;)&lt;/span&gt;&#xA;  &lt;/p&gt;&#xA;  &lt;p class=&#34;p-note&#34;&gt;&#xA;    Engineer, &lt;span class=&#34;p-category&#34;&gt;runner&lt;/span&gt;, &lt;span class=&#34;p-category&#34;&gt;climber&lt;/span&gt;, &lt;span class=&#34;p-category&#34;&gt;rower&lt;/span&gt; in &lt;span class=&#34;p-locality&#34;&gt;London&lt;/span&gt;&#xA;  &lt;/p&gt;&#xA;  &lt;ul&gt;&#xA;    &lt;li&gt;&lt;a class=&#34;u-url&#34; rel=&#34;me&#34; href=&#34;https://mobile.twitter.com/da_wehner&#34;&gt;@da_wehner Twitter&lt;/a&gt;&lt;/li&gt;&#xA;    &lt;li&gt;&lt;a class=&#34;u-url&#34; rel=&#34;me&#34; href=&#34;https://github.com/dawehner&#34;&gt;dawehner Github&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&lt;p&gt;A lists of podcasts I enjoy listening to can be found &lt;a href=&#34;https://daniel.town/podcasts&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Projects</title>
       <link>https://daniel.town/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://daniel.town/projects/</guid>
-      <description>This page links and describes some of my personal projects.
-A list of GLSL (OpenGL Shading Language) experiments A simple electron based UI for tinypng to make it easy to compress images: tiny-UI An vocabulary trainer app written in elm to procrastinate from learning vocabularies: elm-vocab Tool to automatically notify finished longruning process: Done Slack PHP Bot: slack-phpeval Jupyer/Ipython kernel for PHP: jupyter-php A lot of Drupal specific code, see drupal.</description>
+      <description>&lt;p&gt;This page links and describes some of my personal projects.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;A list of &lt;a href=&#34;https://daniel.town/shader/&#34;&gt;GLSL (OpenGL Shading Language) experiments&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;A simple &lt;a href=&#34;https://electron.atom.io/&#34;&gt;electron&lt;/a&gt; based UI for &lt;a href=&#34;https://https://tinypng.com/&#34;&gt;tinypng&lt;/a&gt; to make it easy to compress images: &lt;a href=&#34;https://github.com/dawehner/tiny-ui&#34;&gt;tiny-UI&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;An vocabulary trainer app written in elm to procrastinate from learning vocabularies: &lt;a href=&#34;https://github.com/dawehner/elm-vocab&#34;&gt;elm-vocab&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;Tool to automatically notify finished longruning process: &lt;a href=&#34;https://github.com/dawehner/done&#34;&gt;Done&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;Slack PHP Bot: &lt;a href=&#34;https://github.com/dawehner/slack-phpeval&#34;&gt;slack-phpeval&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;Jupyer/Ipython kernel for PHP: &lt;a href=&#34;https://github.com/dawehner/jupyter-php&#34;&gt;jupyter-php&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;li&gt;A lot of Drupal specific code, see &lt;a href=&#34;https://drupal.org/u/dawehner&#34;&gt;drupal.org&lt;/a&gt; and &lt;a href=&#34;https://github.com/dawehner&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>
