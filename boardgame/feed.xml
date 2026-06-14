@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Boardgames on Daniel Wehner&#39;s blog</title>
-    <link>https://daniel.town/boardgame/</link>
-    <description>Recent content in Boardgames on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jul 2023 22:15:31 +0000</lastBuildDate>
-    <atom:link href="https://daniel.town/boardgame/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Port Royal</title>
-      <link>https://daniel.town/boardgame/port-royal/</link>
-      <pubDate>Sun, 16 Jul 2023 22:15:31 +0000</pubDate>
-      <guid>https://daniel.town/boardgame/port-royal/</guid>
-      <description>&lt;p&gt;Port royal is a deck building game, meets pirate theme.&#xA;You buy cards over time which either bring you more capabilities, or what you are&#xA;really aiming for, give you victory points.&lt;/p&gt;&#xA;&lt;p&gt;As its more on the easier side of things, this is a great game to explain someone to get started.&#xA;One nice aspect is that its not necessarily obvious early in the game you will win.&#xA;Unlike other deck building games, it has a bit of randomness involved.&#xA;The game also comes with a taking the chance effect, which make the group by excited.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Terraforming mars</title>
-      <link>https://daniel.town/boardgame/terraforming-mars/</link>
-      <pubDate>Sun, 16 Jul 2023 09:08:31 +0000</pubDate>
-      <guid>https://daniel.town/boardgame/terraforming-mars/</guid>
-      <description>&lt;p&gt;Terraforming mars is an excellent game, but it takes a bunch of effort to learn.&#xA;It is not a beginner game, but its very rewarding, once you get going.&lt;/p&gt;&#xA;&lt;p&gt;One nice aspect: it is actually a nice single player game as well.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Boardgames on Daniel Wehner&#39;s blog</title>
+		<link>https://daniel.town/boardgame/</link>
+		<description>Recent content in Boardgames on Daniel Wehner&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 16 Jul 2023 22:15:31 +0000</lastBuildDate>
+		
+			<atom:link href="https://daniel.town/boardgame/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Port Royal</title>
+				<link>https://daniel.town/boardgame/port-royal/</link>
+				<pubDate>Sun, 16 Jul 2023 22:15:31 +0000</pubDate>
+				<guid>https://daniel.town/boardgame/port-royal/</guid>
+				<description>&lt;p&gt;Port royal is a deck building game, meets pirate theme.&#xA;You buy cards over time which either bring you more capabilities, or what you are&#xA;really aiming for, give you victory points.&lt;/p&gt;&#xA;&lt;p&gt;As its more on the easier side of things, this is a great game to explain someone to get started.&#xA;One nice aspect is that its not necessarily obvious early in the game you will win.&#xA;Unlike other deck building games, it has a bit of randomness involved.&#xA;The game also comes with a taking the chance effect, which make the group by excited.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Terraforming mars</title>
+				<link>https://daniel.town/boardgame/terraforming-mars/</link>
+				<pubDate>Sun, 16 Jul 2023 09:08:31 +0000</pubDate>
+				<guid>https://daniel.town/boardgame/terraforming-mars/</guid>
+				<description>&lt;p&gt;Terraforming mars is an excellent game, but it takes a bunch of effort to learn.&#xA;It is not a beginner game, but its very rewarding, once you get going.&lt;/p&gt;&#xA;&lt;p&gt;One nice aspect: it is actually a nice single player game as well.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hammerspoon on Daniel Wehner&#39;s blog</title>
-    <link>https://daniel.town/categories/hammerspoon/</link>
-    <description>Recent content in Hammerspoon on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://daniel.town/categories/hammerspoon/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Lua for all the things on your mac v1</title>
-      <link>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</link>
-      <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</guid>
-      <description>&lt;p&gt;One thing people really like about OSX is that everything works and is easy to use,&#xA;but what is easy is not necessarily the best for your particular usecase.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://www.hammerspoon.org/images/hammerspoon.png&#34; alt=&#34;Hammerspoon&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This especially becomes important when it comes down to configurability / scriptablity.&#xA;For my own purposes I use &lt;a href=&#34;http://www.hammerspoon.org/&#34;&gt;Hammerspoon&lt;/a&gt; which provides&#xA;Lua wrappers for quite a lot of lower level APIs, so its easy to setup things a specific way.&lt;/p&gt;&#xA;&lt;p&gt;Just a quick list of what you can do with it:&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Hammerspoon on Daniel Wehner&#39;s blog</title>
+		<link>https://daniel.town/categories/hammerspoon/</link>
+		<description>Recent content in Hammerspoon on Daniel Wehner&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 22 Nov 2015 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://daniel.town/categories/hammerspoon/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Lua for all the things on your mac v1</title>
+				<link>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</link>
+				<pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/lua-for-all-the-things-on-your-mac-v1/</guid>
+				<description>&lt;p&gt;One thing people really like about OSX is that everything works and is easy to use,&#xA;but what is easy is not necessarily the best for your particular usecase.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://www.hammerspoon.org/images/hammerspoon.png&#34; alt=&#34;Hammerspoon&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This especially becomes important when it comes down to configurability / scriptablity.&#xA;For my own purposes I use &lt;a href=&#34;http://www.hammerspoon.org/&#34;&gt;Hammerspoon&lt;/a&gt; which provides&#xA;Lua wrappers for quite a lot of lower level APIs, so its easy to setup things a specific way.&lt;/p&gt;&#xA;&lt;p&gt;Just a quick list of what you can do with it:&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

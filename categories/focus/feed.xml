@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Focus on Daniel Wehner&#39;s blog</title>
-    <link>https://daniel.town/categories/focus/</link>
-    <description>Recent content in Focus on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://daniel.town/categories/focus/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Seeing the screen in black and white</title>
-      <link>https://daniel.town/seeing-the-screen-in-black-and-white/</link>
-      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/seeing-the-screen-in-black-and-white/</guid>
-      <description>&lt;p&gt;Recently I&amp;rsquo;ve been thinking a lot about what matters to me. As many people I struggle with spending too much time&#xA;on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit&#xA;let&amp;rsquo;s you feel good temporarily, but as long you don&amp;rsquo;t consume it purposefully, it didn&amp;rsquo;t really give me anything longterm.&lt;/p&gt;&#xA;&lt;p&gt;End of October I stumbled upon &lt;a href=&#34;https://support.google.com/pixelphone/answer/9137850?hl=en&amp;amp;utm_source=wellbeing.google&amp;amp;utm_medium=referral&amp;amp;utm_campaign=wellbeing&#34;&gt;digital wellbeing&lt;/a&gt; on Android: It allows you to set a certain time of the night, at which&#xA;notifications gets disabled and your screen becomes black and white. This seems to be quite a nice solution in the late&#xA;evening. I stopped reading my phone in the late evening. While this is a solution for the night, there are still like 16 hours I have my computer/phone reachable.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Focus on Daniel Wehner&#39;s blog</title>
+		<link>https://daniel.town/categories/focus/</link>
+		<description>Recent content in Focus on Daniel Wehner&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://daniel.town/categories/focus/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Seeing the screen in black and white</title>
+				<link>https://daniel.town/seeing-the-screen-in-black-and-white/</link>
+				<pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/seeing-the-screen-in-black-and-white/</guid>
+				<description>&lt;p&gt;Recently I&amp;rsquo;ve been thinking a lot about what matters to me. As many people I struggle with spending too much time&#xA;on the internet. Content consumable in small little pieces like tweets, titles on hackernews or simply images on reddit&#xA;let&amp;rsquo;s you feel good temporarily, but as long you don&amp;rsquo;t consume it purposefully, it didn&amp;rsquo;t really give me anything longterm.&lt;/p&gt;&#xA;&lt;p&gt;End of October I stumbled upon &lt;a href=&#34;https://support.google.com/pixelphone/answer/9137850?hl=en&amp;amp;utm_source=wellbeing.google&amp;amp;utm_medium=referral&amp;amp;utm_campaign=wellbeing&#34;&gt;digital wellbeing&lt;/a&gt; on Android: It allows you to set a certain time of the night, at which&#xA;notifications gets disabled and your screen becomes black and white. This seems to be quite a nice solution in the late&#xA;evening. I stopped reading my phone in the late evening. While this is a solution for the night, there are still like 16 hours I have my computer/phone reachable.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

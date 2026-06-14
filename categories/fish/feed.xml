@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Fish on Daniel Wehner&#39;s blog</title>
-    <link>https://daniel.town/categories/fish/</link>
-    <description>Recent content in Fish on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://daniel.town/categories/fish/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Get notified on slow commands</title>
-      <link>https://daniel.town/get-notified-on-slow-commands/</link>
-      <pubDate>Thu, 19 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/get-notified-on-slow-commands/</guid>
-      <description>&lt;p&gt;We are all lazy and we get distracted. One thing happens often… You run some slow command in your shell, switch to the browser, and bam… you are distracted.&lt;/p&gt;&#xA;&lt;p&gt;What about sending an OS notification? Every time any command needs longer to run than let’s say 10 seconds then there is some notification to show so you can get right back to work each time.&lt;/p&gt;&#xA;&lt;p&gt;Note: This is for &lt;a href=&#34;http://fishshell.com/&#34;&gt;Fish shell&lt;/a&gt;, which is a modern shell and really nice to use.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Fish on Daniel Wehner&#39;s blog</title>
+		<link>https://daniel.town/categories/fish/</link>
+		<description>Recent content in Fish on Daniel Wehner&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 19 Nov 2015 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://daniel.town/categories/fish/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Get notified on slow commands</title>
+				<link>https://daniel.town/get-notified-on-slow-commands/</link>
+				<pubDate>Thu, 19 Nov 2015 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/get-notified-on-slow-commands/</guid>
+				<description>&lt;p&gt;We are all lazy and we get distracted. One thing happens often… You run some slow command in your shell, switch to the browser, and bam… you are distracted.&lt;/p&gt;&#xA;&lt;p&gt;What about sending an OS notification? Every time any command needs longer to run than let’s say 10 seconds then there is some notification to show so you can get right back to work each time.&lt;/p&gt;&#xA;&lt;p&gt;Note: This is for &lt;a href=&#34;http://fishshell.com/&#34;&gt;Fish shell&lt;/a&gt;, which is a modern shell and really nice to use.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

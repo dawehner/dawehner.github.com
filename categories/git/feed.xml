@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Git on Daniel Wehner&#39;s blog</title>
-    <link>https://daniel.town/categories/git/</link>
-    <description>Recent content in Git on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://daniel.town/categories/git/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Access inaccessible git commits</title>
-      <link>https://daniel.town/access-inaccessible-git-commits/</link>
-      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/access-inaccessible-git-commits/</guid>
-      <description>&lt;p&gt;Note: This is mostly a personal note, but maybe helpful for others&lt;/p&gt;&#xA;&lt;p&gt;I accidentally removed a local branch using git branch -D local-branch, but I forgot to push the last commit.&lt;/p&gt;&#xA;&lt;p&gt;I found this on the interwebs.&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log -reflog&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;&#xA;&lt;p&gt;which gets all the logs and I was able to cherry-pick from there on.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Automatically clear the render cache when templates change</title>
-      <link>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</link>
-      <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</guid>
-      <description>&lt;p&gt;Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.&lt;/p&gt;&#xA;&lt;p&gt;On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.&lt;/p&gt;&#xA;&lt;p&gt;As solution we have written a script which invalidates the render cache when someone touches a template.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Clone a non composer repo with composer</title>
-      <link>https://daniel.town/clone-a-non-composer-repo-with-composer/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/clone-a-non-composer-repo-with-composer/</guid>
-      <description>&lt;p&gt;There are some usecases where you want to integrate arbitrary libraries into your system.&#xA;One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files.&#xA;In Drupal we wanted to synchronize these information.&lt;/p&gt;&#xA;&lt;p&gt;Therefore we are using this small little bit in composer.json:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;repositories&amp;#34;&lt;/span&gt;: [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;package&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;package&amp;#34;&lt;/span&gt;: {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;namespace/name&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;dev-master&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;: {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;https://github.com/example/example-repo.git&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;git&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;master&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;Once this is done you can use:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Extract a folder from a git repo into its own repo</title>
-      <link>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</link>
-      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
-      <description>&lt;p&gt;Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.&lt;/p&gt;&#xA;&lt;p&gt;Now there are a two of possiblities:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Copy the files and give a shit about the history&lt;/li&gt;&#xA;&lt;li&gt;Extract the history from an existing repo.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;But how would you extract a history from an existing repo?&lt;/p&gt;&#xA;&lt;h3 id=&#34;extract-history-from-existing-repo&#34;&gt;Extract history from existing repo.&lt;/h3&gt;&#xA;&lt;p&gt;Step 1: Clone the existing repo into a new one:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Remove all merged local branches</title>
-      <link>https://daniel.town/remove-all-merged-local-branches/</link>
-      <pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/remove-all-merged-local-branches/</guid>
-      <description>&lt;p&gt;When you use git you often create a hell lot of custom branches.&#xA;This is annoying.&lt;/p&gt;&#xA;&lt;p&gt;With using a PR based workflow this results into proper merges, so&#xA;we can truncate those branches.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout master&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch --merged | grep -v &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;\*&amp;#34;&lt;/span&gt; | xargs -n &lt;span style=&#34;color:#3677a9&#34;&gt;1&lt;/span&gt; git branch -d&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Git on Daniel Wehner&#39;s blog</title>
+		<link>https://daniel.town/categories/git/</link>
+		<description>Recent content in Git on Daniel Wehner&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://daniel.town/categories/git/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Access inaccessible git commits</title>
+				<link>https://daniel.town/access-inaccessible-git-commits/</link>
+				<pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/access-inaccessible-git-commits/</guid>
+				<description>&lt;p&gt;Note: This is mostly a personal note, but maybe helpful for others&lt;/p&gt;&#xA;&lt;p&gt;I accidentally removed a local branch using git branch -D local-branch, but I forgot to push the last commit.&lt;/p&gt;&#xA;&lt;p&gt;I found this on the interwebs.&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log -reflog&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;&#xA;&lt;p&gt;which gets all the logs and I was able to cherry-pick from there on.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Automatically clear the render cache when templates change</title>
+				<link>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</link>
+				<pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/automatically-clear-the-render-cache-when-templates-change/</guid>
+				<description>&lt;p&gt;Recently someone asked whether we can disable CSS/JS aggregation and render cache on local development sites. It is totally easy to do that, but we realized that keeping render cache enabled is important to not miss caching issues during development and then have issues once the site is deployed.&lt;/p&gt;&#xA;&lt;p&gt;On the other hand its quite annoying to have to clear the render cache manually, everytime you touch any template.&lt;/p&gt;&#xA;&lt;p&gt;As solution we have written a script which invalidates the render cache when someone touches a template.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Clone a non composer repo with composer</title>
+				<link>https://daniel.town/clone-a-non-composer-repo-with-composer/</link>
+				<pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/clone-a-non-composer-repo-with-composer/</guid>
+				<description>&lt;p&gt;There are some usecases where you want to integrate arbitrary libraries into your system.&#xA;One example I stumbled upon was some NPM library which stored some general taxonomy mappings in json files.&#xA;In Drupal we wanted to synchronize these information.&lt;/p&gt;&#xA;&lt;p&gt;Therefore we are using this small little bit in composer.json:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;repositories&amp;#34;&lt;/span&gt;: [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;package&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;package&amp;#34;&lt;/span&gt;: {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;namespace/name&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;dev-master&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;: {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;https://github.com/example/example-repo.git&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;git&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;master&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;Once this is done you can use:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Extract a folder from a git repo into its own repo</title>
+				<link>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</link>
+				<pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/extract-a-folder-from-a-git-repo-into-its-own-repo/</guid>
+				<description>&lt;p&gt;Let&amp;rsquo;s assume you work on some client project. After a while you realize that the nice small tool you wrote is actually reusable and can/should be shared as opensource.&lt;/p&gt;&#xA;&lt;p&gt;Now there are a two of possiblities:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Copy the files and give a shit about the history&lt;/li&gt;&#xA;&lt;li&gt;Extract the history from an existing repo.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;But how would you extract a history from an existing repo?&lt;/p&gt;&#xA;&lt;h3 id=&#34;extract-history-from-existing-repo&#34;&gt;Extract history from existing repo.&lt;/h3&gt;&#xA;&lt;p&gt;Step 1: Clone the existing repo into a new one:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Remove all merged local branches</title>
+				<link>https://daniel.town/remove-all-merged-local-branches/</link>
+				<pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/remove-all-merged-local-branches/</guid>
+				<description>&lt;p&gt;When you use git you often create a hell lot of custom branches.&#xA;This is annoying.&lt;/p&gt;&#xA;&lt;p&gt;With using a PR based workflow this results into proper merges, so&#xA;we can truncate those branches.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout master&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch --merged | grep -v &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;\*&amp;#34;&lt;/span&gt; | xargs -n &lt;span style=&#34;color:#3677a9&#34;&gt;1&lt;/span&gt; git branch -d&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+			</item>
+	</channel>
 </rss>

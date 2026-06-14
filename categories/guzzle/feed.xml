@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Guzzle on Daniel Wehner&#39;s blog</title>
-    <link>https://daniel.town/categories/guzzle/</link>
-    <description>Recent content in Guzzle on Daniel Wehner&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://daniel.town/categories/guzzle/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Retry HTTP requests</title>
-      <link>https://daniel.town/retry-http-requests/</link>
-      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://daniel.town/retry-http-requests/</guid>
-      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;As a matter of life we all learn stuff fails. This might be frame with our&#xA;favourite picture, the street in front of our house, or more likely requests to APIs.&lt;/p&gt;&#xA;&lt;p&gt;A call to a 3rd/2nd party API can fail due to various reasons:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The client / server is under high load, which results into a timeout potentially&lt;/li&gt;&#xA;&lt;li&gt;The internet routes packages weird&lt;/li&gt;&#xA;&lt;li&gt;Currently something along the stack is deployed&lt;/li&gt;&#xA;&lt;li&gt;The universe just doesn&amp;rsquo;t like you for a second.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;When you detect a failing request you can do many things&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Guzzle on Daniel Wehner&#39;s blog</title>
+		<link>https://daniel.town/categories/guzzle/</link>
+		<description>Recent content in Guzzle on Daniel Wehner&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://daniel.town/categories/guzzle/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Retry HTTP requests</title>
+				<link>https://daniel.town/retry-http-requests/</link>
+				<pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+				<guid>https://daniel.town/retry-http-requests/</guid>
+				<description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;&#xA;&lt;p&gt;As a matter of life we all learn stuff fails. This might be frame with our&#xA;favourite picture, the street in front of our house, or more likely requests to APIs.&lt;/p&gt;&#xA;&lt;p&gt;A call to a 3rd/2nd party API can fail due to various reasons:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The client / server is under high load, which results into a timeout potentially&lt;/li&gt;&#xA;&lt;li&gt;The internet routes packages weird&lt;/li&gt;&#xA;&lt;li&gt;Currently something along the stack is deployed&lt;/li&gt;&#xA;&lt;li&gt;The universe just doesn&amp;rsquo;t like you for a second.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;When you detect a failing request you can do many things&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
